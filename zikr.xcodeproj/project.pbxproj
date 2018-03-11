@@ -1,0 +1,351 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C23942B82055A95C00637428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23942B72055A95C00637428 /* Assets.xcassets */; };
+		C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */; };
+		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
+		C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */; };
+		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
+		C2815052204CE2B200F6117B /* QuranicPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815051204CE2B200F6117B /* QuranicPrayers.swift */; };
+		C2815054204F783100F6117B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815053204F783100F6117B /* AppDelegate.swift */; };
+		C2815056204F798300F6117B /* NavigationControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815055204F798300F6117B /* NavigationControllerHelper.swift */; };
+		C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815066204F8D0400F6117B /* SettingsTableViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C23942B72055A95C00637428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = zikr/Assets.xcassets; sourceTree = "<group>"; };
+		C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarNotificationsModel.swift; sourceTree = "<group>"; };
+		C281502F204CBED600F6117B /* zikr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zikr.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C281503C204CBED600F6117B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningAndNightAzkarTableViewController.swift; sourceTree = "<group>"; };
+		C281504D204CD8D000F6117B /* AppTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabController.swift; sourceTree = "<group>"; };
+		C2815051204CE2B200F6117B /* QuranicPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranicPrayers.swift; sourceTree = "<group>"; };
+		C2815053204F783100F6117B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C2815055204F798300F6117B /* NavigationControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerHelper.swift; sourceTree = "<group>"; };
+		C2815066204F8D0400F6117B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C281502C204CBED600F6117B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C24E771E2052374A00C3571D /* Notifications */ = {
+			isa = PBXGroup;
+			children = (
+				C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */,
+			);
+			path = Notifications;
+			sourceTree = "<group>";
+		};
+		C2815026204CBED600F6117B = {
+			isa = PBXGroup;
+			children = (
+				C2815031204CBED600F6117B /* zikr */,
+				C2815030204CBED600F6117B /* Products */,
+				C23942B72055A95C00637428 /* Assets.xcassets */,
+			);
+			sourceTree = "<group>";
+		};
+		C2815030204CBED600F6117B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C281502F204CBED600F6117B /* zikr.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C2815031204CBED600F6117B /* zikr */ = {
+			isa = PBXGroup;
+			children = (
+				C24E771E2052374A00C3571D /* Notifications */,
+				C2815048204CD72B00F6117B /* Main Controllers */,
+				C281504D204CD8D000F6117B /* AppTabController.swift */,
+				C2815053204F783100F6117B /* AppDelegate.swift */,
+				C2815055204F798300F6117B /* NavigationControllerHelper.swift */,
+				C281503B204CBED600F6117B /* LaunchScreen.storyboard */,
+				C281503E204CBED600F6117B /* Info.plist */,
+			);
+			path = zikr;
+			sourceTree = "<group>";
+		};
+		C2815048204CD72B00F6117B /* Main Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */,
+				C2815051204CE2B200F6117B /* QuranicPrayers.swift */,
+				C2815066204F8D0400F6117B /* SettingsTableViewController.swift */,
+			);
+			path = "Main Controllers";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C281502E204CBED600F6117B /* zikr */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2815041204CBED600F6117B /* Build configuration list for PBXNativeTarget "zikr" */;
+			buildPhases = (
+				C281502B204CBED600F6117B /* Sources */,
+				C281502C204CBED600F6117B /* Frameworks */,
+				C281502D204CBED600F6117B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = zikr;
+			productName = azkar;
+			productReference = C281502F204CBED600F6117B /* zikr.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C2815027204CBED600F6117B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Ahmed Ebaid";
+				TargetAttributes = {
+					C281502E204CBED600F6117B = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = C281502A204CBED600F6117B /* Build configuration list for PBXProject "zikr" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C2815026204CBED600F6117B;
+			productRefGroup = C2815030204CBED600F6117B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C281502E204CBED600F6117B /* zikr */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C281502D204CBED600F6117B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
+				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C281502B204CBED600F6117B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */,
+				C2815052204CE2B200F6117B /* QuranicPrayers.swift in Sources */,
+				C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */,
+				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
+				C2815056204F798300F6117B /* NavigationControllerHelper.swift in Sources */,
+				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
+				C281504E204CD8D000F6117B /* AppTabController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C281503B204CBED600F6117B /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C281503C204CBED600F6117B /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C281503F204CBED600F6117B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C2815040204CBED600F6117B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C2815042204CBED600F6117B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QC25NDT48;
+				INFOPLIST_FILE = azkar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.azkar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C2815043204CBED600F6117B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QC25NDT48;
+				INFOPLIST_FILE = azkar/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.azkar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C281502A204CBED600F6117B /* Build configuration list for PBXProject "zikr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C281503F204CBED600F6117B /* Debug */,
+				C2815040204CBED600F6117B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2815041204CBED600F6117B /* Build configuration list for PBXNativeTarget "zikr" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2815042204CBED600F6117B /* Debug */,
+				C2815043204CBED600F6117B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C2815027204CBED600F6117B /* Project object */;
+}
