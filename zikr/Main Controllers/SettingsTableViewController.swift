@@ -2,16 +2,12 @@ import UIKit
 
 class SettingsTableViewController: UITableViewController {
     let changeLocationCell = UITableViewCell()
-    let timeZoneCell = UITableViewCell()
-    let azkarNotificationsCell = UITableViewCell()
-    
-    let locationSettingsLabel = UILabel()
-    let azkarSettingsLabel = UILabel()
-    let notificationSwitch = UISwitch()
-    
-    var model = AzkarNotificationsModel()
-    
-    let sectionsHeadersTitles = ["Location Settings", "Azkar Settings"]
+    let calculationMethodCell = UITableViewCell()
+
+    let changeLocationLabel = UILabel()
+    let calculationMethodLabel = UILabel()
+
+    let sectionsHeadersTitles = ["Azkar Settings", "Location Settings"]
     let height : CGFloat = 50.0
     
     override func viewDidLoad() {
@@ -27,36 +23,25 @@ class SettingsTableViewController: UITableViewController {
     }
     
     private func configureHeaderCells() {
-        locationSettingsLabel.translatesAutoresizingMaskIntoConstraints = false
-        locationSettingsLabel.text = sectionsHeadersTitles[0]
-        locationSettingsLabel.textColor = UIColor.white
+        calculationMethodLabel.translatesAutoresizingMaskIntoConstraints = false
+        calculationMethodLabel.text = sectionsHeadersTitles[0]
+        calculationMethodLabel.textColor = UIColor.white
         
-        azkarSettingsLabel.translatesAutoresizingMaskIntoConstraints = false
-        azkarSettingsLabel.text = sectionsHeadersTitles[1]
-        azkarSettingsLabel.textColor = UIColor.white
+        changeLocationLabel.translatesAutoresizingMaskIntoConstraints = false
+        changeLocationLabel.text = sectionsHeadersTitles[1]
+        changeLocationLabel.textColor = UIColor.white
     }
+    
     private func configureDataCells() {
+        calculationMethodCell.textLabel?.text = "Calculation Method"
+        calculationMethodCell.accessoryType = .disclosureIndicator
+        calculationMethodCell.selectionStyle = .none
+        
         changeLocationCell.textLabel?.text = "Change Location"
         changeLocationCell.accessoryType = .disclosureIndicator
         changeLocationCell.selectionStyle = .none
         
-        timeZoneCell.textLabel?.text = "Timezone Info"
-        timeZoneCell.accessoryType = .disclosureIndicator
-        timeZoneCell.selectionStyle = .none
-        
-        
-        azkarNotificationsCell.selectionStyle = .none
-        azkarNotificationsCell.textLabel?.text = "Azkar Notifications"
-        
-        notificationSwitch.setOn(true, animated: true)
-        notificationSwitch.addTarget(self, action: #selector(notificationSwitchChanged), for: .valueChanged)
-        azkarNotificationsCell.accessoryView = notificationSwitch
-        
         tableView.tableFooterView = UIView()
-    }
-    
-    @objc func notificationSwitchChanged() {
-        model.toggleNotifications(with: notificationSwitch.isOn)
     }
     
     // MARK: - Table view data source
@@ -67,7 +52,7 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 2
+            return 1
         case 1:
             return 1
         default:
@@ -80,14 +65,12 @@ class SettingsTableViewController: UITableViewController {
         case 0:
             switch indexPath.row {
             case 0:
-                return changeLocationCell
-            case 1:
-                return timeZoneCell
+                return calculationMethodCell
             default:
                 fatalError("Unknown Cell")
             }
         case 1:
-            return azkarNotificationsCell
+            return changeLocationCell
         default:
             fatalError("Unknown Cell")
         }
@@ -99,15 +82,32 @@ class SettingsTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            view.addSubview(locationSettingsLabel)
-            NSLayoutConstraint.activate([locationSettingsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), locationSettingsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), locationSettingsLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
+            view.addSubview(calculationMethodLabel)
+            NSLayoutConstraint.activate([calculationMethodLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), calculationMethodLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), calculationMethodLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
         case 1:
-            view.addSubview(azkarSettingsLabel)
-            NSLayoutConstraint.activate([azkarSettingsLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), azkarSettingsLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), azkarSettingsLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
+            view.addSubview(changeLocationLabel)
+            NSLayoutConstraint.activate([changeLocationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), changeLocationLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), changeLocationLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
         default:
             fatalError("no section available")
         }
         return view
     }
+    
+    //Marker: Table View Delegate Methods
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+        //TODO: Go to Calculation Method Screen
+            print("Calculation")
+        case 1:
+            //TODO: Go to Location Screen
+            print("Location")
+        default:
+            fatalError("no section available")
+
+        }
+    }
+    
+    
 }
 

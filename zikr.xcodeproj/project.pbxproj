@@ -8,7 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		C23942B82055A95C00637428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23942B72055A95C00637428 /* Assets.xcassets */; };
+		C23942BB2055AEF500637428 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942BA2055AEF500637428 /* Endpoint.swift */; };
+		C23942C12055B19300637428 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; };
+		C23942C22055B19300637428 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; };
+		C23942C32055B19300637428 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; };
+		C23942C42055B19300637428 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; };
+		C23942C62055B1B300637428 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C23942C72055B1B300637428 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C23942C82055B1B300637428 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C23942C92055B1B300637428 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C23942CC2055BC3600637428 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942CB2055BC3600637428 /* Client.swift */; };
+		C23942CE2055BEFB00637428 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942CD2055BEFB00637428 /* Constants.swift */; };
+		C23942D12055C37600637428 /* AzkarTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D02055C37500637428 /* AzkarTimes.swift */; };
+		C23942D42055C81E00637428 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D32055C81E00637428 /* ClientError.swift */; };
+		C23942D72055E27100637428 /* Date+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D62055E27100637428 /* Date+Current.swift */; };
 		C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */; };
+		C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC7D2056122F00F72703 /* SettingsViewModel.swift */; };
+		C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */; };
+		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
+		C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */; };
 		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
 		C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */; };
 		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
@@ -18,9 +36,39 @@
 		C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815066204F8D0400F6117B /* SettingsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		C23942C52055B1A200637428 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C23942C62055B1B300637428 /* Alamofire.framework in CopyFiles */,
+				C23942C72055B1B300637428 /* Moya.framework in CopyFiles */,
+				C23942C82055B1B300637428 /* Result.framework in CopyFiles */,
+				C23942C92055B1B300637428 /* SwiftyJSON.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		C23942B72055A95C00637428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = zikr/Assets.xcassets; sourceTree = "<group>"; };
+		C23942BA2055AEF500637428 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C23942BD2055B19300637428 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		C23942BE2055B19300637428 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		C23942BF2055B19300637428 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
+		C23942C02055B19300637428 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
+		C23942CB2055BC3600637428 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
+		C23942CD2055BEFB00637428 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C23942D02055C37500637428 /* AzkarTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarTimes.swift; sourceTree = "<group>"; };
+		C23942D32055C81E00637428 /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
+		C23942D62055E27100637428 /* Date+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Current.swift"; sourceTree = "<group>"; };
 		C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarNotificationsModel.swift; sourceTree = "<group>"; };
+		C263AC7D2056122F00F72703 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTableViewController.swift; sourceTree = "<group>"; };
+		C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationTableViewController.swift; sourceTree = "<group>"; };
+		C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodViewModel.swift; sourceTree = "<group>"; };
 		C281502F204CBED600F6117B /* zikr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zikr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C281503C204CBED600F6117B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,12 +85,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C23942C12055B19300637428 /* Alamofire.framework in Frameworks */,
+				C23942C22055B19300637428 /* Result.framework in Frameworks */,
+				C23942C32055B19300637428 /* SwiftyJSON.framework in Frameworks */,
+				C23942C42055B19300637428 /* Moya.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C23942B92055AEE600637428 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C23942BA2055AEF500637428 /* Endpoint.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C23942BC2055B19300637428 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C23942BD2055B19300637428 /* Alamofire.framework */,
+				C23942C02055B19300637428 /* Moya.framework */,
+				C23942BE2055B19300637428 /* Result.framework */,
+				C23942BF2055B19300637428 /* SwiftyJSON.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C23942CA2055BC2600637428 /* ApiClients */ = {
+			isa = PBXGroup;
+			children = (
+				C23942CB2055BC3600637428 /* Client.swift */,
+			);
+			path = ApiClients;
+			sourceTree = "<group>";
+		};
+		C23942CF2055C36100637428 /* JSON */ = {
+			isa = PBXGroup;
+			children = (
+				C23942D02055C37500637428 /* AzkarTimes.swift */,
+			);
+			path = JSON;
+			sourceTree = "<group>";
+		};
+		C23942D22055C80E00637428 /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				C23942D32055C81E00637428 /* ClientError.swift */,
+			);
+			path = Errors;
+			sourceTree = "<group>";
+		};
+		C23942D52055E1E000637428 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C23942D62055E27100637428 /* Date+Current.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C23942D82056104000637428 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C263AC7D2056122F00F72703 /* SettingsViewModel.swift */,
+				C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C24E771E2052374A00C3571D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -51,12 +163,21 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
+		C263AC7F2056133A00F72703 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				C2815055204F798300F6117B /* NavigationControllerHelper.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		C2815026204CBED600F6117B = {
 			isa = PBXGroup;
 			children = (
 				C2815031204CBED600F6117B /* zikr */,
 				C2815030204CBED600F6117B /* Products */,
 				C23942B72055A95C00637428 /* Assets.xcassets */,
+				C23942BC2055B19300637428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,13 +192,20 @@
 		C2815031204CBED600F6117B /* zikr */ = {
 			isa = PBXGroup;
 			children = (
+				C263AC7F2056133A00F72703 /* Helpers */,
+				C23942D52055E1E000637428 /* Extensions */,
+				C23942D22055C80E00637428 /* Errors */,
+				C23942CF2055C36100637428 /* JSON */,
+				C23942CA2055BC2600637428 /* ApiClients */,
+				C23942B92055AEE600637428 /* Network */,
 				C24E771E2052374A00C3571D /* Notifications */,
 				C2815048204CD72B00F6117B /* Main Controllers */,
+				C23942D82056104000637428 /* ViewModel */,
 				C281504D204CD8D000F6117B /* AppTabController.swift */,
 				C2815053204F783100F6117B /* AppDelegate.swift */,
-				C2815055204F798300F6117B /* NavigationControllerHelper.swift */,
 				C281503B204CBED600F6117B /* LaunchScreen.storyboard */,
 				C281503E204CBED600F6117B /* Info.plist */,
+				C23942CD2055BEFB00637428 /* Constants.swift */,
 			);
 			path = zikr;
 			sourceTree = "<group>";
@@ -88,6 +216,8 @@
 				C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */,
 				C2815051204CE2B200F6117B /* QuranicPrayers.swift */,
 				C2815066204F8D0400F6117B /* SettingsTableViewController.swift */,
+				C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */,
+				C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */,
 			);
 			path = "Main Controllers";
 			sourceTree = "<group>";
@@ -102,6 +232,7 @@
 				C281502B204CBED600F6117B /* Sources */,
 				C281502C204CBED600F6117B /* Frameworks */,
 				C281502D204CBED600F6117B /* Resources */,
+				C23942C52055B1A200637428 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -164,12 +295,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */,
+				C23942D12055C37600637428 /* AzkarTimes.swift in Sources */,
 				C2815052204CE2B200F6117B /* QuranicPrayers.swift in Sources */,
 				C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */,
+				C23942D72055E27100637428 /* Date+Current.swift in Sources */,
+				C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */,
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
+				C23942CC2055BC3600637428 /* Client.swift in Sources */,
+				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
+				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,
 				C2815056204F798300F6117B /* NavigationControllerHelper.swift in Sources */,
+				C23942BB2055AEF500637428 /* Endpoint.swift in Sources */,
+				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
 				C281504E204CD8D000F6117B /* AppTabController.swift in Sources */,
+				C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */,
+				C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,7 +441,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QC25NDT48;
-				INFOPLIST_FILE = azkar/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/zikr/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.azkar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -315,7 +460,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QC25NDT48;
-				INFOPLIST_FILE = azkar/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = "$(SRCROOT)/zikr/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.azkar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
