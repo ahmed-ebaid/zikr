@@ -4,8 +4,8 @@ class SettingsTableViewController: UITableViewController {
     let changeLocationCell = UITableViewCell()
     let calculationMethodCell = UITableViewCell()
 
-    let changeLocationLabel = UILabel()
-    let calculationMethodLabel = UILabel()
+    let changeLocationHeaderLabel = UILabel()
+    let calculationMethodHeaderLabel = UILabel()
 
     let sectionsHeadersTitles = ["Azkar Settings", "Location Settings"]
     let height : CGFloat = 50.0
@@ -23,13 +23,13 @@ class SettingsTableViewController: UITableViewController {
     }
     
     private func configureHeaderCells() {
-        calculationMethodLabel.translatesAutoresizingMaskIntoConstraints = false
-        calculationMethodLabel.text = sectionsHeadersTitles[0]
-        calculationMethodLabel.textColor = UIColor.white
+        calculationMethodHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
+        calculationMethodHeaderLabel.text = sectionsHeadersTitles[0]
+        calculationMethodHeaderLabel.textColor = UIColor.white
         
-        changeLocationLabel.translatesAutoresizingMaskIntoConstraints = false
-        changeLocationLabel.text = sectionsHeadersTitles[1]
-        changeLocationLabel.textColor = UIColor.white
+        changeLocationHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
+        changeLocationHeaderLabel.text = sectionsHeadersTitles[1]
+        changeLocationHeaderLabel.textColor = UIColor.white
     }
     
     private func configureDataCells() {
@@ -82,11 +82,11 @@ class SettingsTableViewController: UITableViewController {
         
         switch section {
         case 0:
-            view.addSubview(calculationMethodLabel)
-            NSLayoutConstraint.activate([calculationMethodLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), calculationMethodLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), calculationMethodLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
+            view.addSubview(calculationMethodHeaderLabel)
+            NSLayoutConstraint.activate([calculationMethodHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), calculationMethodHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), calculationMethodHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
         case 1:
-            view.addSubview(changeLocationLabel)
-            NSLayoutConstraint.activate([changeLocationLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), changeLocationLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), changeLocationLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
+            view.addSubview(changeLocationHeaderLabel)
+            NSLayoutConstraint.activate([changeLocationHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), changeLocationHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), changeLocationHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
         default:
             fatalError("no section available")
         }
@@ -97,17 +97,15 @@ class SettingsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         switch indexPath.section {
         case 0:
-        //TODO: Go to Calculation Method Screen
-            print("Calculation")
+            let viewController = CalculationMethodTableViewController()
+            self.navigationController?.pushViewController(viewController, animated: true)
         case 1:
-            //TODO: Go to Location Screen
-            print("Location")
+            let viewController = ChangeLocationTableViewController()
+            self.navigationController?.pushViewController(viewController, animated: true)
         default:
             fatalError("no section available")
 
         }
     }
-    
-    
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C20194022058B198005ED7DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* Location.swift */; };
 		C23942B82055A95C00637428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23942B72055A95C00637428 /* Assets.xcassets */; };
 		C23942BB2055AEF500637428 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942BA2055AEF500637428 /* Endpoint.swift */; };
 		C23942C12055B19300637428 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; };
@@ -27,6 +28,8 @@
 		C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */; };
 		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
 		C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */; };
+		C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC882057617400F72703 /* ChangeLocationViewModel.swift */; };
+		C263AC8F20576A0D00F72703 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C263AC8E20576A0D00F72703 /* CoreLocation.framework */; };
 		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
 		C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */; };
 		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
@@ -53,6 +56,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C20194012058B198005ED7DC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C23942B72055A95C00637428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = zikr/Assets.xcassets; sourceTree = "<group>"; };
 		C23942BA2055AEF500637428 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C23942BD2055B19300637428 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
@@ -69,6 +73,8 @@
 		C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTableViewController.swift; sourceTree = "<group>"; };
 		C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationTableViewController.swift; sourceTree = "<group>"; };
 		C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodViewModel.swift; sourceTree = "<group>"; };
+		C263AC882057617400F72703 /* ChangeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewModel.swift; sourceTree = "<group>"; };
+		C263AC8E20576A0D00F72703 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		C281502F204CBED600F6117B /* zikr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zikr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C281503C204CBED600F6117B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,6 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C263AC8F20576A0D00F72703 /* CoreLocation.framework in Frameworks */,
 				C23942C12055B19300637428 /* Alamofire.framework in Frameworks */,
 				C23942C22055B19300637428 /* Result.framework in Frameworks */,
 				C23942C32055B19300637428 /* SwiftyJSON.framework in Frameworks */,
@@ -106,6 +113,7 @@
 		C23942BC2055B19300637428 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C263AC8E20576A0D00F72703 /* CoreLocation.framework */,
 				C23942BD2055B19300637428 /* Alamofire.framework */,
 				C23942C02055B19300637428 /* Moya.framework */,
 				C23942BE2055B19300637428 /* Result.framework */,
@@ -146,15 +154,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		C23942D82056104000637428 /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-				C263AC7D2056122F00F72703 /* SettingsViewModel.swift */,
-				C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */,
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		C24E771E2052374A00C3571D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +168,46 @@
 				C2815055204F798300F6117B /* NavigationControllerHelper.swift */,
 			);
 			path = Helpers;
+			sourceTree = "<group>";
+		};
+		C263AC8A2057679700F72703 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				C263AC8D205767AD00F72703 /* Settings */,
+				C263AC8C205767A800F72703 /* Duaa */,
+				C263AC8B205767A200F72703 /* Azkar */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		C263AC8B205767A200F72703 /* Azkar */ = {
+			isa = PBXGroup;
+			children = (
+				C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */,
+			);
+			path = Azkar;
+			sourceTree = "<group>";
+		};
+		C263AC8C205767A800F72703 /* Duaa */ = {
+			isa = PBXGroup;
+			children = (
+				C2815051204CE2B200F6117B /* QuranicPrayers.swift */,
+			);
+			path = Duaa;
+			sourceTree = "<group>";
+		};
+		C263AC8D205767AD00F72703 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				C263AC7D2056122F00F72703 /* SettingsViewModel.swift */,
+				C2815066204F8D0400F6117B /* SettingsTableViewController.swift */,
+				C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */,
+				C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */,
+				C263AC882057617400F72703 /* ChangeLocationViewModel.swift */,
+				C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */,
+				C20194012058B198005ED7DC /* Location.swift */,
+			);
+			path = Settings;
 			sourceTree = "<group>";
 		};
 		C2815026204CBED600F6117B = {
@@ -192,6 +231,7 @@
 		C2815031204CBED600F6117B /* zikr */ = {
 			isa = PBXGroup;
 			children = (
+				C263AC8A2057679700F72703 /* Screens */,
 				C263AC7F2056133A00F72703 /* Helpers */,
 				C23942D52055E1E000637428 /* Extensions */,
 				C23942D22055C80E00637428 /* Errors */,
@@ -199,8 +239,6 @@
 				C23942CA2055BC2600637428 /* ApiClients */,
 				C23942B92055AEE600637428 /* Network */,
 				C24E771E2052374A00C3571D /* Notifications */,
-				C2815048204CD72B00F6117B /* Main Controllers */,
-				C23942D82056104000637428 /* ViewModel */,
 				C281504D204CD8D000F6117B /* AppTabController.swift */,
 				C2815053204F783100F6117B /* AppDelegate.swift */,
 				C281503B204CBED600F6117B /* LaunchScreen.storyboard */,
@@ -208,18 +246,6 @@
 				C23942CD2055BEFB00637428 /* Constants.swift */,
 			);
 			path = zikr;
-			sourceTree = "<group>";
-		};
-		C2815048204CD72B00F6117B /* Main Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */,
-				C2815051204CE2B200F6117B /* QuranicPrayers.swift */,
-				C2815066204F8D0400F6117B /* SettingsTableViewController.swift */,
-				C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */,
-				C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */,
-			);
-			path = "Main Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,9 +334,11 @@
 				C23942BB2055AEF500637428 /* Endpoint.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
+				C20194022058B198005ED7DC /* Location.swift in Sources */,
 				C281504E204CD8D000F6117B /* AppTabController.swift in Sources */,
 				C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */,
 				C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */,
+				C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
