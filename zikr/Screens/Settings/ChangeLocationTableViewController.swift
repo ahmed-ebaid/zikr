@@ -1,11 +1,13 @@
 import UIKit
 
-class ChangeLocationTableViewController: UITableViewController {
+class ChangeLocationTableViewController: UITableViewController, ChangeLocationViewModelDelegate {
     let getCurrentLocationCell = UITableViewCell()
     
     let azkarLocationSettingsHeaderLabel = UILabel()
     let savedLocationsHeaderLabel = UILabel()
     let model = ChangeLocationViewModel()
+    
+    var indicator = UIActivityIndicatorView()
     
     let sectionsHeadersTitles = ["Azkar Location Settings", "Saved Locations"]
     let height : CGFloat = 50.0
@@ -13,8 +15,10 @@ class ChangeLocationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Change Location"
+        model.delegate = self
         configureHeaderCells()
         configureDataCells()
+        configureIndicator()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,6 +36,13 @@ class ChangeLocationTableViewController: UITableViewController {
         savedLocationsHeaderLabel.textColor = UIColor.white
     }
     
+    private func configureIndicator() {
+        indicator = UIActivityIndicatorView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+        indicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.gray
+        indicator.center = self.view.center
+        self.view.addSubview(indicator)
+    }
+    
     private func configureDataCells() {
         getCurrentLocationCell.textLabel?.text = "Get Current Location (GPS)"
         getCurrentLocationCell.accessoryType = .disclosureIndicator
@@ -46,66 +57,47 @@ class ChangeLocationTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return model.favoritedLocations?.count ?? 1
-        default:
-            fatalError("Unkown number of sections")
-        }
+        return section == 0 ? 1 : model.favoritedLocations.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
+        if indexPath.section == 0 {
             return getCurrentLocationCell
-        case 1:
+        } else {
             let cell = UITableViewCell()
-            cell.textLabel?.text = model.getLocationInfo(model.favoritedLocations?[indexPath.row])
-            if model.favoritedLocations != nil {
-                if indexPath.row == (model.favoritedLocations?.count)! - 1 {
-                    cell.accessoryType = .checkmark
-                }
+            cell.textLabel?.text = model.getLocationInfo(model.favoritedLocations[indexPath.row])
+            if indexPath.row == (model.favoritedLocations.count) - 1 {
+                cell.accessoryType = .checkmark
             }
             return cell
-        default:
-            fatalError("Unknown Cell")
         }
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: height))
-        view.backgroundColor = UIColor.lightGray
+        let view = UIView()
+        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
         
-        switch section {
-        case 0:
+        if section == 0 {
             view.addSubview(azkarLocationSettingsHeaderLabel)
             NSLayoutConstraint.activate([azkarLocationSettingsHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), azkarLocationSettingsHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), azkarLocationSettingsHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
-        case 1:
+        } else {
             view.addSubview(savedLocationsHeaderLabel)
             NSLayoutConstraint.activate([savedLocationsHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), savedLocationsHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), savedLocationsHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
-        default:
-            fatalError("no section available")
         }
         return view
     }
     
     //Marker: Table View Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0:
+        if indexPath.section == 0 {
+            indicator.startAnimating()
             model.getCurrentLocation()
-            print("Got current locatoin")
-            tableView.reloadData()
-    
-        case 1:
-            //TODO: Go to Location Screen
-            print("Location")
-        default:
-            fatalError("no section available")
-            
         }
     }
     
+    //Mark ChangeLocationViewModelDelegate delegate method
+    func didRecieveLocation() {
+        tableView.reloadData()
+        indicator.stopAnimating()
+    }
 }

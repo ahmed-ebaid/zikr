@@ -8,7 +8,7 @@ class Location : NSObject, NSSecureCoding {
     
     static var supportsSecureCoding: Bool = true
     
-    init(coordinate: CLLocation, city: NSString, state: NSString?, country: NSString) {
+    init(coordinate: CLLocation?, city: NSString?, state: NSString?, country: NSString?) {
         self.coordinate = coordinate
         self.city = city
         self.state = state
@@ -29,10 +29,3 @@ class Location : NSObject, NSSecureCoding {
         aCoder.encode(country, forKey: "country")
     }
 }
-
-//extension Location : Equatable {
-//    static func ==(lhs: Location, rhs: Location) -> Bool {
-//        return lhs.coordinate == rhs.coordinate && lhs.city == rhs.city && lhs.state == rhs.state && lhs.country == rhs.country
-//    }
-//}
-
