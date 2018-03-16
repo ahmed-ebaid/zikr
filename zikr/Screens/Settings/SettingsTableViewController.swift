@@ -1,14 +1,14 @@
 import UIKit
 
 class SettingsTableViewController: UITableViewController {
-    let changeLocationCell = UITableViewCell()
     let calculationMethodCell = UITableViewCell()
-
-    let changeLocationHeaderLabel = UILabel()
+    let changeLocationCell = UITableViewCell()
+    
     let calculationMethodHeaderLabel = UILabel()
-
+    let changeLocationHeaderLabel = UILabel()
+    
     let sectionsHeadersTitles = ["Azkar Settings", "Location Settings"]
-    let height : CGFloat = 50.0
+    let height : CGFloat = 75.0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,11 +25,11 @@ class SettingsTableViewController: UITableViewController {
     private func configureHeaderCells() {
         calculationMethodHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
         calculationMethodHeaderLabel.text = sectionsHeadersTitles[0]
-        calculationMethodHeaderLabel.textColor = UIColor.white
+        calculationMethodHeaderLabel.textColor = .darkGray
         
         changeLocationHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
         changeLocationHeaderLabel.text = sectionsHeadersTitles[1]
-        changeLocationHeaderLabel.textColor = UIColor.white
+        changeLocationHeaderLabel.textColor = .darkGray
     }
     
     private func configureDataCells() {
@@ -41,7 +41,7 @@ class SettingsTableViewController: UITableViewController {
         changeLocationCell.accessoryType = .disclosureIndicator
         changeLocationCell.selectionStyle = .none
         
-        tableView.tableFooterView = UIView()
+        tableView.tableFooterView = UIView() //hides empty cells
     }
     
     // MARK: - Table view data source
@@ -50,62 +50,41 @@ class SettingsTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        switch section {
-        case 0:
-            return 1
-        case 1:
-            return 1
-        default:
-            fatalError("Unkown number of sections")
-        }
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        switch indexPath.section {
-        case 0:
-            switch indexPath.row {
-            case 0:
-                return calculationMethodCell
-            default:
-                fatalError("Unknown Cell")
-            }
-        case 1:
-            return changeLocationCell
-        default:
-            fatalError("Unknown Cell")
-        }
+        return indexPath.section == 0 ? calculationMethodCell : changeLocationCell
     }
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let view = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.width, height: height))
-        view.backgroundColor = UIColor.lightGray
-        
-        switch section {
-        case 0:
+        let view = UIView()
+        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
+        if section == 0 {
             view.addSubview(calculationMethodHeaderLabel)
-            NSLayoutConstraint.activate([calculationMethodHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), calculationMethodHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), calculationMethodHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
-        case 1:
+            NSLayoutConstraint.activate([
+                calculationMethodHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15), calculationMethodHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 25)])
+        } else {
             view.addSubview(changeLocationHeaderLabel)
-            NSLayoutConstraint.activate([changeLocationHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), changeLocationHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), changeLocationHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
-        default:
-            fatalError("no section available")
+            NSLayoutConstraint.activate([
+                changeLocationHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15),changeLocationHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 25)])
         }
         return view
     }
     
     //Marker: Table View Delegate Methods
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0:
+        if indexPath.section == 0 {
             let viewController = CalculationMethodTableViewController()
             self.navigationController?.pushViewController(viewController, animated: true)
-        case 1:
+        } else {
             let viewController = ChangeLocationTableViewController()
             self.navigationController?.pushViewController(viewController, animated: true)
-        default:
-            fatalError("no section available")
-
         }
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
 }
 

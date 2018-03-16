@@ -1,15 +1,16 @@
 import Foundation
 
+fileprivate let defaultCalculationMethodIndex = 2
 class CalculationMethodViewModel {
-    lazy var calculationMethods = [("Jafari - Ithna Ashari." , 0),
-                              ("Karachi - University of Islamic Sciences.", 1),
-                              ("ISNA - Islamic Society of North America.", 2),
-                              ("MWL - Muslim World League." , 3),
-                              ("Mecca - Umm al-Qura.", 4),
-                              ("Egyptian General Authority of Survey.", 5),
-                              ("University of Tehran - Institute of Geophysics.", 7),
-                              ("Algerian Minister of Religious Affairs and Wakfs." , 8)]
     let userDefaults = UserDefaults.standard
+    lazy var calculationMethods = [("Jafari - Ithna Ashari." , 0),
+                                   ("Karachi - University of Islamic Sciences.", 1),
+                                   ("ISNA - Islamic Society of North America.", 2),
+                                   ("MWL - Muslim World League." , 3),
+                                   ("Mecca - Umm al-Qura.", 4),
+                                   ("Egyptian General Authority of Survey.", 5),
+                                   ("University of Tehran - Institute of Geophysics.", 7),
+                                   ("Algerian Minister of Religious Affairs and Wakfs." , 8)]
     
     func setDefaultCalculationMethod(calculationMethod: String = "ISNA - Islamic Society of North America.") {
         userDefaults.set(findIndexOfCalculationMethod(calculationMethod), forKey: "CalculationMethod")
@@ -21,6 +22,6 @@ class CalculationMethodViewModel {
                 return tuple.1
             }
         }
-        return 2
+        return defaultCalculationMethodIndex
     }
 }

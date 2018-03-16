@@ -41,7 +41,7 @@ class ChangeLocationViewModel : NSObject, CLLocationManagerDelegate{
             if placemarksArray != nil {
                 let placemark = placemarksArray?.first
                 
-                let currentLocation = Location(coordinate: (placemark?.location)!, city: placemark?.locality! as! NSString, state: placemark?.administrativeArea as! NSString, country: placemark?.country as! NSString)
+                let currentLocation = Location(coordinate: (placemark?.location)!, city: placemark?.locality! as! NSString, state: placemark?.administrativeArea as! NSString, country: placemark?.country! as! NSString)
                 self.addFavoritedLocation(location: currentLocation)
             }
         }

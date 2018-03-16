@@ -11,18 +11,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let center =  UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { result, error in
             if error == nil {
-                AzkarNotificationsModel().toggleNotifications(with: result != nil ? result : false)
+                AzkarNotificationsModel().toggleNotifications(with: result)
             }
         }
-        
         
         window = UIWindow()
         let tabController = AppTabController()
         window?.rootViewController = tabController
         window?.makeKeyAndVisible()
-        
-        
-        
         
         return true
     }

@@ -28,7 +28,6 @@ class CalculationMethodTableViewController: UITableViewController {
         cell.selectionStyle = .none
         cell.accessoryType = .none
         let indexOfSelectedCell = UserDefaults.standard.integer(forKey: "CalculationMethod")
-        print(indexOfSelectedCell)
         if model.calculationMethods[indexPath.row].1 == indexOfSelectedCell {
             cell.accessoryType = .checkmark
         }
@@ -39,20 +38,16 @@ class CalculationMethodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView()
-        footerView.backgroundColor = UIColor.white.withAlphaComponent(0.5)
-        footerView.frame = CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 50)
         let label = UILabel()
-        label.text = "PLEASE REFER TO YOUR RELIGUOUS AUTORITY FOR THE COORECT CALCULATION METHOD TO USE"
-        label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
-        
-        
+        label.text = "PLEASE REFER TO YOUR RELIGUOUS AUTORITY FOR THE COORECT CALCULATION METHOD TO USE"
+        label.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
+
+        label.numberOfLines = 0
+
         footerView.addSubview(label)
-        NSLayoutConstraint.activate([label.topAnchor.constraint(equalTo: footerView.topAnchor),
-                                     label.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 17),
-                                     label.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: 10)])
-        
-        
+        NSLayoutConstraint.activate([label.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 17), label.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 20),
+            label.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: 10)])
         return footerView
     }
     
@@ -66,5 +61,4 @@ class CalculationMethodTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .none
     }
-
 }
