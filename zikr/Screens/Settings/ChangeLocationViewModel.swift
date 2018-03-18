@@ -24,6 +24,19 @@ class ChangeLocationViewModel : NSObject, CLLocationManagerDelegate {
         }
     }
     
+    func getLocation(using displayedLocation: String) -> Location {
+        let displayedLocationArray = displayedLocation.split(separator: ",")
+        for location in favoritedLocations {
+            guard let city = location.city, let state = location.state, let country = location.country else  {
+                continue
+            }
+            if city as String == displayedLocationArray[0].trimmingCharacters(in: .whitespaces) && ( state as String == displayedLocationArray[1].trimmingCharacters(in: .whitespaces) || country as String == displayedLocationArray[1].trimmingCharacters(in: .whitespaces) ) {
+                return location
+            }
+        }
+        return Location(clLocation: nil, city: nil, state: nil, country: nil)
+    }
+    
     func getCurrentLocation() {
         locationManager.requestWhenInUseAuthorization()
         if CLLocationManager.locationServicesEnabled() {
@@ -33,7 +46,7 @@ class ChangeLocationViewModel : NSObject, CLLocationManagerDelegate {
         }
     }
     
-    private func addFavoritedLocation(location: Location) {
+    func addFavoritedLocation(location: Location) {
         var locations = self.favoritedLocations
         
         if locations.isEmpty {
@@ -43,14 +56,14 @@ class ChangeLocationViewModel : NSObject, CLLocationManagerDelegate {
                 locations.remove(at: index)
             }
             
-            locations.append(location)
+            locations.insert(location, at: 0)
             self.favoritedLocations = locations
         }
     }
     
     func getLocationInfo(_ location: Location) -> String {
-       if let city = location.city, let state = location.state {
-        return "\(String(describing: city)), \(String(describing: state))"
+        if let city = location.city, let state = location.state {
+            return "\(String(describing: city)), \(String(describing: state))"
         }
         
         if let city = location.city, let country = location.country {
@@ -80,7 +93,7 @@ class ChangeLocationViewModel : NSObject, CLLocationManagerDelegate {
                 let state = placemark.administrativeArea as NSString?
                 let country = placemark.country as NSString?
                 
-                self.addFavoritedLocation(location: Location(coordinate: coordinate, city: city, state: state, country: country))
+                self.addFavoritedLocation(location: Location(clLocation: coordinate, city: city, state: state, country: country))
                 self.delegate?.didRecieveLocation()
             }
         }

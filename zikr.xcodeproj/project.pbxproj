@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C20194022058B198005ED7DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* Location.swift */; };
+		C22607E7205D5486001787CF /* AzkarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E6205D5486001787CF /* AzkarClient.swift */; };
+		C22607E9205D5E75001787CF /* AzkarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E8205D5E75001787CF /* AzkarData.swift */; };
+		C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */; };
 		C23942B82055A95C00637428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23942B72055A95C00637428 /* Assets.xcassets */; };
 		C23942BB2055AEF500637428 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942BA2055AEF500637428 /* Endpoint.swift */; };
 		C23942C12055B19300637428 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; };
@@ -18,9 +21,8 @@
 		C23942C72055B1B300637428 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C23942C82055B1B300637428 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C23942C92055B1B300637428 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C23942CC2055BC3600637428 /* Client.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942CB2055BC3600637428 /* Client.swift */; };
 		C23942CE2055BEFB00637428 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942CD2055BEFB00637428 /* Constants.swift */; };
-		C23942D12055C37600637428 /* AzkarTimes.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D02055C37500637428 /* AzkarTimes.swift */; };
+		C23942D12055C37600637428 /* AzkarTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D02055C37500637428 /* AzkarTime.swift */; };
 		C23942D42055C81E00637428 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D32055C81E00637428 /* ClientError.swift */; };
 		C23942D72055E27100637428 /* Date+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D62055E27100637428 /* Date+Current.swift */; };
 		C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */; };
@@ -57,15 +59,17 @@
 
 /* Begin PBXFileReference section */
 		C20194012058B198005ED7DC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C22607E6205D5486001787CF /* AzkarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzkarClient.swift; sourceTree = "<group>"; };
+		C22607E8205D5E75001787CF /* AzkarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarData.swift; sourceTree = "<group>"; };
+		C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+FirstLaunch.swift"; sourceTree = "<group>"; };
 		C23942B72055A95C00637428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = zikr/Assets.xcassets; sourceTree = "<group>"; };
 		C23942BA2055AEF500637428 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		C23942BD2055B19300637428 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		C23942BE2055B19300637428 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		C23942BF2055B19300637428 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		C23942C02055B19300637428 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
-		C23942CB2055BC3600637428 /* Client.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Client.swift; sourceTree = "<group>"; };
 		C23942CD2055BEFB00637428 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C23942D02055C37500637428 /* AzkarTimes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarTimes.swift; sourceTree = "<group>"; };
+		C23942D02055C37500637428 /* AzkarTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarTime.swift; sourceTree = "<group>"; };
 		C23942D32055C81E00637428 /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 		C23942D62055E27100637428 /* Date+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Current.swift"; sourceTree = "<group>"; };
 		C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarNotificationsModel.swift; sourceTree = "<group>"; };
@@ -125,7 +129,7 @@
 		C23942CA2055BC2600637428 /* ApiClients */ = {
 			isa = PBXGroup;
 			children = (
-				C23942CB2055BC3600637428 /* Client.swift */,
+				C22607E6205D5486001787CF /* AzkarClient.swift */,
 			);
 			path = ApiClients;
 			sourceTree = "<group>";
@@ -133,7 +137,7 @@
 		C23942CF2055C36100637428 /* JSON */ = {
 			isa = PBXGroup;
 			children = (
-				C23942D02055C37500637428 /* AzkarTimes.swift */,
+				C23942D02055C37500637428 /* AzkarTime.swift */,
 			);
 			path = JSON;
 			sourceTree = "<group>";
@@ -150,6 +154,7 @@
 			isa = PBXGroup;
 			children = (
 				C23942D62055E27100637428 /* Date+Current.swift */,
+				C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 				C281503B204CBED600F6117B /* LaunchScreen.storyboard */,
 				C281503E204CBED600F6117B /* Info.plist */,
 				C23942CD2055BEFB00637428 /* Constants.swift */,
+				C22607E8205D5E75001787CF /* AzkarData.swift */,
 			);
 			path = zikr;
 			sourceTree = "<group>";
@@ -282,6 +288,11 @@
 					C281502E204CBED600F6117B = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -321,17 +332,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */,
-				C23942D12055C37600637428 /* AzkarTimes.swift in Sources */,
+				C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */,
+				C22607E7205D5486001787CF /* AzkarClient.swift in Sources */,
+				C23942D12055C37600637428 /* AzkarTime.swift in Sources */,
 				C2815052204CE2B200F6117B /* QuranicPrayers.swift in Sources */,
 				C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */,
 				C23942D72055E27100637428 /* Date+Current.swift in Sources */,
 				C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */,
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
-				C23942CC2055BC3600637428 /* Client.swift in Sources */,
 				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
 				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,
 				C2815056204F798300F6117B /* NavigationControllerHelper.swift in Sources */,
 				C23942BB2055AEF500637428 /* Endpoint.swift in Sources */,
+				C22607E9205D5E75001787CF /* AzkarData.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
 				C20194022058B198005ED7DC /* Location.swift in Sources */,

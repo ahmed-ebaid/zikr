@@ -12,6 +12,11 @@ class CalculationMethodViewModel {
                                    ("University of Tehran - Institute of Geophysics.", 7),
                                    ("Algerian Minister of Religious Affairs and Wakfs." , 8)]
     
+    var calculationMethod: Int {
+        return userDefaults.integer(forKey: "CalculationMethod")
+    }
+    
+    
     func setDefaultCalculationMethod(calculationMethod: String = "ISNA - Islamic Society of North America.") {
         userDefaults.set(findIndexOfCalculationMethod(calculationMethod), forKey: "CalculationMethod")
     }

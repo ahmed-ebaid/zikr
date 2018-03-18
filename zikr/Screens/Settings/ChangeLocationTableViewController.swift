@@ -1,7 +1,8 @@
 import UIKit
 
-class ChangeLocationTableViewController: UITableViewController, ChangeLocationViewModelDelegate {
+class ChangeLocationTableViewController: UITableViewController {
     let getCurrentLocationCell = UITableViewCell()
+    let settingsViewModel = SettingsViewModel(client: AzkarClient())
     
     let azkarLocationSettingsHeaderLabel = UILabel()
     let savedLocationsHeaderLabel = UILabel()
@@ -16,6 +17,7 @@ class ChangeLocationTableViewController: UITableViewController, ChangeLocationVi
         super.viewDidLoad()
         title = "Change Location"
         model.delegate = self
+        tableView.clipsToBounds = true
         configureHeaderCells()
         configureDataCells()
         configureIndicator()
@@ -29,11 +31,11 @@ class ChangeLocationTableViewController: UITableViewController, ChangeLocationVi
     private func configureHeaderCells() {
         azkarLocationSettingsHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
         azkarLocationSettingsHeaderLabel.text = sectionsHeadersTitles[0]
-        azkarLocationSettingsHeaderLabel.textColor = UIColor.white
+        azkarLocationSettingsHeaderLabel.textColor = .darkGray
         
         savedLocationsHeaderLabel.translatesAutoresizingMaskIntoConstraints = false
         savedLocationsHeaderLabel.text = sectionsHeadersTitles[1]
-        savedLocationsHeaderLabel.textColor = UIColor.white
+        savedLocationsHeaderLabel.textColor = .darkGray
     }
     
     private func configureIndicator() {
@@ -66,7 +68,7 @@ class ChangeLocationTableViewController: UITableViewController, ChangeLocationVi
         } else {
             let cell = UITableViewCell()
             cell.textLabel?.text = model.getLocationInfo(model.favoritedLocations[indexPath.row])
-            if indexPath.row == (model.favoritedLocations.count) - 1 {
+            if indexPath.row == 0 {
                 cell.accessoryType = .checkmark
             }
             return cell
@@ -75,16 +77,22 @@ class ChangeLocationTableViewController: UITableViewController, ChangeLocationVi
     
     override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let view = UIView()
-        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.7)
+        view.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         
         if section == 0 {
             view.addSubview(azkarLocationSettingsHeaderLabel)
-            NSLayoutConstraint.activate([azkarLocationSettingsHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), azkarLocationSettingsHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), azkarLocationSettingsHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
+            NSLayoutConstraint.activate([
+                azkarLocationSettingsHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15), azkarLocationSettingsHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 25)])
         } else {
             view.addSubview(savedLocationsHeaderLabel)
-            NSLayoutConstraint.activate([savedLocationsHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10), savedLocationsHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 15), savedLocationsHeaderLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -15)])
+            NSLayoutConstraint.activate([
+                savedLocationsHeaderLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 15), savedLocationsHeaderLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 25)])
         }
         return view
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
     }
     
     //Marker: Table View Delegate Methods
@@ -92,12 +100,29 @@ class ChangeLocationTableViewController: UITableViewController, ChangeLocationVi
         if indexPath.section == 0 {
             indicator.startAnimating()
             model.getCurrentLocation()
+        } else {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
+            if let selectedCellText = tableView.cellForRow(at: indexPath)?.textLabel?.text {
+                let location = model.getLocation(using: selectedCellText)
+                model.addFavoritedLocation(location: location)
+            }
+            tableView.reloadData()
         }
     }
     
-    //Mark ChangeLocationViewModelDelegate delegate method
+    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        if indexPath.section == 1 {
+            tableView.cellForRow(at: indexPath)?.accessoryType = .none
+        }
+    }
+}
+
+extension ChangeLocationTableViewController : ChangeLocationViewModelDelegate {
     func didRecieveLocation() {
         tableView.reloadData()
         indicator.stopAnimating()
+        settingsViewModel.getAzkarTimes {
+            self.settingsViewModel.restartAzkarNotifications()
+        }
     }
 }

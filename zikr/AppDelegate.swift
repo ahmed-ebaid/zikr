@@ -1,25 +1,34 @@
 import CoreLocation
 import UIKit
 import UserNotifications
+import Foundation
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
+    let settingsViewModel = SettingsViewModel(client: AzkarClient())
+    let changeLocationViewModel = ChangeLocationViewModel()
+    let calculationMethodViewModel = CalculationMethodViewModel()
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        
-        let center =  UNUserNotificationCenter.current()
-        center.requestAuthorization(options: [.alert, .sound, .badge]) { result, error in
-            if error == nil {
-                AzkarNotificationsModel().toggleNotifications(with: result)
-            }
-        }
-        
         window = UIWindow()
         let tabController = AppTabController()
         window?.rootViewController = tabController
         window?.makeKeyAndVisible()
-        
+        changeLocationViewModel.delegate = self
+
+        let center =  UNUserNotificationCenter.current()
+        center.requestAuthorization(options: [.alert, .sound, .badge]) { result, error in
+            if error == nil {
+                if result {
+                    if UserDefaults.isFirstLaunch() {
+                        self.calculationMethodViewModel.setDefaultCalculationMethod()
+                        self.changeLocationViewModel.getCurrentLocation()
+                    }
+                }
+            }
+        }
         return true
     }
     
@@ -43,6 +52,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+}
+
+extension AppDelegate : ChangeLocationViewModelDelegate {
+    func didRecieveLocation() {
+        settingsViewModel.getAzkarTimes {
+            self.settingsViewModel.restartAzkarNotifications()
+        }
     }
 }
 

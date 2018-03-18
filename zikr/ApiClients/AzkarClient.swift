@@ -1,11 +1,11 @@
 import Moya
 import SwiftyJSON
 
-protocol ClientProtocol {
+protocol AzkarClientProtocol {
     func getAzkarTimes(latitude: Double, longitude: Double, method: Int, month: Int, year: Int, completion: @escaping ClientCompletionClosure)
 }
 
-class Client : ClientProtocol {
+class AzkarClient : AzkarClientProtocol {
     func getAzkarTimes(latitude: Double,
                        longitude: Double,
                        method: Int,
@@ -20,8 +20,8 @@ class Client : ClientProtocol {
                                                             switch result {
                                                             case let .success(response):
                                                                 do {
-                                                                    let azkarData = try AzkarTimes.arrayFromJSON(JSON(response.data))
-                                                                        completion(nil, azkarData)
+                                                                    let azkarTimes = try AzkarTime.arrayFromJSON(JSON(response.data))
+                                                                        completion(nil, azkarTimes)
                                                                 } catch(let error) {
                                                                     completion(error, nil)
                                                                 }

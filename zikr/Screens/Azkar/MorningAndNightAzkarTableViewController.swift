@@ -10,19 +10,6 @@ class MorningAndNightAzkarTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        let todaysDate  = Date()
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd-MM-yyyy"
-        let todayString = dateFormatter.string(from: todaysDate as Date)
-        print(todayString)
-        
-        let date = dateFormatter.date(from: todayString) //according to date format your date string
-        print(date?.description(with: NSLocale.current) ?? "") //Convert String to Date
-        
-        let client = Client()
-        client.getAzkarTimes(latitude: 41.7861107, longitude: -88.1851476, method: 2, month: 03, year: 2018 ) {error, result in
-        }
-        
         
     }
     

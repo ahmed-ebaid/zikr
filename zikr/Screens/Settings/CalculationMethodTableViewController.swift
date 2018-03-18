@@ -2,16 +2,29 @@ import UIKit
 
 class CalculationMethodTableViewController: UITableViewController {
     let model = CalculationMethodViewModel()
+    let settingsViewModel = SettingsViewModel(client: AzkarClient())
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Calculation Method"
+        tableView.clipsToBounds = true
+        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 52, right: 0)
         tableView.tableFooterView = UIView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         tableView.reloadData()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        settingsViewModel.getAzkarTimes {
+            self.settingsViewModel.restartAzkarNotifications()
+        }
+        
+        
     }
     
     // MARK: - Table view data source
@@ -38,16 +51,18 @@ class CalculationMethodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         let footerView = UIView()
+        
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "PLEASE REFER TO YOUR RELIGUOUS AUTORITY FOR THE COORECT CALCULATION METHOD TO USE"
         label.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
-
         label.numberOfLines = 0
 
         footerView.addSubview(label)
+        
         NSLayoutConstraint.activate([label.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 17), label.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 20),
             label.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: 10)])
+        
         return footerView
     }
     
