@@ -24,10 +24,18 @@ struct AzkarTime {
         try data.forEach { try azkarTimes.append(AzkarTime.fromJSON($0)) }
         
         let todaysDate = Date()
+        let todaysComponents = Date.getDateComponentsFrom(date: todaysDate)
         
-        return azkarTimes.filter { $0.date >= todaysDate }
+        return azkarTimes.filter {
+            let currentComponents = Date.getDateComponentsFrom(date: $0.date)
+            
+            if currentComponents.year == todaysComponents.year && currentComponents.month == todaysComponents.month {
+                return currentComponents.day! >= todaysComponents.day!
+            } else {
+                return true
+            }
+        }
     }
-    
 }
 
 struct Timings {

@@ -1,5 +1,7 @@
 import CoreLocation
 import UIKit
+import UserNotifications
+
 
 class MorningAndNightAzkarTableViewController: UITableViewController {
     
@@ -10,7 +12,9 @@ class MorningAndNightAzkarTableViewController: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        
+        UNUserNotificationCenter.current().getPendingNotificationRequests { x in
+            print(x)
+        }
     }
     
     override func didReceiveMemoryWarning() {

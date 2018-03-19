@@ -5,7 +5,7 @@ class AzkarNotificationsModel: NSObject, UNUserNotificationCenterDelegate {
     let fagrAzkarContent = UNMutableNotificationContent()
     let asrAzkarContent = UNMutableNotificationContent()
     let asrIdentifier = "AsrIdentifier"
-    let fagrIdentifier = "IshaIdentifier"
+    let fagrIdentifier = "FagrIdentifier"
     let sharedModel = AzkarData.shared
     
     
@@ -23,7 +23,7 @@ class AzkarNotificationsModel: NSObject, UNUserNotificationCenterDelegate {
             var fagrDateComponents = Date.getDateComponentsFrom(date: zikrDate.date)
             let fagrTime = getZikrTime(zikrDate.timings.Fajr)
             fagrDateComponents.hour = fagrTime.0
-            fagrDateComponents.minute = fagrTime.1 + 20
+            fagrDateComponents.minute = fagrTime.1
             fagrDateComponents.second = 0
             let fagrTrigger = UNCalendarNotificationTrigger(dateMatching: fagrDateComponents, repeats: false)
             notificationRequests.append(UNNotificationRequest(identifier: fagrIdentifier + "\(i)", content: fagrAzkarContent, trigger: fagrTrigger))
@@ -36,7 +36,7 @@ class AzkarNotificationsModel: NSObject, UNUserNotificationCenterDelegate {
             var asrDateComponents = Date.getDateComponentsFrom(date: zikrDate.date)
             let asrTime = getZikrTime(zikrDate.timings.Asr)
             asrDateComponents.hour = asrTime.0
-            asrDateComponents.minute = asrTime.1 + 20
+            asrDateComponents.minute = asrTime.1
             asrDateComponents.second = 0
             let asrTrigger = UNCalendarNotificationTrigger(dateMatching: asrDateComponents, repeats: false)
             notificationRequests.append(UNNotificationRequest(identifier: asrIdentifier + "\(i)", content: asrAzkarContent, trigger: asrTrigger))
@@ -59,8 +59,8 @@ class AzkarNotificationsModel: NSObject, UNUserNotificationCenterDelegate {
         }
     }
     
-    func resetAzkarNotifications() {
-        center.removePendingNotificationRequests(withIdentifiers: [asrIdentifier, fagrIdentifier])
+    func removeDeliveredNotifications() {
+        center.removeAllDeliveredNotifications()
     }
     
     private func getZikrTime(_ stringTime: String) -> (Int, Int) {

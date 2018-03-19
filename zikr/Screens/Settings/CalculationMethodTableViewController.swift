@@ -17,15 +17,7 @@ class CalculationMethodTableViewController: UITableViewController {
         super.viewWillAppear(animated)
         tableView.reloadData()
     }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        settingsViewModel.getAzkarTimes {
-            self.settingsViewModel.restartAzkarNotifications()
-        }
-        
-        
-    }
+  
     
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -70,6 +62,9 @@ class CalculationMethodTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         model.setDefaultCalculationMethod(calculationMethod: model.calculationMethods[indexPath.row].0)
+        settingsViewModel.getAzkarTimes {
+            self.settingsViewModel.restartAzkarNotifications()
+        }
         tableView.reloadData()
     }
     
