@@ -11,15 +11,22 @@ class AppTabController: UITabBarController {
     }
     
     private func setTabBarItems() {
+        var attributededStringKeys: [NSAttributedStringKey: Any] = [:]
+        attributededStringKeys[.font] = UIFont.systemFont(ofSize: 10, weight: .bold)
         
-        let azkarNavigationController = NavigationControllerHelper(rootViewController: MorningAndNightAzkarTableViewController()).getNavigationWithTabBarItemSetForController(title: "أذكار الصباح والمساء", image: UIImage(named: "Sabah")
-, tag: 0)
+        let azkarController = AzkarTableViewController()
+        azkarController.tabBarItem = UITabBarItem(title: "أذكار الصباح والمساء", image: UIImage(named: "Sabah"), tag: 0)
+        azkarController.tabBarItem.setTitleTextAttributes(attributededStringKeys, for: .normal)
         
-       let quranicNavigationController = NavigationControllerHelper(rootViewController: QuranicPrayers()).getNavigationWithTabBarItemSetForController(title: "أدعية مختارة", image: UIImage(named: "Doaa"), tag: 1)
+        let doaaController = DoaaTableViewController()
+        doaaController.tabBarItem = UITabBarItem(title: "أدعية مختارة", image: UIImage(named: "Doaa"), tag: 1)
+        doaaController.tabBarItem.setTitleTextAttributes(attributededStringKeys, for: .normal)
         
-        let settingsNavigationController = NavigationControllerHelper(rootViewController: SettingsTableViewController()).getNavigationWithTabBarItemSetForController(title: "إعدادات", image: UIImage(named: "Settings"), tag: 2)
-        
+        let settingsNavigationController = UINavigationController(rootViewController: SettingsTableViewController())
+        settingsNavigationController.tabBarItem = UITabBarItem(title: "إعدادات", image: UIImage(named: "Settings"), tag: 2)
+        attributededStringKeys[.font] = UIFont.systemFont(ofSize: 10, weight: .bold)
+        settingsNavigationController.tabBarItem.setTitleTextAttributes(attributededStringKeys, for: .normal)
 
-        self.viewControllers = [azkarNavigationController, quranicNavigationController, settingsNavigationController]
+        self.viewControllers = [azkarController, doaaController, settingsNavigationController]
     }
 }

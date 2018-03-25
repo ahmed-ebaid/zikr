@@ -49,7 +49,7 @@ class ChangeLocationTableViewController: UITableViewController {
         getCurrentLocationCell.textLabel?.text = "Get Current Location (GPS)"
         getCurrentLocationCell.accessoryType = .disclosureIndicator
         getCurrentLocationCell.selectionStyle = .none
-        
+    
         tableView.tableFooterView = UIView()
     }
     

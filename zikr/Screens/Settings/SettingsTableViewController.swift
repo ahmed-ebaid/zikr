@@ -15,6 +15,7 @@ class SettingsTableViewController: UITableViewController {
         title = "إعدادات"
         configureHeaderCells()
         configureDataCells()
+        configureScrollView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -42,6 +43,10 @@ class SettingsTableViewController: UITableViewController {
         changeLocationCell.selectionStyle = .none
         
         tableView.tableFooterView = UIView() //hides empty cells
+    }
+    
+    private func configureScrollView() {
+        tableView.bounces = false
     }
     
     // MARK: - Table view data source

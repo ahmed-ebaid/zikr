@@ -8,50 +8,79 @@
 
 /* Begin PBXBuildFile section */
 		C20194022058B198005ED7DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* Location.swift */; };
+		C2178A982065D1E900E91513 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A972065D1E900E91513 /* images.jpeg */; };
+		C2178A9A2065D1F800E91513 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A992065D1F800E91513 /* images.jpeg */; };
+		C2178A9C2065D25900E91513 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A9B2065D25900E91513 /* background.jpg */; };
 		C22607E7205D5486001787CF /* AzkarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E6205D5486001787CF /* AzkarClient.swift */; };
 		C22607E9205D5E75001787CF /* AzkarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E8205D5E75001787CF /* AzkarData.swift */; };
 		C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */; };
 		C23942B82055A95C00637428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23942B72055A95C00637428 /* Assets.xcassets */; };
 		C23942BB2055AEF500637428 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942BA2055AEF500637428 /* Endpoint.swift */; };
-		C23942C12055B19300637428 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; };
-		C23942C22055B19300637428 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; };
-		C23942C32055B19300637428 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; };
-		C23942C42055B19300637428 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; };
-		C23942C62055B1B300637428 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C23942C72055B1B300637428 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C23942C82055B1B300637428 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C23942C92055B1B300637428 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C23942CE2055BEFB00637428 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942CD2055BEFB00637428 /* Constants.swift */; };
 		C23942D12055C37600637428 /* AzkarTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D02055C37500637428 /* AzkarTime.swift */; };
 		C23942D42055C81E00637428 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D32055C81E00637428 /* ClientError.swift */; };
 		C23942D72055E27100637428 /* Date+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D62055E27100637428 /* Date+Current.swift */; };
 		C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */; };
+		C25EDB6E2068039D00CF164F /* AzkarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EDB6C2068039D00CF164F /* AzkarTableViewController.swift */; };
+		C25EDB6F2068039D00CF164F /* AzkarTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25EDB6D2068039D00CF164F /* AzkarTableViewController.xib */; };
+		C25EDB7120680B8E00CF164F /* ZikrQuranView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */; };
+		C25EDB7520680C9A00CF164F /* ZikrQuranView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */; };
 		C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC7D2056122F00F72703 /* SettingsViewModel.swift */; };
 		C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */; };
 		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
 		C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */; };
 		C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC882057617400F72703 /* ChangeLocationViewModel.swift */; };
-		C263AC8F20576A0D00F72703 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C263AC8E20576A0D00F72703 /* CoreLocation.framework */; };
 		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
-		C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */; };
 		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
-		C2815052204CE2B200F6117B /* QuranicPrayers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815051204CE2B200F6117B /* QuranicPrayers.swift */; };
 		C2815054204F783100F6117B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815053204F783100F6117B /* AppDelegate.swift */; };
-		C2815056204F798300F6117B /* NavigationControllerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815055204F798300F6117B /* NavigationControllerHelper.swift */; };
 		C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815066204F8D0400F6117B /* SettingsTableViewController.swift */; };
+		C28794CF20682CEC007FEBE4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; };
+		C28794D020682CEC007FEBE4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; };
+		C28794D220682D5D007FEBE4 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25EDB7B2068298A00CF164F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28794D320682D5D007FEBE4 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25EDB7A2068298900CF164F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28794D520682D74007FEBE4 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28794D620682D74007FEBE4 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28794D720682E77007FEBE4 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; };
+		C28794D820682E8C007FEBE4 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28794D920682EBA007FEBE4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; };
+		C28794DA20682EC0007FEBE4 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28803122063466800C68F03 /* DoaaTableViewController.swift */; };
+		C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28803132063466800C68F03 /* DoaaTableViewController.xib */; };
+		C2F8C93620648F0500630B0A /* zikrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F8C93520648F0500630B0A /* zikrTests.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C2F8C93820648F0500630B0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C2815027204CBED600F6117B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C281502E204CBED600F6117B;
+			remoteInfo = zikr;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXCopyFilesBuildPhase section */
-		C23942C52055B1A200637428 /* CopyFiles */ = {
+		C28794D120682D4C007FEBE4 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				C23942C62055B1B300637428 /* Alamofire.framework in CopyFiles */,
-				C23942C72055B1B300637428 /* Moya.framework in CopyFiles */,
-				C23942C82055B1B300637428 /* Result.framework in CopyFiles */,
-				C23942C92055B1B300637428 /* SwiftyJSON.framework in CopyFiles */,
+				C28794D220682D5D007FEBE4 /* Nimble.framework in CopyFiles */,
+				C28794D320682D5D007FEBE4 /* Quick.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C28794D420682D66007FEBE4 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C28794DA20682EC0007FEBE4 /* SwiftyJSON.framework in CopyFiles */,
+				C28794D820682E8C007FEBE4 /* Moya.framework in CopyFiles */,
+				C28794D520682D74007FEBE4 /* Alamofire.framework in CopyFiles */,
+				C28794D620682D74007FEBE4 /* Result.framework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,6 +88,9 @@
 
 /* Begin PBXFileReference section */
 		C20194012058B198005ED7DC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C2178A972065D1E900E91513 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		C2178A992065D1F800E91513 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		C2178A9B2065D25900E91513 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		C22607E6205D5486001787CF /* AzkarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzkarClient.swift; sourceTree = "<group>"; };
 		C22607E8205D5E75001787CF /* AzkarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarData.swift; sourceTree = "<group>"; };
 		C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+FirstLaunch.swift"; sourceTree = "<group>"; };
@@ -73,6 +105,12 @@
 		C23942D32055C81E00637428 /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 		C23942D62055E27100637428 /* Date+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Current.swift"; sourceTree = "<group>"; };
 		C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarNotificationsModel.swift; sourceTree = "<group>"; };
+		C25EDB6C2068039D00CF164F /* AzkarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarTableViewController.swift; sourceTree = "<group>"; };
+		C25EDB6D2068039D00CF164F /* AzkarTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AzkarTableViewController.xib; sourceTree = "<group>"; };
+		C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZikrQuranView.xib; sourceTree = "<group>"; };
+		C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranView.swift; sourceTree = "<group>"; };
+		C25EDB7A2068298900CF164F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		C25EDB7B2068298A00CF164F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C263AC7D2056122F00F72703 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTableViewController.swift; sourceTree = "<group>"; };
 		C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationTableViewController.swift; sourceTree = "<group>"; };
@@ -82,12 +120,14 @@
 		C281502F204CBED600F6117B /* zikr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zikr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C281503C204CBED600F6117B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorningAndNightAzkarTableViewController.swift; sourceTree = "<group>"; };
 		C281504D204CD8D000F6117B /* AppTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabController.swift; sourceTree = "<group>"; };
-		C2815051204CE2B200F6117B /* QuranicPrayers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuranicPrayers.swift; sourceTree = "<group>"; };
 		C2815053204F783100F6117B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2815055204F798300F6117B /* NavigationControllerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationControllerHelper.swift; sourceTree = "<group>"; };
 		C2815066204F8D0400F6117B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		C28803122063466800C68F03 /* DoaaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoaaTableViewController.swift; sourceTree = "<group>"; };
+		C28803132063466800C68F03 /* DoaaTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoaaTableViewController.xib; sourceTree = "<group>"; };
+		C2F8C93320648F0500630B0A /* zikrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zikrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C2F8C93520648F0500630B0A /* zikrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikrTests.swift; sourceTree = "<group>"; };
+		C2F8C93720648F0500630B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,11 +135,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C263AC8F20576A0D00F72703 /* CoreLocation.framework in Frameworks */,
-				C23942C12055B19300637428 /* Alamofire.framework in Frameworks */,
-				C23942C22055B19300637428 /* Result.framework in Frameworks */,
-				C23942C32055B19300637428 /* SwiftyJSON.framework in Frameworks */,
-				C23942C42055B19300637428 /* Moya.framework in Frameworks */,
+				C28794D920682EBA007FEBE4 /* SwiftyJSON.framework in Frameworks */,
+				C28794D720682E77007FEBE4 /* Moya.framework in Frameworks */,
+				C28794CF20682CEC007FEBE4 /* Alamofire.framework in Frameworks */,
+				C28794D020682CEC007FEBE4 /* Result.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F8C93020648F0500630B0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +155,7 @@
 		C23942B92055AEE600637428 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C2178A972065D1E900E91513 /* images.jpeg */,
 				C23942BA2055AEF500637428 /* Endpoint.swift */,
 			);
 			path = Network;
@@ -117,6 +164,8 @@
 		C23942BC2055B19300637428 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C25EDB7B2068298A00CF164F /* Nimble.framework */,
+				C25EDB7A2068298900CF164F /* Quick.framework */,
 				C263AC8E20576A0D00F72703 /* CoreLocation.framework */,
 				C23942BD2055B19300637428 /* Alamofire.framework */,
 				C23942C02055B19300637428 /* Moya.framework */,
@@ -170,7 +219,6 @@
 		C263AC7F2056133A00F72703 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				C2815055204F798300F6117B /* NavigationControllerHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -188,7 +236,10 @@
 		C263AC8B205767A200F72703 /* Azkar */ = {
 			isa = PBXGroup;
 			children = (
-				C2815046204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift */,
+				C25EDB6D2068039D00CF164F /* AzkarTableViewController.xib */,
+				C25EDB6C2068039D00CF164F /* AzkarTableViewController.swift */,
+				C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */,
+				C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */,
 			);
 			path = Azkar;
 			sourceTree = "<group>";
@@ -196,7 +247,8 @@
 		C263AC8C205767A800F72703 /* Duaa */ = {
 			isa = PBXGroup;
 			children = (
-				C2815051204CE2B200F6117B /* QuranicPrayers.swift */,
+				C28803122063466800C68F03 /* DoaaTableViewController.swift */,
+				C28803132063466800C68F03 /* DoaaTableViewController.xib */,
 			);
 			path = Duaa;
 			sourceTree = "<group>";
@@ -219,7 +271,10 @@
 			isa = PBXGroup;
 			children = (
 				C2815031204CBED600F6117B /* zikr */,
+				C2F8C93420648F0500630B0A /* zikrTests */,
 				C2815030204CBED600F6117B /* Products */,
+				C2178A9B2065D25900E91513 /* background.jpg */,
+				C2178A992065D1F800E91513 /* images.jpeg */,
 				C23942B72055A95C00637428 /* Assets.xcassets */,
 				C23942BC2055B19300637428 /* Frameworks */,
 			);
@@ -229,6 +284,7 @@
 			isa = PBXGroup;
 			children = (
 				C281502F204CBED600F6117B /* zikr.app */,
+				C2F8C93320648F0500630B0A /* zikrTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -254,6 +310,15 @@
 			path = zikr;
 			sourceTree = "<group>";
 		};
+		C2F8C93420648F0500630B0A /* zikrTests */ = {
+			isa = PBXGroup;
+			children = (
+				C2F8C93520648F0500630B0A /* zikrTests.swift */,
+				C2F8C93720648F0500630B0A /* Info.plist */,
+			);
+			path = zikrTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,7 +329,7 @@
 				C281502B204CBED600F6117B /* Sources */,
 				C281502C204CBED600F6117B /* Frameworks */,
 				C281502D204CBED600F6117B /* Resources */,
-				C23942C52055B1A200637428 /* CopyFiles */,
+				C28794D420682D66007FEBE4 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -274,6 +339,25 @@
 			productName = azkar;
 			productReference = C281502F204CBED600F6117B /* zikr.app */;
 			productType = "com.apple.product-type.application";
+		};
+		C2F8C93220648F0500630B0A /* zikrTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C2F8C93A20648F0500630B0A /* Build configuration list for PBXNativeTarget "zikrTests" */;
+			buildPhases = (
+				C2F8C92F20648F0500630B0A /* Sources */,
+				C2F8C93020648F0500630B0A /* Frameworks */,
+				C2F8C93120648F0500630B0A /* Resources */,
+				C28794D120682D4C007FEBE4 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C2F8C93920648F0500630B0A /* PBXTargetDependency */,
+			);
+			name = zikrTests;
+			productName = zikrTests;
+			productReference = C2F8C93320648F0500630B0A /* zikrTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -294,6 +378,11 @@
 							};
 						};
 					};
+					C2F8C93220648F0500630B0A = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = C281502E204CBED600F6117B;
+					};
 				};
 			};
 			buildConfigurationList = C281502A204CBED600F6117B /* Build configuration list for PBXProject "zikr" */;
@@ -310,6 +399,7 @@
 			projectRoot = "";
 			targets = (
 				C281502E204CBED600F6117B /* zikr */,
+				C2F8C93220648F0500630B0A /* zikrTests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,8 +409,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C25EDB7120680B8E00CF164F /* ZikrQuranView.xib in Resources */,
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
+				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
+				C2178A9A2065D1F800E91513 /* images.jpeg in Resources */,
+				C2178A9C2065D25900E91513 /* background.jpg in Resources */,
+				C25EDB6F2068039D00CF164F /* AzkarTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
+				C2178A982065D1E900E91513 /* images.jpeg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C2F8C93120648F0500630B0A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -331,18 +434,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C2815047204CCAAD00F6117B /* MorningAndNightAzkarTableViewController.swift in Sources */,
 				C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */,
 				C22607E7205D5486001787CF /* AzkarClient.swift in Sources */,
 				C23942D12055C37600637428 /* AzkarTime.swift in Sources */,
-				C2815052204CE2B200F6117B /* QuranicPrayers.swift in Sources */,
+				C25EDB7520680C9A00CF164F /* ZikrQuranView.swift in Sources */,
 				C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */,
 				C23942D72055E27100637428 /* Date+Current.swift in Sources */,
 				C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */,
+				C25EDB6E2068039D00CF164F /* AzkarTableViewController.swift in Sources */,
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
 				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
+				C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */,
 				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,
-				C2815056204F798300F6117B /* NavigationControllerHelper.swift in Sources */,
 				C23942BB2055AEF500637428 /* Endpoint.swift in Sources */,
 				C22607E9205D5E75001787CF /* AzkarData.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
@@ -355,7 +458,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C2F8C92F20648F0500630B0A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C2F8C93620648F0500630B0A /* zikrTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C2F8C93920648F0500630B0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C281502E204CBED600F6117B /* zikr */;
+			targetProxy = C2F8C93820648F0500630B0A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C281503B204CBED600F6117B /* LaunchScreen.storyboard */ = {
@@ -514,6 +633,38 @@
 			};
 			name = Release;
 		};
+		C2F8C93B20648F0500630B0A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QC25NDT48;
+				INFOPLIST_FILE = zikrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.zikrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zikr.app/zikr";
+			};
+			name = Debug;
+		};
+		C2F8C93C20648F0500630B0A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 4QC25NDT48;
+				INFOPLIST_FILE = zikrTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.zikrTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/zikr.app/zikr";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -531,6 +682,15 @@
 			buildConfigurations = (
 				C2815042204CBED600F6117B /* Debug */,
 				C2815043204CBED600F6117B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C2F8C93A20648F0500630B0A /* Build configuration list for PBXNativeTarget "zikrTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C2F8C93B20648F0500630B0A /* Debug */,
+				C2F8C93C20648F0500630B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

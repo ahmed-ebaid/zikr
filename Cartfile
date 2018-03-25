@@ -1,2 +1,4 @@
 github "Moya/Moya"
 github "SwiftyJSON/SwiftyJSON"
+github "Quick/Quick"
+github "Quick/Nimble"
