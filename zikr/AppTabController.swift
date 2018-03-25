@@ -17,6 +17,8 @@ class AppTabController: UITabBarController {
         let azkarController = AzkarTableViewController()
         azkarController.tabBarItem = UITabBarItem(title: "أذكار الصباح والمساء", image: UIImage(named: "Sabah"), tag: 0)
         azkarController.tabBarItem.setTitleTextAttributes(attributededStringKeys, for: .normal)
+        azkarController.tableView.contentInset.bottom = tabBar.frame.height + 50
+//        azkarController.tableView.scrollIndicatorInsets.bottom = tabBar.frame.height + 50
         
         let doaaController = DoaaTableViewController()
         doaaController.tabBarItem = UITabBarItem(title: "أدعية مختارة", image: UIImage(named: "Doaa"), tag: 1)

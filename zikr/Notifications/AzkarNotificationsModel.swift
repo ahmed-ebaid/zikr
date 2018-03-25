@@ -17,7 +17,6 @@ class AzkarNotificationsModel: NSObject, UNUserNotificationCenterDelegate {
                 i += 1
             }
             fagrAzkarContent.title = "وقت أذكار الصباح"
-            fagrAzkarContent.subtitle = "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَمَاتِنَا وَإِلَيْهِ النُّشُورِ"
             fagrAzkarContent.body = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ"
             fagrAzkarContent.sound = UNNotificationSound.default()
             var fagrDateComponents = Date.getDateComponentsFrom(date: zikrDate.date)
@@ -30,7 +29,6 @@ class AzkarNotificationsModel: NSObject, UNUserNotificationCenterDelegate {
             
             i += 1
             asrAzkarContent.title = "وقت أذكار المساء"
-            asrAzkarContent.subtitle = "الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَمَاتِنَا وَإِلَيْهِ النُّشُورِ"
             asrAzkarContent.body = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ"
             asrAzkarContent.sound = UNNotificationSound.default()
             var asrDateComponents = Date.getDateComponentsFrom(date: zikrDate.date)

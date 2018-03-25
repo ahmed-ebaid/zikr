@@ -9,6 +9,7 @@ class AzkarTableViewController: UITableViewController {
         let imageView = UIImageView(image: UIImage(named: "background.jpg"))
         tableView.backgroundView = imageView
         
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300
     }
@@ -37,7 +38,6 @@ class AzkarTableViewController: UITableViewController {
             zikrView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
             zikrView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor)
             ])
-
         return cell
     }
 }
