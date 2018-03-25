@@ -5,6 +5,10 @@ class AzkarTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.separatorStyle = .none
+        
+        let imageView = UIImageView(image: UIImage(named: "background.jpg"))
+        tableView.backgroundView = imageView
+        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 300
     }
@@ -23,6 +27,8 @@ class AzkarTableViewController: UITableViewController {
         let cell = UITableViewCell()
         cell.selectionStyle = .none
         cell.contentView.addSubview(zikrView)
+        cell.backgroundColor = .clear
+        cell.contentView.backgroundColor = .clear
         zikrView.translatesAutoresizingMaskIntoConstraints = false
         
         NSLayoutConstraint.activate([
@@ -34,17 +40,6 @@ class AzkarTableViewController: UITableViewController {
 
         return cell
     }
-    
-//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        let cell = tableView.cellForRow(at: indexPath)
-//        let view = cell?.contentView.subviews[0] as! ZikrQuranView
-//        UIView.animate(withDuration: 1.0) {
-//            view.stackViewHeightConstraint.constant =
-//                view.stackViewHeightConstraint.constant == 0 ? 100 : 0
-//            tableView.beginUpdates()
-//            tableView.endUpdates()
-//        }
-//    }
 }
 
 extension AzkarTableViewController : ZikrQuranViewProtocol {

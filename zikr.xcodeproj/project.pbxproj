@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		C20194022058B198005ED7DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* Location.swift */; };
 		C2178A982065D1E900E91513 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A972065D1E900E91513 /* images.jpeg */; };
-		C2178A9A2065D1F800E91513 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A992065D1F800E91513 /* images.jpeg */; };
-		C2178A9C2065D25900E91513 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A9B2065D25900E91513 /* background.jpg */; };
 		C22607E7205D5486001787CF /* AzkarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E6205D5486001787CF /* AzkarClient.swift */; };
 		C22607E9205D5E75001787CF /* AzkarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E8205D5E75001787CF /* AzkarData.swift */; };
 		C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */; };
@@ -30,6 +28,7 @@
 		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
 		C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */; };
 		C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC882057617400F72703 /* ChangeLocationViewModel.swift */; };
+		C275D5AE2068390600028D91 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C275D5AD2068390600028D91 /* background.jpg */; };
 		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
 		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
 		C2815054204F783100F6117B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815053204F783100F6117B /* AppDelegate.swift */; };
@@ -89,8 +88,6 @@
 /* Begin PBXFileReference section */
 		C20194012058B198005ED7DC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C2178A972065D1E900E91513 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
-		C2178A992065D1F800E91513 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
-		C2178A9B2065D25900E91513 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		C22607E6205D5486001787CF /* AzkarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzkarClient.swift; sourceTree = "<group>"; };
 		C22607E8205D5E75001787CF /* AzkarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarData.swift; sourceTree = "<group>"; };
 		C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+FirstLaunch.swift"; sourceTree = "<group>"; };
@@ -117,6 +114,7 @@
 		C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodViewModel.swift; sourceTree = "<group>"; };
 		C263AC882057617400F72703 /* ChangeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewModel.swift; sourceTree = "<group>"; };
 		C263AC8E20576A0D00F72703 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C275D5AD2068390600028D91 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
 		C281502F204CBED600F6117B /* zikr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zikr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C281503C204CBED600F6117B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -211,6 +209,7 @@
 		C24E771E2052374A00C3571D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
+				C275D5AD2068390600028D91 /* background.jpg */,
 				C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */,
 			);
 			path = Notifications;
@@ -273,8 +272,6 @@
 				C2815031204CBED600F6117B /* zikr */,
 				C2F8C93420648F0500630B0A /* zikrTests */,
 				C2815030204CBED600F6117B /* Products */,
-				C2178A9B2065D25900E91513 /* background.jpg */,
-				C2178A992065D1F800E91513 /* images.jpeg */,
 				C23942B72055A95C00637428 /* Assets.xcassets */,
 				C23942BC2055B19300637428 /* Frameworks */,
 			);
@@ -411,9 +408,8 @@
 			files = (
 				C25EDB7120680B8E00CF164F /* ZikrQuranView.xib in Resources */,
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
+				C275D5AE2068390600028D91 /* background.jpg in Resources */,
 				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
-				C2178A9A2065D1F800E91513 /* images.jpeg in Resources */,
-				C2178A9C2065D25900E91513 /* background.jpg in Resources */,
 				C25EDB6F2068039D00CF164F /* AzkarTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
 				C2178A982065D1E900E91513 /* images.jpeg in Resources */,
