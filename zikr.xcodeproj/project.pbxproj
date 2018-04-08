@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C20194022058B198005ED7DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* Location.swift */; };
 		C2178A982065D1E900E91513 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A972065D1E900E91513 /* images.jpeg */; };
+		C224D173207A362F00FF0AE4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C224D172207A362F00FF0AE4 /* background.png */; };
 		C22607E7205D5486001787CF /* AzkarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E6205D5486001787CF /* AzkarClient.swift */; };
 		C22607E9205D5E75001787CF /* AzkarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E8205D5E75001787CF /* AzkarData.swift */; };
 		C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */; };
@@ -19,8 +20,6 @@
 		C23942D42055C81E00637428 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D32055C81E00637428 /* ClientError.swift */; };
 		C23942D72055E27100637428 /* Date+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D62055E27100637428 /* Date+Current.swift */; };
 		C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */; };
-		C25EDB6E2068039D00CF164F /* AzkarTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EDB6C2068039D00CF164F /* AzkarTableViewController.swift */; };
-		C25EDB6F2068039D00CF164F /* AzkarTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25EDB6D2068039D00CF164F /* AzkarTableViewController.xib */; };
 		C25EDB7120680B8E00CF164F /* ZikrQuranView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */; };
 		C25EDB7520680C9A00CF164F /* ZikrQuranView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */; };
 		C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC7D2056122F00F72703 /* SettingsViewModel.swift */; };
@@ -28,7 +27,10 @@
 		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
 		C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */; };
 		C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC882057617400F72703 /* ChangeLocationViewModel.swift */; };
-		C275D5AE2068390600028D91 /* background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C275D5AD2068390600028D91 /* background.jpg */; };
+		C26A7D1B206C694F002B6343 /* AzkarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A7D19206C694F002B6343 /* AzkarCollectionViewController.swift */; };
+		C26A7D1C206C694F002B6343 /* AzkarCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26A7D1A206C694F002B6343 /* AzkarCollectionViewController.xib */; };
+		C26A7D23206C72A3002B6343 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A7D21206C72A3002B6343 /* CollectionViewCell.swift */; };
+		C26A7D24206C72A3002B6343 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26A7D22206C72A3002B6343 /* CollectionViewCell.xib */; };
 		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
 		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
 		C2815054204F783100F6117B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815053204F783100F6117B /* AppDelegate.swift */; };
@@ -88,6 +90,7 @@
 /* Begin PBXFileReference section */
 		C20194012058B198005ED7DC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		C2178A972065D1E900E91513 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		C224D172207A362F00FF0AE4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C22607E6205D5486001787CF /* AzkarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzkarClient.swift; sourceTree = "<group>"; };
 		C22607E8205D5E75001787CF /* AzkarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarData.swift; sourceTree = "<group>"; };
 		C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+FirstLaunch.swift"; sourceTree = "<group>"; };
@@ -102,8 +105,6 @@
 		C23942D32055C81E00637428 /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
 		C23942D62055E27100637428 /* Date+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Current.swift"; sourceTree = "<group>"; };
 		C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarNotificationsModel.swift; sourceTree = "<group>"; };
-		C25EDB6C2068039D00CF164F /* AzkarTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarTableViewController.swift; sourceTree = "<group>"; };
-		C25EDB6D2068039D00CF164F /* AzkarTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AzkarTableViewController.xib; sourceTree = "<group>"; };
 		C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZikrQuranView.xib; sourceTree = "<group>"; };
 		C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranView.swift; sourceTree = "<group>"; };
 		C25EDB7A2068298900CF164F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
@@ -114,7 +115,10 @@
 		C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodViewModel.swift; sourceTree = "<group>"; };
 		C263AC882057617400F72703 /* ChangeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewModel.swift; sourceTree = "<group>"; };
 		C263AC8E20576A0D00F72703 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C275D5AD2068390600028D91 /* background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = background.jpg; sourceTree = "<group>"; };
+		C26A7D19206C694F002B6343 /* AzkarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarCollectionViewController.swift; sourceTree = "<group>"; };
+		C26A7D1A206C694F002B6343 /* AzkarCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AzkarCollectionViewController.xib; sourceTree = "<group>"; };
+		C26A7D21206C72A3002B6343 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		C26A7D22206C72A3002B6343 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		C281502F204CBED600F6117B /* zikr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zikr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C281503C204CBED600F6117B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -209,8 +213,8 @@
 		C24E771E2052374A00C3571D /* Notifications */ = {
 			isa = PBXGroup;
 			children = (
-				C275D5AD2068390600028D91 /* background.jpg */,
 				C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */,
+				C224D172207A362F00FF0AE4 /* background.png */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -235,8 +239,10 @@
 		C263AC8B205767A200F72703 /* Azkar */ = {
 			isa = PBXGroup;
 			children = (
-				C25EDB6D2068039D00CF164F /* AzkarTableViewController.xib */,
-				C25EDB6C2068039D00CF164F /* AzkarTableViewController.swift */,
+				C26A7D22206C72A3002B6343 /* CollectionViewCell.xib */,
+				C26A7D21206C72A3002B6343 /* CollectionViewCell.swift */,
+				C26A7D1A206C694F002B6343 /* AzkarCollectionViewController.xib */,
+				C26A7D19206C694F002B6343 /* AzkarCollectionViewController.swift */,
 				C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */,
 				C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */,
 			);
@@ -363,7 +369,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Ahmed Ebaid";
 				TargetAttributes = {
 					C281502E204CBED600F6117B = {
@@ -407,11 +413,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C25EDB7120680B8E00CF164F /* ZikrQuranView.xib in Resources */,
+				C224D173207A362F00FF0AE4 /* background.png in Resources */,
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
-				C275D5AE2068390600028D91 /* background.jpg in Resources */,
 				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
-				C25EDB6F2068039D00CF164F /* AzkarTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
+				C26A7D1C206C694F002B6343 /* AzkarCollectionViewController.xib in Resources */,
+				C26A7D24206C72A3002B6343 /* CollectionViewCell.xib in Resources */,
 				C2178A982065D1E900E91513 /* images.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -437,12 +444,13 @@
 				C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */,
 				C23942D72055E27100637428 /* Date+Current.swift in Sources */,
 				C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */,
-				C25EDB6E2068039D00CF164F /* AzkarTableViewController.swift in Sources */,
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
 				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
 				C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */,
+				C26A7D23206C72A3002B6343 /* CollectionViewCell.swift in Sources */,
 				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,
 				C23942BB2055AEF500637428 /* Endpoint.swift in Sources */,
+				C26A7D1B206C694F002B6343 /* AzkarCollectionViewController.swift in Sources */,
 				C22607E9205D5E75001787CF /* AzkarData.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
@@ -498,6 +506,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -505,6 +514,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -555,6 +565,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -562,6 +573,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

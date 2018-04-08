@@ -9,7 +9,7 @@ class CalculationMethodTableViewController: UITableViewController {
         super.viewDidLoad()
         title = "Calculation Method"
         tableView.clipsToBounds = true
-        tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 52, right: 0)
+        tableView.contentInset.bottom = 52
         tableView.tableFooterView = UIView()
     }
     
