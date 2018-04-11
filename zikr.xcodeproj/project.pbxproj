@@ -27,10 +27,6 @@
 		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
 		C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */; };
 		C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC882057617400F72703 /* ChangeLocationViewModel.swift */; };
-		C26A7D1B206C694F002B6343 /* AzkarCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A7D19206C694F002B6343 /* AzkarCollectionViewController.swift */; };
-		C26A7D1C206C694F002B6343 /* AzkarCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26A7D1A206C694F002B6343 /* AzkarCollectionViewController.xib */; };
-		C26A7D23206C72A3002B6343 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26A7D21206C72A3002B6343 /* CollectionViewCell.swift */; };
-		C26A7D24206C72A3002B6343 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C26A7D22206C72A3002B6343 /* CollectionViewCell.xib */; };
 		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
 		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
 		C2815054204F783100F6117B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815053204F783100F6117B /* AppDelegate.swift */; };
@@ -47,6 +43,8 @@
 		C28794DA20682EC0007FEBE4 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28803122063466800C68F03 /* DoaaTableViewController.swift */; };
 		C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28803132063466800C68F03 /* DoaaTableViewController.xib */; };
+		C2CA97EE207ADA9100D25D4C /* AzkarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA97EC207ADA9100D25D4C /* AzkarViewController.swift */; };
+		C2CA97EF207ADA9100D25D4C /* AzkarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CA97ED207ADA9100D25D4C /* AzkarViewController.xib */; };
 		C2F8C93620648F0500630B0A /* zikrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F8C93520648F0500630B0A /* zikrTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -115,10 +113,6 @@
 		C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodViewModel.swift; sourceTree = "<group>"; };
 		C263AC882057617400F72703 /* ChangeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewModel.swift; sourceTree = "<group>"; };
 		C263AC8E20576A0D00F72703 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
-		C26A7D19206C694F002B6343 /* AzkarCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarCollectionViewController.swift; sourceTree = "<group>"; };
-		C26A7D1A206C694F002B6343 /* AzkarCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AzkarCollectionViewController.xib; sourceTree = "<group>"; };
-		C26A7D21206C72A3002B6343 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
-		C26A7D22206C72A3002B6343 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		C281502F204CBED600F6117B /* zikr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = zikr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C281503C204CBED600F6117B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -127,6 +121,8 @@
 		C2815066204F8D0400F6117B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		C28803122063466800C68F03 /* DoaaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoaaTableViewController.swift; sourceTree = "<group>"; };
 		C28803132063466800C68F03 /* DoaaTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoaaTableViewController.xib; sourceTree = "<group>"; };
+		C2CA97EC207ADA9100D25D4C /* AzkarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarViewController.swift; sourceTree = "<group>"; };
+		C2CA97ED207ADA9100D25D4C /* AzkarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AzkarViewController.xib; sourceTree = "<group>"; };
 		C2F8C93320648F0500630B0A /* zikrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zikrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F8C93520648F0500630B0A /* zikrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikrTests.swift; sourceTree = "<group>"; };
 		C2F8C93720648F0500630B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,10 +235,8 @@
 		C263AC8B205767A200F72703 /* Azkar */ = {
 			isa = PBXGroup;
 			children = (
-				C26A7D22206C72A3002B6343 /* CollectionViewCell.xib */,
-				C26A7D21206C72A3002B6343 /* CollectionViewCell.swift */,
-				C26A7D1A206C694F002B6343 /* AzkarCollectionViewController.xib */,
-				C26A7D19206C694F002B6343 /* AzkarCollectionViewController.swift */,
+				C2CA97ED207ADA9100D25D4C /* AzkarViewController.xib */,
+				C2CA97EC207ADA9100D25D4C /* AzkarViewController.swift */,
 				C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */,
 				C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */,
 			);
@@ -417,9 +411,8 @@
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
 				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
-				C26A7D1C206C694F002B6343 /* AzkarCollectionViewController.xib in Resources */,
-				C26A7D24206C72A3002B6343 /* CollectionViewCell.xib in Resources */,
 				C2178A982065D1E900E91513 /* images.jpeg in Resources */,
+				C2CA97EF207ADA9100D25D4C /* AzkarViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -447,10 +440,9 @@
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
 				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
 				C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */,
-				C26A7D23206C72A3002B6343 /* CollectionViewCell.swift in Sources */,
+				C2CA97EE207ADA9100D25D4C /* AzkarViewController.swift in Sources */,
 				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,
 				C23942BB2055AEF500637428 /* Endpoint.swift in Sources */,
-				C26A7D1B206C694F002B6343 /* AzkarCollectionViewController.swift in Sources */,
 				C22607E9205D5E75001787CF /* AzkarData.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,

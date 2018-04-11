@@ -2,13 +2,12 @@
 import UIKit
 
 protocol ZikrQuranViewProtocol : class {
-    func collectionViewUpdate()
+    func azkarTableViewWillUpdateTable()
 }
 
 class ZikrQuranView: UIView {
     weak var delegate: ZikrQuranViewProtocol?
 
-    @IBOutlet weak var stackViewHeightConstraint: NSLayoutConstraint!
     @IBOutlet weak var contentViewGesture: UITapGestureRecognizer!
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -22,14 +21,12 @@ class ZikrQuranView: UIView {
     }
     
     private func configureUI() {
-//        stackViewHeightConstraint.constant = 0
+        
     }
     
     @IBAction func contentViewGestureAction(_ sender: UITapGestureRecognizer) {
         UIView.animate(withDuration: 1.0) {
-//            self.stackViewHeightConstraint.constant =
-//            self.stackViewHeightConstraint.constant == 0 ? 100 : 0
-            self.delegate?.collectionViewUpdate()
+            self.delegate?.azkarTableViewWillUpdateTable()
         }
     }
     

@@ -14,7 +14,7 @@ class AppTabController: UITabBarController {
         var attributededStringKeys: [NSAttributedStringKey: Any] = [:]
         attributededStringKeys[.font] = UIFont.systemFont(ofSize: 10, weight: .bold)
         
-        let azkarController = AzkarCollectionViewController(nibName: "AzkarCollectionViewController", bundle: nil)
+        let azkarController = AzkarViewController()
         azkarController.tabBarItem = UITabBarItem(title: "أذكار الصباح والمساء", image: UIImage(named: "Sabah"), tag: 0)
         azkarController.tabBarItem.setTitleTextAttributes(attributededStringKeys, for: .normal)
 //        azkarController.tableView.scrollIndicatorInsets.bottom = tabBar.frame.height + 50

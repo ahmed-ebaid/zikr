@@ -197,22 +197,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zikr/Screens/Azkar/AzkarViewController.swift"
-            timestampString = "543687414.61954"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "26"
-            endingLineNumber = "26"
-            landmarkName = "tableView(_:cellForRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "zikr/Screens/Azkar/AzkarTableViewController.swift"
             timestampString = "543712397.571571"
             startingColumnNumber = "9223372036854775807"
@@ -262,7 +246,7 @@
                   moduleName = "zikr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Notifications/AzkarNotificationsModel.swift"
-                  timestampString = "544899430.590104"
+                  timestampString = "544926996.622949"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -277,7 +261,7 @@
                   moduleName = "zikr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Notifications/AzkarNotificationsModel.swift"
-                  timestampString = "544899430.593897"
+                  timestampString = "544926996.626199"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
@@ -294,11 +278,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zikr/Screens/Azkar/ZikrQuranView.swift"
-            timestampString = "544066408.7061779"
+            timestampString = "544926996.314402"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
             landmarkName = "contentViewGestureAction(_:)"
             landmarkType = "7">
             <Locations>
@@ -310,11 +294,11 @@
                   moduleName = "zikr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Screens/Azkar/ZikrQuranView.swift"
-                  timestampString = "544899430.6020941"
+                  timestampString = "544926996.634204"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
+                  startingLineNumber = "28"
+                  endingLineNumber = "28"
                   offsetFromSymbolStart = "16">
                </Location>
                <Location
@@ -325,11 +309,11 @@
                   moduleName = "zikr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Screens/Azkar/ZikrQuranView.swift"
-                  timestampString = "544899430.60489"
+                  timestampString = "544926996.638889"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "32"
-                  endingLineNumber = "32"
+                  startingLineNumber = "29"
+                  endingLineNumber = "29"
                   offsetFromSymbolStart = "21">
                </Location>
             </Locations>
@@ -342,11 +326,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zikr/Screens/Azkar/ZikrQuranView.swift"
-            timestampString = "544066408.7064739"
+            timestampString = "544926996.314517"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
+            startingLineNumber = "29"
+            endingLineNumber = "29"
             landmarkName = "contentViewGestureAction(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -365,6 +349,20 @@
             endingLineNumber = "45"
             landmarkName = "viewWillLayoutSubviews()"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "zikr/Screens/Azkar/AzkarViewController.swift"
+            timestampString = "544926996.31464"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
