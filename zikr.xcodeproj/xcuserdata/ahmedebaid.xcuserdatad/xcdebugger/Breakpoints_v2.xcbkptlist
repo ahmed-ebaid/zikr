@@ -246,7 +246,7 @@
                   moduleName = "zikr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Notifications/AzkarNotificationsModel.swift"
-                  timestampString = "544926996.622949"
+                  timestampString = "545192983.88565"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -261,7 +261,7 @@
                   moduleName = "zikr"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Notifications/AzkarNotificationsModel.swift"
-                  timestampString = "544926996.626199"
+                  timestampString = "545192983.887799"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "50"
@@ -269,70 +269,6 @@
                   offsetFromSymbolStart = "15">
                </Location>
             </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "zikr/Screens/Azkar/ZikrQuranView.swift"
-            timestampString = "544926996.314402"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "contentViewGestureAction(_:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "zikr.ZikrQuranView.contentViewGestureAction(__ObjC.UITapGestureRecognizer) -&gt; ()"
-                  moduleName = "zikr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Screens/Azkar/ZikrQuranView.swift"
-                  timestampString = "544926996.634204"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "28"
-                  endingLineNumber = "28"
-                  offsetFromSymbolStart = "16">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 () -&gt; () in zikr.ZikrQuranView.contentViewGestureAction(__ObjC.UITapGestureRecognizer) -&gt; ()"
-                  moduleName = "zikr"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/ahmedebaid/Documents/swift%20workspace/zikr/zikr/Screens/Azkar/ZikrQuranView.swift"
-                  timestampString = "544926996.638889"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "29"
-                  endingLineNumber = "29"
-                  offsetFromSymbolStart = "21">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "zikr/Screens/Azkar/ZikrQuranView.swift"
-            timestampString = "544926996.314517"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "29"
-            endingLineNumber = "29"
-            landmarkName = "contentViewGestureAction(_:)"
-            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -349,20 +285,6 @@
             endingLineNumber = "45"
             landmarkName = "viewWillLayoutSubviews()"
             landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "zikr/Screens/Azkar/AzkarViewController.swift"
-            timestampString = "544926996.31464"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "67"
-            endingLineNumber = "67">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

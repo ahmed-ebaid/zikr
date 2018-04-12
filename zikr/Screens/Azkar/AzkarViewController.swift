@@ -12,12 +12,19 @@ class AzkarViewController: UIViewController {
     @IBOutlet weak var navigationBar: UINavigationBar!
     @IBOutlet weak var tableView: UITableView!
     
+    var zikrView: ZikrQuranView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.backgroundColor = .clear
+        
+        configureTableView()
         configureTransparentNavigationBar()
     }
     
+    private func configureTableView() {
+        tableView.backgroundColor = .clear
+        tableView.separatorStyle = .none
+    }
     private func configureTransparentNavigationBar() {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
@@ -34,7 +41,7 @@ extension AzkarViewController : UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let zikrView = UINib(nibName: "ZikrQuranView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ZikrQuranView
+        zikrView = UINib(nibName: "ZikrQuranView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ZikrQuranView
         zikrView.delegate = self
         let cell = UITableViewCell()
         cell.selectionStyle = .none
