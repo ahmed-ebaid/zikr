@@ -37,7 +37,7 @@
                     </items>
                 </navigationBar>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-3s-ow8">
-                    <rect key="frame" x="0.0" y="88" width="375" height="532"/>
+                    <rect key="frame" x="0.0" y="88" width="375" height="570"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="d95-g8-VQM"/>
@@ -51,7 +51,7 @@
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="emq-oO-H0d" secondAttribute="trailing" id="AEy-LW-8WI"/>
                 <constraint firstItem="C3W-jx-oV9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LGJ-hB-VDm"/>
                 <constraint firstItem="Gel-3s-ow8" firstAttribute="top" secondItem="C3W-jx-oV9" secondAttribute="bottom" id="V8U-y6-Cia"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gel-3s-ow8" secondAttribute="bottom" constant="158" id="Zd6-Du-4iG"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gel-3s-ow8" secondAttribute="bottom" constant="120" id="Zd6-Du-4iG"/>
                 <constraint firstItem="emq-oO-H0d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aWd-yX-JnV"/>
                 <constraint firstItem="emq-oO-H0d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ecD-FW-j3K"/>
                 <constraint firstItem="C3W-jx-oV9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mmh-Cq-3QR"/>

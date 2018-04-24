@@ -8,20 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		C20194022058B198005ED7DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* Location.swift */; };
-		C2178A982065D1E900E91513 /* images.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = C2178A972065D1E900E91513 /* images.jpeg */; };
+		C22055CC2080230C00FCE437 /* ZikrQuranViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */; };
 		C224D173207A362F00FF0AE4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C224D172207A362F00FF0AE4 /* background.png */; };
+		C224DD872086DBD50089A9F0 /* ZikrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DD862086DBD50089A9F0 /* ZikrModel.swift */; };
+		C224DD9120896F030089A9F0 /* ZikrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */; };
+		C224DD99208D61290089A9F0 /* ZikrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */; };
+		C224DDBF208EB2CD0089A9F0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C224DDBD208EB2CD0089A9F0 /* Model.xcdatamodeld */; };
 		C22607E7205D5486001787CF /* AzkarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E6205D5486001787CF /* AzkarClient.swift */; };
 		C22607E9205D5E75001787CF /* AzkarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E8205D5E75001787CF /* AzkarData.swift */; };
-		C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */; };
+		C235B4DB205E93C60083DA14 /* UserDefaults+Zikr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235B4DA205E93C60083DA14 /* UserDefaults+Zikr.swift */; };
 		C23942B82055A95C00637428 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C23942B72055A95C00637428 /* Assets.xcassets */; };
-		C23942BB2055AEF500637428 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942BA2055AEF500637428 /* Endpoint.swift */; };
+		C23942BB2055AEF500637428 /* UnauthenticatedEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942BA2055AEF500637428 /* UnauthenticatedEndpoints.swift */; };
 		C23942CE2055BEFB00637428 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942CD2055BEFB00637428 /* Constants.swift */; };
-		C23942D12055C37600637428 /* AzkarTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D02055C37500637428 /* AzkarTime.swift */; };
+		C23942D12055C37600637428 /* ZikrNotificationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D02055C37500637428 /* ZikrNotificationTime.swift */; };
 		C23942D42055C81E00637428 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D32055C81E00637428 /* ClientError.swift */; };
-		C23942D72055E27100637428 /* Date+Current.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D62055E27100637428 /* Date+Current.swift */; };
+		C23942D72055E27100637428 /* Date+Zikr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D62055E27100637428 /* Date+Zikr.swift */; };
 		C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */; };
-		C25EDB7120680B8E00CF164F /* ZikrQuranView.xib in Resources */ = {isa = PBXBuildFile; fileRef = C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */; };
-		C25EDB7520680C9A00CF164F /* ZikrQuranView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */; };
 		C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC7D2056122F00F72703 /* SettingsViewModel.swift */; };
 		C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */; };
 		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
@@ -89,24 +91,26 @@
 
 /* Begin PBXFileReference section */
 		C20194012058B198005ED7DC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
-		C2178A972065D1E900E91513 /* images.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = images.jpeg; sourceTree = "<group>"; };
+		C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranViewModel.swift; sourceTree = "<group>"; };
 		C224D172207A362F00FF0AE4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		C224DD862086DBD50089A9F0 /* ZikrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrModel.swift; sourceTree = "<group>"; };
+		C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZikrTableViewCell.xib; sourceTree = "<group>"; };
+		C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrTableViewCell.swift; sourceTree = "<group>"; };
+		C224DDBE208EB2CD0089A9F0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		C22607E6205D5486001787CF /* AzkarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzkarClient.swift; sourceTree = "<group>"; };
 		C22607E8205D5E75001787CF /* AzkarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarData.swift; sourceTree = "<group>"; };
-		C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+FirstLaunch.swift"; sourceTree = "<group>"; };
-		C23942B72055A95C00637428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = zikr/Assets.xcassets; sourceTree = "<group>"; };
-		C23942BA2055AEF500637428 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		C235B4DA205E93C60083DA14 /* UserDefaults+Zikr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Zikr.swift"; sourceTree = "<group>"; };
+		C23942B72055A95C00637428 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C23942BA2055AEF500637428 /* UnauthenticatedEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnauthenticatedEndpoints.swift; sourceTree = "<group>"; };
 		C23942BD2055B19300637428 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		C23942BE2055B19300637428 /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		C23942BF2055B19300637428 /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = Carthage/Build/iOS/SwiftyJSON.framework; sourceTree = "<group>"; };
 		C23942C02055B19300637428 /* Moya.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Moya.framework; path = Carthage/Build/iOS/Moya.framework; sourceTree = "<group>"; };
 		C23942CD2055BEFB00637428 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		C23942D02055C37500637428 /* AzkarTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarTime.swift; sourceTree = "<group>"; };
+		C23942D02055C37500637428 /* ZikrNotificationTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrNotificationTime.swift; sourceTree = "<group>"; };
 		C23942D32055C81E00637428 /* ClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClientError.swift; sourceTree = "<group>"; };
-		C23942D62055E27100637428 /* Date+Current.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Current.swift"; sourceTree = "<group>"; };
+		C23942D62055E27100637428 /* Date+Zikr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Zikr.swift"; sourceTree = "<group>"; };
 		C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarNotificationsModel.swift; sourceTree = "<group>"; };
-		C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZikrQuranView.xib; sourceTree = "<group>"; };
-		C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranView.swift; sourceTree = "<group>"; };
 		C25EDB7A2068298900CF164F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		C25EDB7B2068298A00CF164F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		C263AC7D2056122F00F72703 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
@@ -154,13 +158,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		C23942B92055AEE600637428 /* Network */ = {
+		C224DDBB208EB27F0089A9F0 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
-				C2178A972065D1E900E91513 /* images.jpeg */,
-				C23942BA2055AEF500637428 /* Endpoint.swift */,
+				C281504D204CD8D000F6117B /* AppTabController.swift */,
 			);
-			path = Network;
+			path = Tabbar;
+			sourceTree = "<group>";
+		};
+		C224DDBC208EB2A00089A9F0 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				C224DDBD208EB2CD0089A9F0 /* Model.xcdatamodeld */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		C23942B92055AEE600637428 /* Endpoints */ = {
+			isa = PBXGroup;
+			children = (
+				C23942BA2055AEF500637428 /* UnauthenticatedEndpoints.swift */,
+			);
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		C23942BC2055B19300637428 /* Frameworks */ = {
@@ -177,20 +196,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C23942CA2055BC2600637428 /* ApiClients */ = {
+		C23942CA2055BC2600637428 /* Clients */ = {
 			isa = PBXGroup;
 			children = (
 				C22607E6205D5486001787CF /* AzkarClient.swift */,
 			);
-			path = ApiClients;
+			path = Clients;
 			sourceTree = "<group>";
 		};
-		C23942CF2055C36100637428 /* JSON */ = {
+		C23942CF2055C36100637428 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C23942D02055C37500637428 /* AzkarTime.swift */,
+				C22607E8205D5E75001787CF /* AzkarData.swift */,
+				C23942D02055C37500637428 /* ZikrNotificationTime.swift */,
+				C224DD862086DBD50089A9F0 /* ZikrModel.swift */,
 			);
-			path = JSON;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		C23942D22055C80E00637428 /* Errors */ = {
@@ -204,10 +225,22 @@
 		C23942D52055E1E000637428 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				C23942D62055E27100637428 /* Date+Current.swift */,
-				C235B4DA205E93C60083DA14 /* UserDefaults+FirstLaunch.swift */,
+				C23942D62055E27100637428 /* Date+Zikr.swift */,
+				C235B4DA205E93C60083DA14 /* UserDefaults+Zikr.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		C239F74F2083DC0100A83BDA /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				C23942CD2055BEFB00637428 /* Constants.swift */,
+				C2815053204F783100F6117B /* AppDelegate.swift */,
+				C281503B204CBED600F6117B /* LaunchScreen.storyboard */,
+				C281503E204CBED600F6117B /* Info.plist */,
+				C23942B72055A95C00637428 /* Assets.xcassets */,
+			);
+			path = SupportFiles;
 			sourceTree = "<group>";
 		};
 		C24E771E2052374A00C3571D /* Notifications */ = {
@@ -221,16 +254,10 @@
 			path = Notifications;
 			sourceTree = "<group>";
 		};
-		C263AC7F2056133A00F72703 /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
 		C263AC8A2057679700F72703 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				C224DDBB208EB27F0089A9F0 /* Tabbar */,
 				C263AC8D205767AD00F72703 /* Settings */,
 				C263AC8C205767A800F72703 /* Duaa */,
 				C263AC8B205767A200F72703 /* Azkar */,
@@ -243,8 +270,9 @@
 			children = (
 				C2CA97ED207ADA9100D25D4C /* AzkarViewController.xib */,
 				C2CA97EC207ADA9100D25D4C /* AzkarViewController.swift */,
-				C25EDB7020680B8E00CF164F /* ZikrQuranView.xib */,
-				C25EDB7420680C9A00CF164F /* ZikrQuranView.swift */,
+				C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */,
+				C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */,
+				C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */,
 			);
 			path = Azkar;
 			sourceTree = "<group>";
@@ -278,7 +306,6 @@
 				C2815031204CBED600F6117B /* zikr */,
 				C2F8C93420648F0500630B0A /* zikrTests */,
 				C2815030204CBED600F6117B /* Products */,
-				C23942B72055A95C00637428 /* Assets.xcassets */,
 				C23942BC2055B19300637428 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -295,20 +322,15 @@
 		C2815031204CBED600F6117B /* zikr */ = {
 			isa = PBXGroup;
 			children = (
-				C263AC8A2057679700F72703 /* Screens */,
-				C263AC7F2056133A00F72703 /* Helpers */,
-				C23942D52055E1E000637428 /* Extensions */,
+				C224DDBC208EB2A00089A9F0 /* Core Data */,
+				C23942CA2055BC2600637428 /* Clients */,
+				C23942B92055AEE600637428 /* Endpoints */,
 				C23942D22055C80E00637428 /* Errors */,
-				C23942CF2055C36100637428 /* JSON */,
-				C23942CA2055BC2600637428 /* ApiClients */,
-				C23942B92055AEE600637428 /* Network */,
+				C23942D52055E1E000637428 /* Extensions */,
+				C23942CF2055C36100637428 /* Model */,
 				C24E771E2052374A00C3571D /* Notifications */,
-				C281504D204CD8D000F6117B /* AppTabController.swift */,
-				C2815053204F783100F6117B /* AppDelegate.swift */,
-				C281503B204CBED600F6117B /* LaunchScreen.storyboard */,
-				C281503E204CBED600F6117B /* Info.plist */,
-				C23942CD2055BEFB00637428 /* Constants.swift */,
-				C22607E8205D5E75001787CF /* AzkarData.swift */,
+				C263AC8A2057679700F72703 /* Screens */,
+				C239F74F2083DC0100A83BDA /* SupportFiles */,
 			);
 			path = zikr;
 			sourceTree = "<group>";
@@ -412,12 +434,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C25EDB7120680B8E00CF164F /* ZikrQuranView.xib in Resources */,
 				C224D173207A362F00FF0AE4 /* background.png in Resources */,
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
+				C224DD9120896F030089A9F0 /* ZikrTableViewCell.xib in Resources */,
 				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
-				C2178A982065D1E900E91513 /* images.jpeg in Resources */,
 				C2CA97EF207ADA9100D25D4C /* AzkarViewController.xib in Resources */,
 				C2CA97F3207EE0EF00D25D4C /* favorite.png in Resources */,
 				C2CA97F1207EE04700D25D4C /* share.png in Resources */,
@@ -438,22 +459,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C235B4DB205E93C60083DA14 /* UserDefaults+FirstLaunch.swift in Sources */,
+				C22055CC2080230C00FCE437 /* ZikrQuranViewModel.swift in Sources */,
+				C235B4DB205E93C60083DA14 /* UserDefaults+Zikr.swift in Sources */,
 				C22607E7205D5486001787CF /* AzkarClient.swift in Sources */,
-				C23942D12055C37600637428 /* AzkarTime.swift in Sources */,
-				C25EDB7520680C9A00CF164F /* ZikrQuranView.swift in Sources */,
+				C23942D12055C37600637428 /* ZikrNotificationTime.swift in Sources */,
 				C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */,
-				C23942D72055E27100637428 /* Date+Current.swift in Sources */,
+				C23942D72055E27100637428 /* Date+Zikr.swift in Sources */,
 				C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */,
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
 				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
 				C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */,
 				C2CA97EE207ADA9100D25D4C /* AzkarViewController.swift in Sources */,
+				C224DDBF208EB2CD0089A9F0 /* Model.xcdatamodeld in Sources */,
 				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,
-				C23942BB2055AEF500637428 /* Endpoint.swift in Sources */,
+				C224DD99208D61290089A9F0 /* ZikrTableViewCell.swift in Sources */,
+				C23942BB2055AEF500637428 /* UnauthenticatedEndpoints.swift in Sources */,
 				C22607E9205D5E75001787CF /* AzkarData.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
+				C224DD872086DBD50089A9F0 /* ZikrModel.swift in Sources */,
 				C20194022058B198005ED7DC /* Location.swift in Sources */,
 				C281504E204CD8D000F6117B /* AppTabController.swift in Sources */,
 				C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */,
@@ -613,7 +637,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/zikr/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/zikr/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.azkar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -632,7 +656,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
-				INFOPLIST_FILE = "$(SRCROOT)/zikr/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/zikr/SupportFiles/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ebaid.azkar;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -704,6 +728,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C224DDBD208EB2CD0089A9F0 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C224DDBE208EB2CD0089A9F0 /* Model.xcdatamodel */,
+			);
+			currentVersion = C224DDBE208EB2CD0089A9F0 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C2815027204CBED600F6117B /* Project object */;
 }

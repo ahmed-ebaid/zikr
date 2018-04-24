@@ -9,64 +9,61 @@
 import UIKit
 
 class AzkarViewController: UIViewController {
-    @IBOutlet weak var navigationBar: UINavigationBar!
-    @IBOutlet weak var tableView: UITableView!
-    
-    var zikrView: ZikrQuranView!
-    
+    @IBOutlet var navigationBar: UINavigationBar!
+    @IBOutlet var tableView: UITableView!
+
+    let viewModel = ZikrQuranViewModel()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         configureTableView()
         configureTransparentNavigationBar()
     }
-    
+
     private func configureTableView() {
         tableView.backgroundColor = .clear
         tableView.separatorStyle = .none
+        let zikrCellNib = UINib(nibName: "ZikrTableViewCell", bundle: nil)
+        tableView.register(zikrCellNib, forCellReuseIdentifier: "zikrCell")
     }
+
     private func configureTransparentNavigationBar() {
         navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationBar.shadowImage = UIImage()
     }
 }
 
-extension AzkarViewController : UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
+extension AzkarViewController: UITableViewDataSource {
+    func numberOfSections(in _: UITableView) -> Int {
         return 1
     }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+
+    func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
+        return viewModel.zikrModels.count
     }
 
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        zikrView = UINib(nibName: "ZikrQuranView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! ZikrQuranView
-        zikrView.delegate = self
-        let cell = UITableViewCell()
+    func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell") as! ZikrTableViewCell
         cell.selectionStyle = .none
-        cell.contentView.addSubview(zikrView)
-        cell.backgroundColor = .clear
-        cell.contentView.backgroundColor = .clear
-        zikrView.translatesAutoresizingMaskIntoConstraints = false
-        
-        NSLayoutConstraint.activate([
-            zikrView.topAnchor.constraint(equalTo: cell.contentView.topAnchor),
-            zikrView.leadingAnchor.constraint(equalTo: cell.contentView.leadingAnchor),
-            zikrView.trailingAnchor.constraint(equalTo: cell.contentView.trailingAnchor),
-            zikrView.bottomAnchor.constraint(equalTo: cell.contentView.bottomAnchor)
-            ])
+        let zikrModel = viewModel.zikrModels[indexPath.row]
+        cell.configureUI(zikrModel: zikrModel)
         return cell
-
     }
 }
 
-extension AzkarViewController : UITableViewDelegate {
+extension AzkarViewController: UITableViewDelegate {
     
 }
 
-extension AzkarViewController : ZikrQuranViewProtocol {    
-    func azkarTableViewWillUpdateTable() {
+extension AzkarViewController: ZikrTableViewCellDelegate {
+    func zikrTableViewCellPresentAvtivityController(with text: [String]) {
+        let activityController = UIActivityViewController(activityItems: text, applicationActivities: nil)
+        activityController.setValue("Zikr application would like to share the following content with you", forKey: "Subject")
+        present(activityController, animated: true, completion: nil)
+    }
+
+    func ZikrTableViewCellUpdate() {
         tableView.beginUpdates()
         tableView.endUpdates()
     }
