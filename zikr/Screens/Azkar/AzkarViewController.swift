@@ -16,7 +16,11 @@ class AzkarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let client = AzkarClient()
+        client.getFuelEconomy(year: "2017", make: "volkswagen") { error, result in
+            print(result)
+        }
+        
         configureTableView()
         configureTransparentNavigationBar()
     }
@@ -40,13 +44,14 @@ extension AzkarViewController: UITableViewDataSource {
     }
 
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return viewModel.zikrModels.count
+        return viewModel.morningZikrModels.count
     }
 
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell") as! ZikrTableViewCell
+        cell.delegate = self
         cell.selectionStyle = .none
-        let zikrModel = viewModel.zikrModels[indexPath.row]
+        let zikrModel = viewModel.morningZikrModels[indexPath.row]
         cell.configureUI(zikrModel: zikrModel)
         return cell
     }
@@ -57,13 +62,13 @@ extension AzkarViewController: UITableViewDelegate {
 }
 
 extension AzkarViewController: ZikrTableViewCellDelegate {
-    func zikrTableViewCellPresentAvtivityController(with text: [String]) {
+    func zikrTableViewCellPresentShareAvtivityController(cell: ZikrTableViewCell, text: [String]) {
         let activityController = UIActivityViewController(activityItems: text, applicationActivities: nil)
         activityController.setValue("Zikr application would like to share the following content with you", forKey: "Subject")
-        present(activityController, animated: true, completion: nil)
+        present(activityController, animated: true)
     }
 
-    func ZikrTableViewCellUpdate() {
+    func zikrTableViewRedrawCell(cell: ZikrTableViewCell) {
         tableView.beginUpdates()
         tableView.endUpdates()
     }

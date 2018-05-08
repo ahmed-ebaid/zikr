@@ -1,49 +1,94 @@
-//
-//  ZikrTableViewCell.swift
-//  zikr
-//
-//  Created by Ahmed Ebaid on 4/22/18.
-//  Copyright © 2018 Ahmed Ebaid. All rights reserved.
-//
-
 import UIKit
 
-protocol ZikrTableViewCellDelegate {
-    func zikrTableViewCellPresentAvtivityController(with text: [String])
-    func ZikrTableViewCellUpdate()
+protocol ZikrTableViewCellDelegate: class {
+    func zikrTableViewCellPresentShareAvtivityController(cell: ZikrTableViewCell, text: [String])
+    func zikrTableViewRedrawCell(cell: ZikrTableViewCell)
 }
 
 class ZikrTableViewCell: UITableViewCell {
-    @IBOutlet weak var bismAllahView: UIView!
-    @IBOutlet weak var zikrView: UIView!
-    @IBOutlet weak var fadlView: UIView!
-    @IBOutlet weak var timesView: UIView!
-    @IBOutlet weak var actionsView: UIStackView!
+    @IBOutlet weak var containerView: UIView!
+    @IBOutlet weak var bismllahBottom: NSLayoutConstraint!
+    @IBOutlet weak var bismllahTop: NSLayoutConstraint!
+    @IBOutlet weak var zikrTop: NSLayoutConstraint!
+    @IBOutlet weak var zikrBottom: NSLayoutConstraint!
+    @IBOutlet weak var fadlTop: NSLayoutConstraint!
+    @IBOutlet weak var fadlBottom: NSLayoutConstraint!
+    @IBOutlet weak var numberOfTimesBottom: NSLayoutConstraint!
+    @IBOutlet weak var numberOfTimesTop: NSLayoutConstraint!
+    @IBOutlet weak var stackViewHeight: NSLayoutConstraint!
     
-    @IBOutlet weak var title: UILabel!
+    @IBOutlet weak var bismllahTitle: UILabel!
     @IBOutlet weak var zikr: UILabel!
     @IBOutlet weak var fadl: UILabel!
     @IBOutlet weak var numberOfTimes: UILabel!
     
+    @IBOutlet weak var separatorView: UIView!
+    @IBOutlet weak var stackView: UIStackView!
+    
+    weak var delegate: ZikrTableViewCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
+        tap.delegate = self
+        containerView.addGestureRecognizer(tap)
     }
     
     func configureUI(zikrModel: ZikrModel) {
-        title.text = zikrModel.title
+        stackViewHeight.constant = 0
+        
+        bismllahTitle.text = zikrModel.title
+        bismllahView(hide: zikrModel.title == "")
+       
         zikr.text = zikrModel.zikr
+        zikrView(hide: zikrModel.zikr == "")
+        
         fadl.text = zikrModel.fadl
+        fadlView(hide: zikrModel.fadl == "")
+        
         numberOfTimes.text = zikrModel.numberOfTimes
+        numberOfTimesView(hide: zikrModel.numberOfTimes == "")
+    }
+    
+    private func bismllahView(hide: Bool) {
+        bismllahBottom.constant = hide ? 0 : 16
+        bismllahTop.constant = hide ? 0 : 16
+    }
+    
+    private func zikrView(hide: Bool) {
+        zikrTop.constant = hide ? 0 : 16
+        zikrBottom.constant = hide ? 0 : 16
+    }
+    
+    private func fadlView(hide: Bool) {
+        fadlTop.constant = hide ? 0 : 16
+        fadlBottom.constant = hide ? 0 : 16
+    }
+    
+    private func numberOfTimesView(hide: Bool) {
+        numberOfTimesTop.constant = hide ? 0 : 16
+        numberOfTimesBottom.constant = hide ? 0 : 16
     }
 
-
     @IBAction func share(_ sender: UIButton) {
-        print("share")
+        //TODO: delegate action in the controller
     }
     
     @IBAction func favorite(_ sender: UIButton) {
+        //TODO: delegate action in the controller
     }
     
-    
-    
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
+        UIView.animate(withDuration: 0.3) {
+            self.separatorView.alpha = 0
+            self.stackView.alpha = 0
+        }
+            self.stackViewHeight.constant = self.stackViewHeight.constant == 0 ? 40 : 0
+            self.delegate?.zikrTableViewRedrawCell(cell: self)
+        
+        UIView.animate(withDuration: 0.3) {
+            self.separatorView.alpha = 1
+            self.stackView.alpha = 1
+        }
+    }
 }

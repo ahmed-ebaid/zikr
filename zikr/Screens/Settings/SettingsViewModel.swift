@@ -15,8 +15,7 @@ class SettingsViewModel {
     }
 
     func getAzkarTimes(completion: @escaping () -> Void) {
-        let clLocation = changeLocationViewModel.favoritedLocations[0].clLocation
-        guard let latitude = clLocation?.coordinate.latitude, let longitude = clLocation?.coordinate.longitude else {
+        guard let latitude = changeLocationViewModel.favoritedLocations[0].latitude, let longitude = changeLocationViewModel.favoritedLocations[0].longitude else {
             return
         }
         let calculationMethod = calculationMethodViewModel.calculationMethod
@@ -25,7 +24,7 @@ class SettingsViewModel {
             return
         }
 
-        client.getAzkarTimes(latitude: latitude, longitude: longitude, method: calculationMethod, month: month, year: year) { error, azkarTimes in
+        client.getAzkarTimes(latitude: Double(truncating: latitude), longitude: Double(truncating: longitude), method: calculationMethod, month: month, year: year) { error, azkarTimes in
             if error == nil && azkarTimes != nil {
                 self.sharedModel.zikrNotificationTimes = azkarTimes as! [ZikrNotificationTime]
                 if self.sharedModel.zikrNotificationTimes.count < 20 {
@@ -38,8 +37,7 @@ class SettingsViewModel {
     }
 
     private func requestMoreAzkarTimes(completion: @escaping () -> Void) {
-        let clLocation = changeLocationViewModel.favoritedLocations[0].clLocation
-        guard let latitude = clLocation?.coordinate.latitude, let longitude = clLocation?.coordinate.longitude else {
+        guard let latitude = changeLocationViewModel.favoritedLocations[0].latitude, let longitude = changeLocationViewModel.favoritedLocations[0].longitude else {
             return
         }
         let calculationMethod = calculationMethodViewModel.calculationMethod
@@ -47,7 +45,7 @@ class SettingsViewModel {
             return
         }
 
-        client.getAzkarTimes(latitude: latitude, longitude: longitude, method: calculationMethod, month: month, year: year) { error, azkarTimes in
+        client.getAzkarTimes(latitude: Double(truncating: latitude), longitude: Double(truncating: longitude), method: calculationMethod, month: month, year: year) { error, azkarTimes in
             if error == nil && azkarTimes != nil {
                 let azkarTimes = azkarTimes as! [ZikrNotificationTime]
                 for zikrTime in azkarTimes {

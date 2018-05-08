@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C20194022058B198005ED7DC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* Location.swift */; };
+		C20194022058B198005ED7DC /* LocationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* LocationMO.swift */; };
 		C22055CC2080230C00FCE437 /* ZikrQuranViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */; };
 		C224D173207A362F00FF0AE4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C224D172207A362F00FF0AE4 /* background.png */; };
 		C224DD872086DBD50089A9F0 /* ZikrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DD862086DBD50089A9F0 /* ZikrModel.swift */; };
 		C224DD9120896F030089A9F0 /* ZikrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */; };
 		C224DD99208D61290089A9F0 /* ZikrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */; };
 		C224DDBF208EB2CD0089A9F0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C224DDBD208EB2CD0089A9F0 /* Model.xcdatamodeld */; };
+		C224DDC1208ED2560089A9F0 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DDC0208ED2560089A9F0 /* CoreDataManager.swift */; };
 		C22607E7205D5486001787CF /* AzkarClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E6205D5486001787CF /* AzkarClient.swift */; };
 		C22607E9205D5E75001787CF /* AzkarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22607E8205D5E75001787CF /* AzkarData.swift */; };
 		C235B4DB205E93C60083DA14 /* UserDefaults+Zikr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C235B4DA205E93C60083DA14 /* UserDefaults+Zikr.swift */; };
@@ -90,13 +91,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		C20194012058B198005ED7DC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		C20194012058B198005ED7DC /* LocationMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMO.swift; sourceTree = "<group>"; };
 		C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranViewModel.swift; sourceTree = "<group>"; };
 		C224D172207A362F00FF0AE4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C224DD862086DBD50089A9F0 /* ZikrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrModel.swift; sourceTree = "<group>"; };
 		C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZikrTableViewCell.xib; sourceTree = "<group>"; };
 		C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrTableViewCell.swift; sourceTree = "<group>"; };
 		C224DDBE208EB2CD0089A9F0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
+		C224DDC0208ED2560089A9F0 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		C22607E6205D5486001787CF /* AzkarClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AzkarClient.swift; sourceTree = "<group>"; };
 		C22607E8205D5E75001787CF /* AzkarData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarData.swift; sourceTree = "<group>"; };
 		C235B4DA205E93C60083DA14 /* UserDefaults+Zikr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Zikr.swift"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			isa = PBXGroup;
 			children = (
 				C224DDBD208EB2CD0089A9F0 /* Model.xcdatamodeld */,
+				C224DDC0208ED2560089A9F0 /* CoreDataManager.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -295,7 +298,7 @@
 				C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */,
 				C263AC882057617400F72703 /* ChangeLocationViewModel.swift */,
 				C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */,
-				C20194012058B198005ED7DC /* Location.swift */,
+				C20194012058B198005ED7DC /* LocationMO.swift */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -477,8 +480,9 @@
 				C22607E9205D5E75001787CF /* AzkarData.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
+				C224DDC1208ED2560089A9F0 /* CoreDataManager.swift in Sources */,
 				C224DD872086DBD50089A9F0 /* ZikrModel.swift in Sources */,
-				C20194022058B198005ED7DC /* Location.swift in Sources */,
+				C20194022058B198005ED7DC /* LocationMO.swift in Sources */,
 				C281504E204CD8D000F6117B /* AppTabController.swift in Sources */,
 				C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */,
 				C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */,
