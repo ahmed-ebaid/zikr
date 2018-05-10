@@ -14,17 +14,7 @@ class ChangeLocationViewModel: NSObject, CLLocationManagerDelegate {
     private var locationManager = CLLocationManager()
     
     var favoritedLocations: [LocationMO] {
-        get {
             return coreDataManager.fetch(forEntity: "Locations", sortDescriptor: NSSortDescriptor(key: "timestamp", ascending: false)) as! [LocationMO]
-        }
-        set {
-            for location in newValue {
-                if !containsLocation(location) {
-                    coreDataManager.insert(location)
-                }
-            }
-            coreDataManager.save()
-        }
     }
     
     func getLocation(using displayedLocation: String) -> LocationMO {
@@ -50,18 +40,8 @@ class ChangeLocationViewModel: NSObject, CLLocationManagerDelegate {
     }
     
     func addFavoritedLocation(location: LocationMO) {
-        var locations = favoritedLocations
-        
-        if locations.isEmpty {
-            favoritedLocations.append(location)
-        } else {
-            if let index = locations.index(where: { ($0.city == location.city && $0.state == location.state) || ($0.city == location.city && $0.country == location.country) }) {
-                locations.remove(at: index)
-            }
-            
-            locations.insert(location, at: 0)
-            favoritedLocations = locations
-        }
+        location.timestamp = Date()
+        coreDataManager.save()
     }
     
     func getLocationInfo(_ location: LocationMO) -> String {
@@ -83,7 +63,6 @@ class ChangeLocationViewModel: NSObject, CLLocationManagerDelegate {
         }
         
         locationManager.stopUpdatingLocation()
-        
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { placemarksArray, _ in
             if placemarksArray != nil {
@@ -91,32 +70,39 @@ class ChangeLocationViewModel: NSObject, CLLocationManagerDelegate {
                     return
                 }
                 
-                let coordinate = placemark.location?.coordinate
-                let latitude = coordinate?.latitude
-                let longitude = coordinate?.longitude
-                let city = placemark.locality
-                let state = placemark.administrativeArea
-                let country = placemark.country
+                guard let coordinate = placemark.location?.coordinate else {
+                    return
+                }
                 
-                let newLocation = LocationMO(context: self.coreDataManager.managedObjectContext)
-                newLocation.latitude = latitude as NSNumber?
-                newLocation.longitude = longitude as NSNumber?
-                newLocation.city = city
-                newLocation.state = state
-                newLocation.country = country
-                newLocation.timestamp = Date()
+                let latitude = coordinate.latitude
+                let longitude = coordinate.longitude
+                guard let city = placemark.locality, let state = placemark.administrativeArea, let country = placemark.country else {
+                    return
+                }
                 
-                self.addFavoritedLocation(location: newLocation)
+                if self.isUniqueLocation(city: city, state: state, country: country) {
+                    let newLocation = LocationMO(context: self.coreDataManager.managedObjectContext)
+                    newLocation.latitude = latitude as NSNumber?
+                    newLocation.longitude = longitude as NSNumber?
+                    newLocation.city = city
+                    newLocation.state = state
+                    newLocation.country = country
+                    newLocation.timestamp = Date()
+                    self.coreDataManager.save()
+                }
                 self.delegate?.didRecieveLocation()
             }
         }
     }
     
-    func containsLocation(_ location: LocationMO) -> Bool {
-        var exists = true
-        for favoriteLocation in favoritedLocations {
-            exists = exists && LocationMO.equals(lhs: favoriteLocation, rhs: location)
+    private func isUniqueLocation(city: String, state: String, country: String) -> Bool {
+        for location in favoritedLocations {
+            if (location.city == city && location.state == state) || (location.city == city && location.country == country) {
+                location.timestamp = Date()
+                coreDataManager.save()
+                return false
+            }
         }
-        return exists
+        return true
     }
 }

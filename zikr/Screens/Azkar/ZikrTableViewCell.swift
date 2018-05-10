@@ -31,12 +31,11 @@ class ZikrTableViewCell: UITableViewCell {
         super.awakeFromNib()
         let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
         tap.delegate = self
+        stackViewHeight.constant = 0
         containerView.addGestureRecognizer(tap)
     }
     
     func configureUI(zikrModel: ZikrModel) {
-        stackViewHeight.constant = 0
-        
         bismllahTitle.text = zikrModel.title
         bismllahView(hide: zikrModel.title == "")
        
@@ -79,14 +78,13 @@ class ZikrTableViewCell: UITableViewCell {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        UIView.animate(withDuration: 0.3) {
+        UIView.animate(withDuration: 3.0) {
             self.separatorView.alpha = 0
             self.stackView.alpha = 0
-        }
+       
             self.stackViewHeight.constant = self.stackViewHeight.constant == 0 ? 40 : 0
             self.delegate?.zikrTableViewRedrawCell(cell: self)
         
-        UIView.animate(withDuration: 0.3) {
             self.separatorView.alpha = 1
             self.stackView.alpha = 1
         }

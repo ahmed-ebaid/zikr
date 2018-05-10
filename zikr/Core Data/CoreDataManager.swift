@@ -38,7 +38,6 @@ class CoreDataManager {
     func delete(_ object: NSManagedObject) {
         managedObjectContext.delete(object)        
     }
-    
     func save() {
         do {
             if managedObjectContext.hasChanges {

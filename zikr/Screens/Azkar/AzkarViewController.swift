@@ -9,32 +9,18 @@
 import UIKit
 
 class AzkarViewController: UIViewController {
-    @IBOutlet var navigationBar: UINavigationBar!
     @IBOutlet var tableView: UITableView!
-
+    
     let viewModel = ZikrQuranViewModel()
 
     override func viewDidLoad() {
-        super.viewDidLoad()
-        let client = AzkarClient()
-        client.getFuelEconomy(year: "2017", make: "volkswagen") { error, result in
-            print(result)
-        }
-        
+        super.viewDidLoad()        
         configureTableView()
-        configureTransparentNavigationBar()
     }
 
     private func configureTableView() {
-        tableView.backgroundColor = .clear
-        tableView.separatorStyle = .none
         let zikrCellNib = UINib(nibName: "ZikrTableViewCell", bundle: nil)
         tableView.register(zikrCellNib, forCellReuseIdentifier: "zikrCell")
-    }
-
-    private func configureTransparentNavigationBar() {
-        navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationBar.shadowImage = UIImage()
     }
 }
 
@@ -69,7 +55,8 @@ extension AzkarViewController: ZikrTableViewCellDelegate {
     }
 
     func zikrTableViewRedrawCell(cell: ZikrTableViewCell) {
-        tableView.beginUpdates()
-        tableView.endUpdates()
+//        tableView.beginUpdates()
+//        tableView.endUpdates()
+        tableView.reloadRows(at: tableView.indexPathsForVisibleRows!, with: .automatic)
     }
 }

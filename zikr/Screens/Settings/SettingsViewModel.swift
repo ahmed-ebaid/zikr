@@ -15,7 +15,8 @@ class SettingsViewModel {
     }
 
     func getAzkarTimes(completion: @escaping () -> Void) {
-        guard let latitude = changeLocationViewModel.favoritedLocations[0].latitude, let longitude = changeLocationViewModel.favoritedLocations[0].longitude else {
+        let favoritedLocations = changeLocationViewModel.favoritedLocations
+        guard let latitude = favoritedLocations[0].latitude, let longitude = favoritedLocations[0].longitude else {
             return
         }
         let calculationMethod = calculationMethodViewModel.calculationMethod

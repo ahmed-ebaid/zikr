@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C20194022058B198005ED7DC /* LocationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* LocationMO.swift */; };
+		C21E4E9F20A3D31000D07557 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E4E9E20A3D31000D07557 /* GradientView.swift */; };
 		C22055CC2080230C00FCE437 /* ZikrQuranViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */; };
 		C224D173207A362F00FF0AE4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C224D172207A362F00FF0AE4 /* background.png */; };
 		C224DD872086DBD50089A9F0 /* ZikrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DD862086DBD50089A9F0 /* ZikrModel.swift */; };
@@ -92,6 +93,7 @@
 
 /* Begin PBXFileReference section */
 		C20194012058B198005ED7DC /* LocationMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMO.swift; sourceTree = "<group>"; };
+		C21E4E9E20A3D31000D07557 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranViewModel.swift; sourceTree = "<group>"; };
 		C224D172207A362F00FF0AE4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C224DD862086DBD50089A9F0 /* ZikrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrModel.swift; sourceTree = "<group>"; };
@@ -160,6 +162,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C21E4E9D20A3D2D600D07557 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				C21E4E9E20A3D31000D07557 /* GradientView.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		C224DDBB208EB27F0089A9F0 /* Tabbar */ = {
 			isa = PBXGroup;
 			children = (
@@ -325,6 +335,7 @@
 		C2815031204CBED600F6117B /* zikr */ = {
 			isa = PBXGroup;
 			children = (
+				C21E4E9D20A3D2D600D07557 /* Common */,
 				C224DDBC208EB2A00089A9F0 /* Core Data */,
 				C23942CA2055BC2600637428 /* Clients */,
 				C23942B92055AEE600637428 /* Endpoints */,
@@ -472,6 +483,7 @@
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
 				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
 				C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */,
+				C21E4E9F20A3D31000D07557 /* GradientView.swift in Sources */,
 				C2CA97EE207ADA9100D25D4C /* AzkarViewController.swift in Sources */,
 				C224DDBF208EB2CD0089A9F0 /* Model.xcdatamodeld in Sources */,
 				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,

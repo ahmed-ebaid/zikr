@@ -13,6 +13,10 @@ class CalculationMethodViewModel {
         ("Egyptian General Authority of Survey.", 5),
         ("University of Tehran - Institute of Geophysics.", 7),
         ("Algerian Minister of Religious Affairs and Wakfs.", 8),
+        ("Institute of Geophysics.", 9),
+        (" Wakfs.", 10),
+        ("Geophysics.", 11),
+        (" fs.", 12),
     ]
 
     var calculationMethod: Int {

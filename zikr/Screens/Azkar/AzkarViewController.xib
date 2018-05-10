@@ -12,7 +12,6 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AzkarViewController" customModule="zikr" customModuleProvider="target">
             <connections>
-                <outlet property="navigationBar" destination="C3W-jx-oV9" id="xsi-xf-YsA"/>
                 <outlet property="tableView" destination="Gel-3s-ow8" id="acv-bk-0DW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -22,23 +21,16 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background.png" translatesAutoresizingMaskIntoConstraints="NO" id="emq-oO-H0d">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
-                </imageView>
-                <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C3W-jx-oV9">
-                    <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="i4i-19-4B9">
+                    <rect key="frame" x="110" y="44" width="155" height="29"/>
+                    <segments>
+                        <segment title="أذكار الصباح"/>
+                        <segment title="أذكار المساء"/>
+                    </segments>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-3s-ow8">
+                    <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <textAttributes key="titleTextAttributes">
-                        <color key="textColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </textAttributes>
-                    <items>
-                        <navigationItem title="أذكار الصباح والمساء" id="IZX-iz-hVb"/>
-                    </items>
-                </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-3s-ow8">
-                    <rect key="frame" x="0.0" y="88" width="375" height="570"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="d95-g8-VQM"/>
                         <outlet property="delegate" destination="-1" id="Gv1-ez-z8R"/>
@@ -47,23 +39,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="C3W-jx-oV9" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="4oi-an-YN4"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="emq-oO-H0d" secondAttribute="trailing" id="AEy-LW-8WI"/>
-                <constraint firstItem="C3W-jx-oV9" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="LGJ-hB-VDm"/>
-                <constraint firstItem="Gel-3s-ow8" firstAttribute="top" secondItem="C3W-jx-oV9" secondAttribute="bottom" id="V8U-y6-Cia"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gel-3s-ow8" secondAttribute="bottom" constant="120" id="Zd6-Du-4iG"/>
-                <constraint firstItem="emq-oO-H0d" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aWd-yX-JnV"/>
-                <constraint firstItem="emq-oO-H0d" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ecD-FW-j3K"/>
-                <constraint firstItem="C3W-jx-oV9" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="mmh-Cq-3QR"/>
+                <constraint firstItem="Gel-3s-ow8" firstAttribute="top" secondItem="i4i-19-4B9" secondAttribute="bottom" constant="16" id="K2g-wD-i3H"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="i4i-19-4B9" secondAttribute="top" id="Y0J-hv-nMq"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gel-3s-ow8" secondAttribute="bottom" id="Zd6-Du-4iG"/>
+                <constraint firstItem="i4i-19-4B9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cGK-Ly-mX4"/>
                 <constraint firstItem="Gel-3s-ow8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="r6Z-q9-2AK"/>
                 <constraint firstItem="Gel-3s-ow8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vqd-K5-Mes"/>
-                <constraint firstItem="emq-oO-H0d" firstAttribute="bottom" secondItem="i5M-Pr-FkT" secondAttribute="bottom" id="yxK-C0-qmA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24.5" y="52"/>
         </view>
     </objects>
-    <resources>
-        <image name="background.png" width="1242" height="2208"/>
-    </resources>
 </document>

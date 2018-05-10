@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -18,11 +19,16 @@
                 <rect key="frame" x="0.0" y="0.0" width="482" height="378.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WtJ-OY-xfc" customClass="GradientView" customModule="zikr" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="482" height="378.5"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="2rb-nL-kGP"/>
+                    </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hr2-bt-nff" userLabel="Bismllah">
-                        <rect key="frame" x="0.0" y="0.0" width="482" height="52.5"/>
+                        <rect key="frame" x="24" y="0.0" width="434" height="52.5"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="أَعُوذُ بِاللهِ مِنْ الشَّيْطَانِ الرَّجِيمِ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAg-6Z-YG2">
-                                <rect key="frame" x="24" y="16" width="434" height="20.5"/>
+                                <rect key="frame" x="24" y="16" width="386" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -126,19 +132,23 @@
                 <constraints>
                     <constraint firstItem="xBv-Gf-H1o" firstAttribute="top" secondItem="q9B-f3-tth" secondAttribute="bottom" constant="8" id="4sa-vn-8oW"/>
                     <constraint firstItem="Ibg-nw-iB4" firstAttribute="top" secondItem="b5u-Yc-PrH" secondAttribute="bottom" id="5em-Gp-xH1"/>
+                    <constraint firstItem="WtJ-OY-xfc" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="8mG-fc-iXz"/>
                     <constraint firstItem="q9B-f3-tth" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="9Od-kZ-4Lm"/>
                     <constraint firstAttribute="trailing" secondItem="q9B-f3-tth" secondAttribute="trailing" constant="24" id="CV3-Hp-v5V"/>
                     <constraint firstItem="Hr2-bt-nff" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="FQD-nI-HgD"/>
+                    <constraint firstAttribute="bottom" secondItem="WtJ-OY-xfc" secondAttribute="bottom" id="J8K-65-VSf"/>
                     <constraint firstAttribute="trailing" secondItem="b5u-Yc-PrH" secondAttribute="trailing" id="Mwg-BG-p0Q"/>
                     <constraint firstItem="b5u-Yc-PrH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="N9T-LN-fsd"/>
                     <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="xBv-Gf-H1o" secondAttribute="bottom" priority="750" id="OfO-qN-fGI"/>
-                    <constraint firstAttribute="trailing" secondItem="Hr2-bt-nff" secondAttribute="trailing" id="SFT-dh-5a9"/>
+                    <constraint firstAttribute="trailing" secondItem="Hr2-bt-nff" secondAttribute="trailing" constant="24" id="SFT-dh-5a9"/>
                     <constraint firstItem="b5u-Yc-PrH" firstAttribute="top" secondItem="Hr2-bt-nff" secondAttribute="bottom" id="Uqp-b1-7cz"/>
                     <constraint firstAttribute="trailing" secondItem="B9d-Ve-FT6" secondAttribute="trailing" id="Y4f-M9-tbr"/>
+                    <constraint firstAttribute="trailing" secondItem="WtJ-OY-xfc" secondAttribute="trailing" id="Z4Q-Kx-C6J"/>
                     <constraint firstItem="B9d-Ve-FT6" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ZSN-kF-Zf7"/>
                     <constraint firstAttribute="trailing" secondItem="xBv-Gf-H1o" secondAttribute="trailing" id="dO1-Ry-xov"/>
                     <constraint firstItem="B9d-Ve-FT6" firstAttribute="top" secondItem="Ibg-nw-iB4" secondAttribute="bottom" id="ec0-hD-sAz"/>
-                    <constraint firstItem="Hr2-bt-nff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="l19-IG-eGA"/>
+                    <constraint firstItem="WtJ-OY-xfc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="f5b-6m-avf"/>
+                    <constraint firstItem="Hr2-bt-nff" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="24" id="l19-IG-eGA"/>
                     <constraint firstItem="xBv-Gf-H1o" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="qzt-2E-zfH"/>
                     <constraint firstItem="Ibg-nw-iB4" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="rVx-EH-EzU"/>
                     <constraint firstAttribute="trailing" secondItem="Ibg-nw-iB4" secondAttribute="trailing" id="xCg-a4-6am"/>
