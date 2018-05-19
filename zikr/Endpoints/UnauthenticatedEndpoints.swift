@@ -11,14 +11,14 @@ extension UnauthenticatedEndpoints: TargetType {
     var baseURL: URL {
         switch self {
         case .getAzkarTimes:
-            return URL(string: "http://api.aladhan.com/v1/calendar")!
+            return URL(string: "http://api.aladhan.com")!
         }
     }
 
     var path: String {
         switch self {
         case .getAzkarTimes:
-            return ""
+            return "/v1/calendar"
         }
     }
 
@@ -44,6 +44,6 @@ extension UnauthenticatedEndpoints: TargetType {
     }
 
     var headers: [String: String]? {
-        return ["Content-type": "application/json"]
+        return ["Accept": "application/json"]
     }
 }

@@ -38,7 +38,7 @@ class ZikrTableViewCell: UITableViewCell {
     func configureUI(zikrModel: ZikrModel) {
         bismllahTitle.text = zikrModel.title
         bismllahView(hide: zikrModel.title == "")
-       
+        
         zikr.text = zikrModel.zikr
         zikrView(hide: zikrModel.zikr == "")
         
@@ -68,7 +68,7 @@ class ZikrTableViewCell: UITableViewCell {
         numberOfTimesTop.constant = hide ? 0 : 16
         numberOfTimesBottom.constant = hide ? 0 : 16
     }
-
+    
     @IBAction func share(_ sender: UIButton) {
         //TODO: delegate action in the controller
     }
@@ -78,15 +78,18 @@ class ZikrTableViewCell: UITableViewCell {
     }
     
     @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        UIView.animate(withDuration: 3.0) {
+        UIView.animate(withDuration: 0.3) {
             self.separatorView.alpha = 0
             self.stackView.alpha = 0
-       
+            
             self.stackViewHeight.constant = self.stackViewHeight.constant == 0 ? 40 : 0
-            self.delegate?.zikrTableViewRedrawCell(cell: self)
-        
+//            self.contentView.layoutIfNeeded()
+            self.contentView.layoutSubviews()
+//            self.delegate?.zikrTableViewRedrawCell(cell: self)
+            
             self.separatorView.alpha = 1
             self.stackView.alpha = 1
+            //            delegate?.zikrTableViewCellPresentShareAvtivityController(cell: self, text: [])
         }
     }
 }

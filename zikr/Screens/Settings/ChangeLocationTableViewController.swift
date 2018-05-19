@@ -121,7 +121,7 @@ class ChangeLocationTableViewController: UITableViewController {
 }
 
 extension ChangeLocationTableViewController: ChangeLocationViewModelDelegate {
-    func didRecieveLocation() {
+    func changeLocationViewModelDidRecieveLocation() {
         tableView.reloadData()
         indicator.stopAnimating()
         settingsViewModel.getAzkarTimes {

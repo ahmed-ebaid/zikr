@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AzkarViewController" customModule="zikr" customModuleProvider="target">
             <connections>
+                <outlet property="pageSelector" destination="i4i-19-4B9" id="OEL-cj-qas"/>
                 <outlet property="tableView" destination="Gel-3s-ow8" id="acv-bk-0DW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -27,13 +28,16 @@
                         <segment title="أذكار الصباح"/>
                         <segment title="أذكار المساء"/>
                     </segments>
+                    <connections>
+                        <action selector="pageSelectorTapped:" destination="-1" eventType="valueChanged" id="Bci-02-F8b"/>
+                    </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-3s-ow8">
                     <rect key="frame" x="0.0" y="88" width="375" height="690"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="d95-g8-VQM"/>
-                        <outlet property="delegate" destination="-1" id="Gv1-ez-z8R"/>
+                        <outlet property="delegate" destination="-1" id="bjp-Zr-ahI"/>
                     </connections>
                 </tableView>
             </subviews>

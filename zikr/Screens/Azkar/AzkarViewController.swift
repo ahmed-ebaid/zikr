@@ -10,17 +10,22 @@ import UIKit
 
 class AzkarViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
+    @IBOutlet weak var pageSelector: UISegmentedControl!
     
     let viewModel = ZikrQuranViewModel()
-
+    
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         configureTableView()
     }
 
     private func configureTableView() {
         let zikrCellNib = UINib(nibName: "ZikrTableViewCell", bundle: nil)
         tableView.register(zikrCellNib, forCellReuseIdentifier: "zikrCell")
+    }
+    
+    @IBAction func pageSelectorTapped(_ sender: UISegmentedControl) {
+        tableView.reloadData()
     }
 }
 
@@ -36,15 +41,12 @@ extension AzkarViewController: UITableViewDataSource {
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell") as! ZikrTableViewCell
         cell.delegate = self
-        cell.selectionStyle = .none
-        let zikrModel = viewModel.morningZikrModels[indexPath.row]
+        
+        let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[indexPath.row] : viewModel.eveningZikrModels[indexPath.row]
+
         cell.configureUI(zikrModel: zikrModel)
         return cell
     }
-}
-
-extension AzkarViewController: UITableViewDelegate {
-    
 }
 
 extension AzkarViewController: ZikrTableViewCellDelegate {
@@ -56,7 +58,9 @@ extension AzkarViewController: ZikrTableViewCellDelegate {
 
     func zikrTableViewRedrawCell(cell: ZikrTableViewCell) {
 //        tableView.beginUpdates()
+//        if let indexPath = tableView.indexPath(for: cell) {
+//            tableView.cellForRow(at: indexPath)
+//        }
 //        tableView.endUpdates()
-        tableView.reloadRows(at: tableView.indexPathsForVisibleRows!, with: .automatic)
     }
 }

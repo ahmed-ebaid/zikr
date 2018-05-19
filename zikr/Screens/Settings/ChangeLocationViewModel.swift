@@ -4,17 +4,17 @@ import UIKit
 import CoreData
 
 protocol ChangeLocationViewModelDelegate: class {
-    func didRecieveLocation()
+    func changeLocationViewModelDidRecieveLocation()
 }
 
-class ChangeLocationViewModel: NSObject, CLLocationManagerDelegate {
+class ChangeLocationViewModel: NSObject {
     weak var delegate: ChangeLocationViewModelDelegate?
     let coreDataManager = CoreDataManager.shared
     
     private var locationManager = CLLocationManager()
     
     var favoritedLocations: [LocationMO] {
-            return coreDataManager.fetch(forEntity: "Locations", sortDescriptor: NSSortDescriptor(key: "timestamp", ascending: false)) as! [LocationMO]
+        return coreDataManager.fetch(forEntity: "Locations", sortDescriptor: NSSortDescriptor(key: "timestamp", ascending: false)) as! [LocationMO]
     }
     
     func getLocation(using displayedLocation: String) -> LocationMO {
@@ -56,7 +56,20 @@ class ChangeLocationViewModel: NSObject, CLLocationManagerDelegate {
         return ""
     }
     
-    // Mark Core Location Delegate Method
+    
+    private func isUniqueLocation(city: String, state: String, country: String) -> Bool {
+        for location in favoritedLocations {
+            if (location.city == city && location.state == state) || (location.city == city && location.country == country) {
+                location.timestamp = Date()
+                coreDataManager.save()
+                return false
+            }
+        }
+        return true
+    }
+}
+
+extension ChangeLocationViewModel: CLLocationManagerDelegate {
     func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
@@ -90,19 +103,8 @@ class ChangeLocationViewModel: NSObject, CLLocationManagerDelegate {
                     newLocation.timestamp = Date()
                     self.coreDataManager.save()
                 }
-                self.delegate?.didRecieveLocation()
+                self.delegate?.changeLocationViewModelDidRecieveLocation()
             }
         }
-    }
-    
-    private func isUniqueLocation(city: String, state: String, country: String) -> Bool {
-        for location in favoritedLocations {
-            if (location.city == city && location.state == state) || (location.city == city && location.country == country) {
-                location.timestamp = Date()
-                coreDataManager.save()
-                return false
-            }
-        }
-        return true
     }
 }

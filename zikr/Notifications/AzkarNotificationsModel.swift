@@ -1,13 +1,21 @@
  import UserNotifications
  
- class AzkarNotificationsModel: NSObject, UNUserNotificationCenterDelegate {
-    let center = UNUserNotificationCenter.current()
-    let zikrContent = UNMutableNotificationContent()
-    let fajrIdentifier = "FajrIdentifier"
-    let asrIdentifier = "AsrIdentifier"
-    let sharedModel = AzkarData.sharedInstance
+ fileprivate let fajrIdentifier = "FajrIdentifier"
+ fileprivate let asrIdentifier = "AsrIdentifier"
+ 
+ class AzkarNotificationsModel: NSObject {
+    let center: UNUserNotificationCenter!
+    private let zikrContent: UNMutableNotificationContent!
+    private let sharedModel: AzkarData!
+    
+    override init() {
+        center = UNUserNotificationCenter.current()
+        zikrContent = UNMutableNotificationContent()
+        sharedModel = AzkarData.sharedInstance
+    }
     
     private func configureAzkarNotifications() -> [UNNotificationRequest] {
+        
         var notificationRequests = [UNNotificationRequest]()
         var i = 0
         for zikrNotificationTime in sharedModel.zikrNotificationTimes {
@@ -19,7 +27,6 @@
     }
     
     private func addNotificationRequest(for zikrNotificationTime: ZikrNotificationTime, isFajrNotification: Bool, notificationId: Int) -> UNNotificationRequest {
-        
         zikrContent.title = isFajrNotification ? "وقت أذكار الصباح" :
         "وقت أذكار المساء"
         zikrContent.body = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ"
@@ -30,12 +37,16 @@
         dateComponents.hour = zikrTime.0
         dateComponents.minute = zikrTime.1
         dateComponents.second = 0
+        let currentFajrIdentifier = fajrIdentifier + "\(notificationId)"
+        let currentAsrIdentifier = asrIdentifier + "\(notificationId)"
+        
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
-        return UNNotificationRequest(identifier: isFajrNotification ? fajrIdentifier : asrIdentifier + "\(notificationId)", content: zikrContent, trigger: trigger)
+        return UNNotificationRequest(identifier: isFajrNotification ? currentFajrIdentifier : currentAsrIdentifier, content: zikrContent, trigger: trigger)
     }
     
     func toggleNotifications(_ value: Bool) {
         if value {
+            center.delegate = self
             let azkarNotificaitionsRequests = configureAzkarNotifications()
             for azkarNotification in azkarNotificaitionsRequests {
                 center.add(azkarNotification) { error in
@@ -61,8 +72,9 @@
         }
         return (hour, minute)
     }
-    
-    // Marker Delegate Methods
+ }
+ 
+ extension AzkarNotificationsModel: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_: UNUserNotificationCenter, didReceive _: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         completionHandler()
     }
