@@ -5,23 +5,65 @@
 //  Created by Ahmed Ebaid on 4/8/18.
 //  Copyright © 2018 Ahmed Ebaid. All rights reserved.
 //
-
+import AVFoundation
 import UIKit
 
 class AzkarViewController: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet weak var pageSelector: UISegmentedControl!
+    @IBOutlet weak var playPause: UIButton!
+    
+    @IBOutlet weak var audioSlider: UISlider!
+    var audioPlayer: AVAudioPlayer?
     
     let viewModel = ZikrQuranViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureTableView()
+        configureAudioPlayer()
     }
 
     private func configureTableView() {
         let zikrCellNib = UINib(nibName: "ZikrTableViewCell", bundle: nil)
         tableView.register(zikrCellNib, forCellReuseIdentifier: "zikrCell")
+    }
+    
+    private func configureAudioPlayer() {
+        
+        let sound = Bundle.main.url(forResource: "112", withExtension: "mp3")
+
+        guard let player = try? AVAudioPlayer(contentsOf: sound!) else {
+            return
+        }
+        audioPlayer = player
+        print("audioPlayer duration: \(audioPlayer?.duration)")
+        audioPlayer?.delegate = self
+
+        if let duration = audioPlayer?.duration.magnitude {
+            audioSlider.maximumValue = Float(duration)
+        }
+        
+        audioSlider.maximumValue = Float((audioPlayer?.duration)!)
+    }
+    
+    @IBAction func playPauseTapped(_ sender: UIButton) {
+        guard let isPlaying = audioPlayer?.isPlaying else {
+            return
+        }
+    
+        if playPause.imageView?.image == #imageLiteral(resourceName: "play") {
+            playPause.setImage(#imageLiteral(resourceName: "pause"), for: .normal)
+            playPause.imageView?.image = #imageLiteral(resourceName: "pause")
+        } else {
+            playPause.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        }
+        
+        if isPlaying {
+            audioPlayer?.pause()
+        } else {
+            audioPlayer?.play()
+        }
     }
     
     @IBAction func pageSelectorTapped(_ sender: UISegmentedControl) {
@@ -47,6 +89,8 @@ extension AzkarViewController: UITableViewDataSource {
         cell.configureUI(zikrModel: zikrModel)
         return cell
     }
+    
+    
 }
 
 extension AzkarViewController: ZikrTableViewCellDelegate {
@@ -57,10 +101,15 @@ extension AzkarViewController: ZikrTableViewCellDelegate {
     }
 
     func zikrTableViewRedrawCell(cell: ZikrTableViewCell) {
-//        tableView.beginUpdates()
-//        if let indexPath = tableView.indexPath(for: cell) {
-//            tableView.cellForRow(at: indexPath)
-//        }
-//        tableView.endUpdates()
+        tableView.beginUpdates()
+        tableView.endUpdates()
+    }
+}
+
+extension AzkarViewController: AVAudioPlayerDelegate {
+    func audioPlayerDidFinishPlaying(_ player: AVAudioPlayer, successfully flag: Bool) {
+        if flag {
+            playPause.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+        }
     }
 }

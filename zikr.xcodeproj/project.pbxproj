@@ -10,7 +10,6 @@
 		C20194022058B198005ED7DC /* LocationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* LocationMO.swift */; };
 		C21E4E9F20A3D31000D07557 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E4E9E20A3D31000D07557 /* GradientView.swift */; };
 		C22055CC2080230C00FCE437 /* ZikrQuranViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */; };
-		C224D173207A362F00FF0AE4 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = C224D172207A362F00FF0AE4 /* background.png */; };
 		C224DD872086DBD50089A9F0 /* ZikrModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DD862086DBD50089A9F0 /* ZikrModel.swift */; };
 		C224DD9120896F030089A9F0 /* ZikrTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */; };
 		C224DD99208D61290089A9F0 /* ZikrTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */; };
@@ -51,6 +50,7 @@
 		C2CA97EF207ADA9100D25D4C /* AzkarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2CA97ED207ADA9100D25D4C /* AzkarViewController.xib */; };
 		C2CA97F1207EE04700D25D4C /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CA97F0207EE04700D25D4C /* share.png */; };
 		C2CA97F3207EE0EF00D25D4C /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CA97F2207EE0EF00D25D4C /* favorite.png */; };
+		C2CAAB2220B2399C00EA4148 /* 112.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2CAAB2120B2399C00EA4148 /* 112.mp3 */; };
 		C2F8C93620648F0500630B0A /* zikrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F8C93520648F0500630B0A /* zikrTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -95,7 +95,6 @@
 		C20194012058B198005ED7DC /* LocationMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMO.swift; sourceTree = "<group>"; };
 		C21E4E9E20A3D31000D07557 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranViewModel.swift; sourceTree = "<group>"; };
-		C224D172207A362F00FF0AE4 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		C224DD862086DBD50089A9F0 /* ZikrModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrModel.swift; sourceTree = "<group>"; };
 		C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZikrTableViewCell.xib; sourceTree = "<group>"; };
 		C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrTableViewCell.swift; sourceTree = "<group>"; };
@@ -135,6 +134,7 @@
 		C2CA97ED207ADA9100D25D4C /* AzkarViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AzkarViewController.xib; sourceTree = "<group>"; };
 		C2CA97F0207EE04700D25D4C /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		C2CA97F2207EE0EF00D25D4C /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
+		C2CAAB2120B2399C00EA4148 /* 112.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 112.mp3; sourceTree = "<group>"; };
 		C2F8C93320648F0500630B0A /* zikrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zikrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F8C93520648F0500630B0A /* zikrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikrTests.swift; sourceTree = "<group>"; };
 		C2F8C93720648F0500630B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -249,6 +249,7 @@
 			children = (
 				C23942CD2055BEFB00637428 /* Constants.swift */,
 				C2815053204F783100F6117B /* AppDelegate.swift */,
+				C2CAAB2120B2399C00EA4148 /* 112.mp3 */,
 				C281503B204CBED600F6117B /* LaunchScreen.storyboard */,
 				C281503E204CBED600F6117B /* Info.plist */,
 				C23942B72055A95C00637428 /* Assets.xcassets */,
@@ -262,7 +263,6 @@
 				C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */,
 				C2CA97F2207EE0EF00D25D4C /* favorite.png */,
 				C2CA97F0207EE04700D25D4C /* share.png */,
-				C224D172207A362F00FF0AE4 /* background.png */,
 			);
 			path = Notifications;
 			sourceTree = "<group>";
@@ -448,8 +448,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C224D173207A362F00FF0AE4 /* background.png in Resources */,
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
+				C2CAAB2220B2399C00EA4148 /* 112.mp3 in Resources */,
 				C224DD9120896F030089A9F0 /* ZikrTableViewCell.xib in Resources */,
 				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,

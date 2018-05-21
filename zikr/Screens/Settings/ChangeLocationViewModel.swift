@@ -78,11 +78,7 @@ extension ChangeLocationViewModel: CLLocationManagerDelegate {
         locationManager.stopUpdatingLocation()
         let geocoder = CLGeocoder()
         geocoder.reverseGeocodeLocation(location) { placemarksArray, _ in
-            if placemarksArray != nil {
-                guard let placemark = placemarksArray?.first else {
-                    return
-                }
-                
+            if let placemark = placemarksArray?.first {
                 guard let coordinate = placemark.location?.coordinate else {
                     return
                 }

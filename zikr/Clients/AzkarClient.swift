@@ -12,7 +12,7 @@ class AzkarClient: AzkarClientProtocol {
                        month: Int,
                        year: Int,
                        completion: @escaping ClientCompletionClosure) {
-        MoyaProvider<UnauthenticatedEndpoints>().request(.getAzkarTimes(latitude: latitude,
+        MoyaProvider<UnauthenticatedEndpoints>(plugins: [NetworkLoggerPlugin()]).request(.getAzkarTimes(latitude: latitude,
                                                                         longitude: longitude,
                                                                         method: method,
                                                                         month: month,

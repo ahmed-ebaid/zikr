@@ -83,13 +83,10 @@ class ZikrTableViewCell: UITableViewCell {
             self.stackView.alpha = 0
             
             self.stackViewHeight.constant = self.stackViewHeight.constant == 0 ? 40 : 0
-//            self.contentView.layoutIfNeeded()
-            self.contentView.layoutSubviews()
-//            self.delegate?.zikrTableViewRedrawCell(cell: self)
+            self.delegate?.zikrTableViewRedrawCell(cell: self)
             
             self.separatorView.alpha = 1
             self.stackView.alpha = 1
-            //            delegate?.zikrTableViewCellPresentShareAvtivityController(cell: self, text: [])
         }
     }
 }
