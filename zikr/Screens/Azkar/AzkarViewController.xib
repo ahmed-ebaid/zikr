@@ -51,6 +51,9 @@
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ee9-v0-7J6">
                     <rect key="frame" x="126" y="89.666666666666671" width="235" height="31"/>
+                    <connections>
+                        <action selector="audioSliderValueChanged:" destination="-1" eventType="valueChanged" id="msU-wk-3fw"/>
+                    </connections>
                 </slider>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
