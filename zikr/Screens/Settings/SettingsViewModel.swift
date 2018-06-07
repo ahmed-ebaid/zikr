@@ -42,7 +42,13 @@ class SettingsViewModel {
             return
         }
         let calculationMethod = calculationMethodViewModel.calculationMethod
-        guard let month = Date.nextMonth, let year = Date.nextYear else {
+        
+        guard let date = Calendar.current.date(byAdding: .month, value: 1, to: Date()) else {
+            return
+        }
+
+        let dateComponents = Date.getDateComponents(for: date)
+        guard let month = dateComponents.month, let year = dateComponents.year else {
             return
         }
         

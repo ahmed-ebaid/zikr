@@ -81,10 +81,10 @@ class ZikrTableViewCell: UITableViewCell {
         UIView.animate(withDuration: 0.3) {
             self.separatorView.alpha = 0
             self.stackView.alpha = 0
-            
+        
             self.stackViewHeight.constant = self.stackViewHeight.constant == 0 ? 40 : 0
             self.delegate?.zikrTableViewRedrawCell(cell: self)
-            
+        
             self.separatorView.alpha = 1
             self.stackView.alpha = 1
         }

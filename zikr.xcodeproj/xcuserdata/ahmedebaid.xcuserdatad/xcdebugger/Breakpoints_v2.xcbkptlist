@@ -230,7 +230,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zikr/Screens/Azkar/ZikrTableViewCell.swift"
-            timestampString = "548446631.696049"
+            timestampString = "549227160.535599"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "75"
@@ -246,7 +246,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zikr/Screens/Azkar/ZikrTableViewCell.swift"
-            timestampString = "548446631.6961451"
+            timestampString = "549227160.536307"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "76"
@@ -310,7 +310,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zikr/SupportFiles/AppDelegate.swift"
-            timestampString = "548446631.696435"
+            timestampString = "549212671.496787"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "40"
@@ -332,38 +332,6 @@
             startingLineNumber = "30"
             endingLineNumber = "30"
             landmarkName = "viewWillDisappear(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "zikr/Notifications/AzkarNotificationsModel.swift"
-            timestampString = "548446631.696565"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "59"
-            endingLineNumber = "59"
-            landmarkName = "toggleNotifications(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "zikr/Notifications/AzkarNotificationsModel.swift"
-            timestampString = "548446631.696658"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
-            landmarkName = "toggleNotifications(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -411,8 +379,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "23"
             endingLineNumber = "23"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "getAzkarTimes(latitude:longitude:method:month:year:completion:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -422,11 +390,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zikr/Screens/Azkar/AzkarViewController.swift"
-            timestampString = "548553742.699144"
+            timestampString = "549227160.537124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "62"
-            endingLineNumber = "62"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "playPauseTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -438,11 +406,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "zikr/Screens/Azkar/AzkarViewController.swift"
-            timestampString = "548553742.701539"
+            timestampString = "549227160.537243"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
             landmarkName = "playPauseTapped(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -453,13 +421,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "zikr/Screens/Azkar/AzkarViewController.swift"
-            timestampString = "548553742.702961"
+            filePath = "zikr/Screens/Settings/SettingsViewModel.swift"
+            timestampString = "550026987.499595"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "111"
-            endingLineNumber = "111"
-            landmarkName = "audioPlayerDidFinishPlaying(_:successfully:)"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "requestMoreAzkarTimes(completion:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

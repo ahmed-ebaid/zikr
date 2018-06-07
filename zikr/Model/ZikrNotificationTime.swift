@@ -11,7 +11,7 @@ struct ZikrNotificationTime {
         
         let fajrAndAsrTimings = FajrAndAsrTimings(fajr: timings["Fajr"] as! String, asr: timings["Asr"] as! String)
         
-        return ZikrNotificationTime(timings: fajrAndAsrTimings, date: Date.getDateFromString(using: date))
+        return ZikrNotificationTime(timings: fajrAndAsrTimings, date: Date.getFormattedDate(date: date))
     }
     
     static func arrayFromJSON(_ json: JSON) throws -> [ZikrNotificationTime] {
@@ -24,10 +24,10 @@ struct ZikrNotificationTime {
         try data.forEach { try zikrNotificationTimes.append(ZikrNotificationTime.fromJSON($0)) }
         
         let todaysDate = Date()
-        let todaysComponents = Date.getDateComponentsFrom(date: todaysDate)
+        let todaysComponents = Date.getDateComponents(for: todaysDate)
         
         return zikrNotificationTimes.filter {
-            let currentComponents = Date.getDateComponentsFrom(date: $0.date)
+            let currentComponents = Date.getDateComponents(for: $0.date)
             
             if currentComponents.year == todaysComponents.year && currentComponents.month == todaysComponents.month {
                 return currentComponents.day! >= todaysComponents.day!

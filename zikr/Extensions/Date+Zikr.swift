@@ -1,58 +1,25 @@
 import Foundation
 
 extension Date {
+    static var day: Int? {
+        return getDateComponents().day
+    }
+    
     static var month: Int? {
-        return getDateComponentsFrom().month
+        return getDateComponents().month
     }
 
     static var year: Int? {
-        get {
-            return getDateComponentsFrom().year
-        }
-        set {
-            self.year = newValue
-        }
+            return getDateComponents().year
     }
 
-    static var nextMonth: Int? {
-        if let currentMonth = month {
-            if currentMonth < 12 {
-                return currentMonth + 1
-            } else {
-                if let currentYear = year {
-                    nextYear = currentYear + 1
-                }
-                return 1
-            }
-        }
-        return 0
-    }
-
-    static var nextYear: Int? {
-        get {
-            return year
-        }
-        set {
-            year = newValue
-        }
-    }
-
-    static func getTodayDate(with dateFormat: String = "dd-MM-yyyy") -> Date {
-        let todaysDate = Date()
+    static func getFormattedDate(date: String, dateFormat: String = "dd-MM-yyyy") -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = dateFormat
-        let todayString = dateFormatter.string(from: todaysDate as Date)
-        return dateFormatter.date(from: todayString)!
+        return dateFormatter.date(from: date)!
     }
 
-    static func getDateFromString(using stringDate: String, and dateFormat: String = "dd-MM-yyyy") -> Date {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = dateFormat
-        return dateFormatter.date(from: stringDate)!
-    }
-
-    static func getDateComponentsFrom(date: Date = Date()) -> DateComponents {
-        let components = Set<Calendar.Component>([.day, .month, .year])
-        return Calendar.current.dateComponents(components, from: date)
+    static func getDateComponents(for date: Date = Date()) -> DateComponents {
+        return Calendar.current.dateComponents([.day, .month, .year], from: date)
     }
 }
