@@ -25,15 +25,11 @@
 		C23942D42055C81E00637428 /* ClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D32055C81E00637428 /* ClientError.swift */; };
 		C23942D72055E27100637428 /* Date+Zikr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23942D62055E27100637428 /* Date+Zikr.swift */; };
 		C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */; };
-		C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC7D2056122F00F72703 /* SettingsViewModel.swift */; };
-		C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */; };
-		C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */; };
 		C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */; };
 		C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C263AC882057617400F72703 /* ChangeLocationViewModel.swift */; };
 		C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C281503B204CBED600F6117B /* LaunchScreen.storyboard */; };
 		C281504E204CD8D000F6117B /* AppTabController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C281504D204CD8D000F6117B /* AppTabController.swift */; };
 		C2815054204F783100F6117B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815053204F783100F6117B /* AppDelegate.swift */; };
-		C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2815066204F8D0400F6117B /* SettingsTableViewController.swift */; };
 		C28794CF20682CEC007FEBE4 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; };
 		C28794D020682CEC007FEBE4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; };
 		C28794D220682D5D007FEBE4 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25EDB7B2068298A00CF164F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -51,6 +47,14 @@
 		C2CA97F1207EE04700D25D4C /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CA97F0207EE04700D25D4C /* share.png */; };
 		C2CA97F3207EE0EF00D25D4C /* favorite.png in Resources */ = {isa = PBXBuildFile; fileRef = C2CA97F2207EE0EF00D25D4C /* favorite.png */; };
 		C2CAAB2220B2399C00EA4148 /* 112.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = C2CAAB2120B2399C00EA4148 /* 112.mp3 */; };
+		C2E7F27B20CC20820061B73E /* UIViewController+Zikr.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F27A20CC20820061B73E /* UIViewController+Zikr.swift */; };
+		C2E7F28320CC880F0061B73E /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F28220CC880E0061B73E /* SettingsViewModel.swift */; };
+		C2E7F28620CC995A0061B73E /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F28420CC995A0061B73E /* SettingsTableViewController.swift */; };
+		C2E7F28720CC995A0061B73E /* SettingsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E7F28520CC995A0061B73E /* SettingsTableViewController.xib */; };
+		C2E7F28A20CC9A5B0061B73E /* ChangeLocationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F28820CC9A5B0061B73E /* ChangeLocationTableViewController.swift */; };
+		C2E7F28B20CC9A5B0061B73E /* ChangeLocationTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E7F28920CC9A5B0061B73E /* ChangeLocationTableViewController.xib */; };
+		C2E7F28E20CC9B250061B73E /* CalculationMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F28C20CC9B250061B73E /* CalculationMethodTableViewController.swift */; };
+		C2E7F28F20CC9B250061B73E /* CalculationMethodTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E7F28D20CC9B250061B73E /* CalculationMethodTableViewController.xib */; };
 		C2F8C93620648F0500630B0A /* zikrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F8C93520648F0500630B0A /* zikrTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -116,9 +120,6 @@
 		C24E771F2052376D00C3571D /* AzkarNotificationsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarNotificationsModel.swift; sourceTree = "<group>"; };
 		C25EDB7A2068298900CF164F /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 		C25EDB7B2068298A00CF164F /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
-		C263AC7D2056122F00F72703 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
-		C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTableViewController.swift; sourceTree = "<group>"; };
-		C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationTableViewController.swift; sourceTree = "<group>"; };
 		C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodViewModel.swift; sourceTree = "<group>"; };
 		C263AC882057617400F72703 /* ChangeLocationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationViewModel.swift; sourceTree = "<group>"; };
 		C263AC8E20576A0D00F72703 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
@@ -127,7 +128,6 @@
 		C281503E204CBED600F6117B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C281504D204CD8D000F6117B /* AppTabController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTabController.swift; sourceTree = "<group>"; };
 		C2815053204F783100F6117B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C2815066204F8D0400F6117B /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		C28803122063466800C68F03 /* DoaaTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoaaTableViewController.swift; sourceTree = "<group>"; };
 		C28803132063466800C68F03 /* DoaaTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoaaTableViewController.xib; sourceTree = "<group>"; };
 		C2CA97EC207ADA9100D25D4C /* AzkarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AzkarViewController.swift; sourceTree = "<group>"; };
@@ -135,6 +135,14 @@
 		C2CA97F0207EE04700D25D4C /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = share.png; sourceTree = "<group>"; };
 		C2CA97F2207EE0EF00D25D4C /* favorite.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = favorite.png; sourceTree = "<group>"; };
 		C2CAAB2120B2399C00EA4148 /* 112.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = 112.mp3; sourceTree = "<group>"; };
+		C2E7F27A20CC20820061B73E /* UIViewController+Zikr.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Zikr.swift"; sourceTree = "<group>"; };
+		C2E7F28220CC880E0061B73E /* SettingsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		C2E7F28420CC995A0061B73E /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		C2E7F28520CC995A0061B73E /* SettingsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsTableViewController.xib; sourceTree = "<group>"; };
+		C2E7F28820CC9A5B0061B73E /* ChangeLocationTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeLocationTableViewController.swift; sourceTree = "<group>"; };
+		C2E7F28920CC9A5B0061B73E /* ChangeLocationTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeLocationTableViewController.xib; sourceTree = "<group>"; };
+		C2E7F28C20CC9B250061B73E /* CalculationMethodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTableViewController.swift; sourceTree = "<group>"; };
+		C2E7F28D20CC9B250061B73E /* CalculationMethodTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculationMethodTableViewController.xib; sourceTree = "<group>"; };
 		C2F8C93320648F0500630B0A /* zikrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zikrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F8C93520648F0500630B0A /* zikrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikrTests.swift; sourceTree = "<group>"; };
 		C2F8C93720648F0500630B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -240,6 +248,7 @@
 			children = (
 				C23942D62055E27100637428 /* Date+Zikr.swift */,
 				C235B4DA205E93C60083DA14 /* UserDefaults+Zikr.swift */,
+				C2E7F27A20CC20820061B73E /* UIViewController+Zikr.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -302,13 +311,16 @@
 		C263AC8D205767AD00F72703 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				C263AC7D2056122F00F72703 /* SettingsViewModel.swift */,
-				C2815066204F8D0400F6117B /* SettingsTableViewController.swift */,
+				C2E7F28220CC880E0061B73E /* SettingsViewModel.swift */,
 				C263AC8620561A1200F72703 /* CalculationMethodViewModel.swift */,
-				C263AC802056181300F72703 /* CalculationMethodTableViewController.swift */,
 				C263AC882057617400F72703 /* ChangeLocationViewModel.swift */,
-				C263AC822056182300F72703 /* ChangeLocationTableViewController.swift */,
 				C20194012058B198005ED7DC /* LocationMO.swift */,
+				C2E7F28420CC995A0061B73E /* SettingsTableViewController.swift */,
+				C2E7F28520CC995A0061B73E /* SettingsTableViewController.xib */,
+				C2E7F28820CC9A5B0061B73E /* ChangeLocationTableViewController.swift */,
+				C2E7F28920CC9A5B0061B73E /* ChangeLocationTableViewController.xib */,
+				C2E7F28C20CC9B250061B73E /* CalculationMethodTableViewController.swift */,
+				C2E7F28D20CC9B250061B73E /* CalculationMethodTableViewController.xib */,
 			);
 			path = Settings;
 			sourceTree = "<group>";
@@ -448,9 +460,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C2E7F28B20CC9A5B0061B73E /* ChangeLocationTableViewController.xib in Resources */,
+				C2E7F28720CC995A0061B73E /* SettingsTableViewController.xib in Resources */,
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
 				C2CAAB2220B2399C00EA4148 /* 112.mp3 in Resources */,
 				C224DD9120896F030089A9F0 /* ZikrTableViewCell.xib in Resources */,
+				C2E7F28F20CC9B250061B73E /* CalculationMethodTableViewController.xib in Resources */,
 				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
 				C2CA97EF207ADA9100D25D4C /* AzkarViewController.xib in Resources */,
@@ -477,11 +492,9 @@
 				C235B4DB205E93C60083DA14 /* UserDefaults+Zikr.swift in Sources */,
 				C22607E7205D5486001787CF /* AzkarClient.swift in Sources */,
 				C23942D12055C37600637428 /* ZikrNotificationTime.swift in Sources */,
-				C2815067204F8D0400F6117B /* SettingsTableViewController.swift in Sources */,
 				C23942D72055E27100637428 /* Date+Zikr.swift in Sources */,
-				C263AC812056181300F72703 /* CalculationMethodTableViewController.swift in Sources */,
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
-				C263AC832056182300F72703 /* ChangeLocationTableViewController.swift in Sources */,
+				C2E7F28A20CC9A5B0061B73E /* ChangeLocationTableViewController.swift in Sources */,
 				C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */,
 				C21E4E9F20A3D31000D07557 /* GradientView.swift in Sources */,
 				C2CA97EE207ADA9100D25D4C /* AzkarViewController.swift in Sources */,
@@ -489,16 +502,19 @@
 				C23942CE2055BEFB00637428 /* Constants.swift in Sources */,
 				C224DD99208D61290089A9F0 /* ZikrTableViewCell.swift in Sources */,
 				C23942BB2055AEF500637428 /* UnauthenticatedEndpoints.swift in Sources */,
+				C2E7F27B20CC20820061B73E /* UIViewController+Zikr.swift in Sources */,
 				C22607E9205D5E75001787CF /* AzkarData.swift in Sources */,
+				C2E7F28620CC995A0061B73E /* SettingsTableViewController.swift in Sources */,
+				C2E7F28E20CC9B250061B73E /* CalculationMethodTableViewController.swift in Sources */,
 				C23942D42055C81E00637428 /* ClientError.swift in Sources */,
 				C2815054204F783100F6117B /* AppDelegate.swift in Sources */,
 				C224DDC1208ED2560089A9F0 /* CoreDataManager.swift in Sources */,
 				C224DD872086DBD50089A9F0 /* ZikrModel.swift in Sources */,
 				C20194022058B198005ED7DC /* LocationMO.swift in Sources */,
 				C281504E204CD8D000F6117B /* AppTabController.swift in Sources */,
-				C263AC7E2056122F00F72703 /* SettingsViewModel.swift in Sources */,
 				C263AC8720561A1200F72703 /* CalculationMethodViewModel.swift in Sources */,
 				C263AC892057617400F72703 /* ChangeLocationViewModel.swift in Sources */,
+				C2E7F28320CC880F0061B73E /* SettingsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

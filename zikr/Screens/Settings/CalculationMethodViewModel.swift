@@ -1,3 +1,11 @@
+//
+//  SettingsTableViewController.swift
+//  zikr
+//
+//  Created by Ahmed Ebaid on 6/9/18.
+//  Copyright © 2018 Ahmed Ebaid. All rights reserved.
+//
+
 import Foundation
 
 fileprivate let defaultCalculationMethodIndex = 2
@@ -16,7 +24,13 @@ class CalculationMethodViewModel {
         ("Institute of Geophysics.", 9),
         (" Wakfs.", 10),
         ("Geophysics.", 11),
-        (" fs.", 12),
+        (" AB", 12),
+        (" CD.", 13),
+        ("EF.", 14),
+        (" GH.", 15),
+        (" IJ.", 16),
+        ("KL.", 17),
+        (" MN.", 18),
     ]
 
     var calculationMethod: Int {

@@ -5,21 +5,9 @@ class CalculationMethodTableViewController: UITableViewController {
     let settingsViewModel = SettingsViewModel(client: AzkarClient())
     var calculationMethod = 0
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        title = "Calculation Method"
-        tableView.clipsToBounds = true
-        tableView.contentInset.bottom = 52
-        tableView.tableFooterView = UIView()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        tableView.reloadData()
-    }
-    
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        title = "Calculation Method"
         calculationMethod = model.calculationMethod
     }
     
@@ -53,32 +41,20 @@ class CalculationMethodTableViewController: UITableViewController {
         return cell
     }
     
-    override func tableView(_: UITableView, viewForFooterInSection _: Int) -> UIView? {
-        let footerView = UIView()
-        
-        let label = UILabel()
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.text = "PLEASE REFER TO YOUR RELIGUOUS AUTORITY FOR THE COORECT CALCULATION METHOD TO USE"
-        label.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
-        label.numberOfLines = 0
-        
-        footerView.addSubview(label)
-        
-        NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: footerView.leadingAnchor, constant: 17), label.topAnchor.constraint(equalTo: footerView.topAnchor, constant: 20),
-            label.trailingAnchor.constraint(equalTo: footerView.trailingAnchor, constant: 10),
-            ])
-        return footerView
+    // MARK: - Table view delegate
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return "CALCULATION METHODS"
     }
     
-    // MARK: - Table view delegate
+    override func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        return "PLEASE REFER TO YOUR RELIGUOUS AUTORITY FOR THE COORECT CALCULATION METHOD TO USE"
+    }
+    
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
         model.setCalculationMethod(calculationMethod: model.calculationMethods[indexPath.row].0)
         tableView.reloadData()
     }
-    
-    override func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tableView.cellForRow(at: indexPath)?.accessoryType = .none
-    }
 }
+
