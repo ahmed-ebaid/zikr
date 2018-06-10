@@ -1,21 +1,37 @@
+//
+//  CalculationMethodTableViewController.swift
+//  zikr
+//
+//  Created by Ahmed Ebaid on 6/9/18.
+//  Copyright © 2018 Ahmed Ebaid. All rights reserved.
+//
+
 import UIKit
 
 class CalculationMethodTableViewController: UITableViewController {
-    let model = CalculationMethodViewModel()
-    let settingsViewModel = SettingsViewModel(client: AzkarClient())
+    let viewModel: SettingsViewModel
     var calculationMethod = 0
+    
+    init(viewModel: SettingsViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: "CalculationMethodTableViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         title = "Calculation Method"
-        calculationMethod = model.calculationMethod
+        calculationMethod = viewModel.calculationMethod.calculationMethodIndex
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        if calculationMethod != model.calculationMethod {
-            settingsViewModel.getAzkarTimes {
-                self.settingsViewModel.restartAzkarNotifications()
+        if calculationMethod != viewModel.calculationMethod.calculationMethodIndex {
+            viewModel.getAzkarTimes {
+                self.viewModel.restartAzkarNotifications()
             }
         }
     }
@@ -26,7 +42,7 @@ class CalculationMethodTableViewController: UITableViewController {
     }
     
     override func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return model.calculationMethods.count
+        return viewModel.calculationMethod.azkarCalculationMethods.count
     }
     
     override func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -34,10 +50,10 @@ class CalculationMethodTableViewController: UITableViewController {
         cell.selectionStyle = .none
         cell.accessoryType = .none
         let indexOfSelectedCell = UserDefaults.standard.integer(forKey: "CalculationMethod")
-        if model.calculationMethods[indexPath.row].1 == indexOfSelectedCell {
+        if viewModel.calculationMethod.azkarCalculationMethods[indexPath.row].1 == indexOfSelectedCell {
             cell.accessoryType = .checkmark
         }
-        cell.textLabel?.text = model.calculationMethods[indexPath.row].0
+        cell.textLabel?.text = viewModel.calculationMethod.azkarCalculationMethods[indexPath.row].0
         return cell
     }
     
@@ -53,7 +69,7 @@ class CalculationMethodTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.cellForRow(at: indexPath)?.accessoryType = .checkmark
-        model.setCalculationMethod(calculationMethod: model.calculationMethods[indexPath.row].0)
+        viewModel.calculationMethod.setCalculationMethod(calculationMethod: viewModel.calculationMethod.azkarCalculationMethods[indexPath.row].0)
         tableView.reloadData()
     }
 }

@@ -11,11 +11,18 @@ import UIKit
 class SettingsTableViewController: UITableViewController {
     let calculationMethodCell = UITableViewCell()
     let changeLocationCell = UITableViewCell()
-    
-    let calculationMethodHeaderLabel = UILabel()
-    let changeLocationHeaderLabel = UILabel()
+    var viewModel: SettingsViewModel
     
     let sectionsHeadersTitles = ["Azkar Settings", "Location Settings"]
+    
+    init(viewModel: SettingsViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: "SettingsTableViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,10 +37,9 @@ class SettingsTableViewController: UITableViewController {
         
         changeLocationCell.textLabel?.text = "Change Location"
         changeLocationCell.accessoryType = .disclosureIndicator
-        changeLocationCell.selectionStyle = .none        
+        changeLocationCell.selectionStyle = .none
     }
 
-    
     // MARK: - Table view data source
     
     override func numberOfSections(in _: UITableView) -> Int {
@@ -51,10 +57,10 @@ class SettingsTableViewController: UITableViewController {
     // Marker: Table View Delegate Methods
     override func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.section == 0 {
-            let viewController = CalculationMethodTableViewController()
+            let viewController = CalculationMethodTableViewController(viewModel: viewModel)
             navigationController?.pushViewController(viewController, animated: true)
         } else {
-            let viewController = ChangeLocationTableViewController()
+            let viewController = ChangeLocationTableViewController(viewModel: viewModel)
             navigationController?.pushViewController(viewController, animated: true)
         }
     }

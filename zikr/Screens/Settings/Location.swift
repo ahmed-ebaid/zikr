@@ -11,12 +11,12 @@ import MapKit
 import UIKit
 import CoreData
 
-protocol ChangeLocationViewModelDelegate: class {
-    func changeLocationViewModelDidRecieveLocation()
+protocol LocationDelegate: class {
+    func locationDidRecieveCurrentLocation(_ location: Location)
 }
 
-class ChangeLocationViewModel: NSObject {
-    weak var delegate: ChangeLocationViewModelDelegate?
+class Location: NSObject {
+    weak var delegate: LocationDelegate?
     let coreDataManager = CoreDataManager.shared
     
     private var locationManager = CLLocationManager()
@@ -77,7 +77,7 @@ class ChangeLocationViewModel: NSObject {
     }
 }
 
-extension ChangeLocationViewModel: CLLocationManagerDelegate {
+extension Location: CLLocationManagerDelegate {
     func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
@@ -107,7 +107,7 @@ extension ChangeLocationViewModel: CLLocationManagerDelegate {
                     newLocation.timestamp = Date()
                     self.coreDataManager.save()
                 }
-                self.delegate?.changeLocationViewModelDidRecieveLocation()
+                self.delegate?.locationDidRecieveCurrentLocation(self)
             }
         }
     }

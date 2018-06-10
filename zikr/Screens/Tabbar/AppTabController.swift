@@ -21,7 +21,9 @@ class AppTabController: UITabBarController {
         doaaController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Doaa"), tag: 1)
         doaaController.tabBarItem.setTitleTextAttributes(attributededStringKeys, for: .normal)
         
-        let settingsNavigationController = UINavigationController(rootViewController: SettingsTableViewController())
+        let client = AzkarClient()
+
+        let settingsNavigationController = UINavigationController(rootViewController: SettingsTableViewController(viewModel: SettingsViewModel(client: client)))
         settingsNavigationController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Settings"), tag: 2)
         attributededStringKeys[.font] = UIFont.systemFont(ofSize: 10, weight: .bold)
         settingsNavigationController.tabBarItem.setTitleTextAttributes(attributededStringKeys, for: .normal)

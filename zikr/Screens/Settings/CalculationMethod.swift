@@ -10,9 +10,11 @@ import Foundation
 
 fileprivate let defaultCalculationMethodIndex = 2
 
-class CalculationMethodViewModel {
+class CalculationMethod {
+    
     let userDefaults = UserDefaults.standard
-    lazy var calculationMethods = [
+    
+    lazy var azkarCalculationMethods = [
         ("Jafari - Ithna Ashari.", 0),
         ("Karachi - University of Islamic Sciences.", 1),
         ("ISNA - Islamic Society of North America.", 2),
@@ -33,7 +35,7 @@ class CalculationMethodViewModel {
         (" MN.", 18),
     ]
 
-    var calculationMethod: Int {
+    var calculationMethodIndex: Int {
         return userDefaults.integer(forKey: "CalculationMethod")
     }
 
@@ -42,7 +44,7 @@ class CalculationMethodViewModel {
     }
 
     private func findIndexOfCalculationMethod(_ calculationMethod: String) -> Int {
-        for tuple in calculationMethods {
+        for tuple in azkarCalculationMethods {
             if tuple.0 == calculationMethod {
                 return tuple.1
             }
