@@ -7,16 +7,28 @@ class AzkarViewController: UIViewController {
     @IBOutlet weak var playPause: UIButton!
     @IBOutlet weak var audioSlider: UISlider!
     
+    var tappedIndexPath: IndexPath?
+    var controlRowIndexPath: IndexPath?
+    let viewModel: ZikrQuranViewModel
+    
+    var timer: Timer?
+    var audioPlayer: AVAudioPlayer?
+    var playButtonStatus: PlaybuttonStatus = .play
+    var selectedCell: IndexPath?
+    
     enum PlaybuttonStatus {
         case play
         case pause
     }
     
-    let viewModel = ZikrQuranViewModel()
-    var timer: Timer?
-    var audioPlayer: AVAudioPlayer?
-    var playButtonStatus: PlaybuttonStatus = .play
-    var selectedCell: IndexPath?
+    init(viewModel: ZikrQuranViewModel) {
+        self.viewModel = viewModel
+        super.init(nibName: "AzkarViewController", bundle: nil)
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,10 +37,12 @@ class AzkarViewController: UIViewController {
     }
     
     private func configureTableView() {
-//        tableView.estimatedRowHeight = 400
-//        tableView.rowHeight = UITableViewAutomaticDimension
         let zikrCellNib = UINib(nibName: "ZikrTableViewCell", bundle: nil)
         tableView.register(zikrCellNib, forCellReuseIdentifier: "zikrCell")
+        
+        let zikrActionNib = UINib(nibName: "ZikrActionsTableViewCell", bundle: nil)
+        tableView.register(zikrActionNib, forCellReuseIdentifier: "zikrActionsCell")
+
     }
     
     private func configureAudioPlayer() {
@@ -99,17 +113,64 @@ extension AzkarViewController: UITableViewDataSource {
     }
     
     func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-        return viewModel.morningZikrModels.count
+        return controlRowIndexPath == nil ? viewModel.morningZikrModels.count : viewModel.morningZikrModels.count + 1
     }
     
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell") as! ZikrTableViewCell
-        cell.delegate = self
+        
+        if controlRowIndexPath != nil {
+            let actionCell = tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell") as! ZikrActionsTableViewCell
+            return actionCell
+        }
         
         let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[indexPath.row] : viewModel.eveningZikrModels[indexPath.row]
         
         cell.configureUI(zikrModel: zikrModel)
         return cell
+    }
+}
+
+extension AzkarViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if let index = tappedIndexPath, index == indexPath {
+            tableView.deselectRow(at: index, animated: false)
+        }
+        
+        var indexPathToDelete: IndexPath?
+        
+        if let index = controlRowIndexPath{
+            indexPathToDelete = index
+        }
+        
+
+        if let index = tappedIndexPath, index == indexPath {
+            tappedIndexPath = nil
+            controlRowIndexPath = nil
+        } else {
+            tappedIndexPath = indexPath
+            controlRowIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
+        }
+        
+        tableView.beginUpdates()
+        
+        if let index = indexPathToDelete {
+            tableView.deleteRows(at: [index], with: .automatic)
+        }
+        
+        if let index = controlRowIndexPath {
+            tableView.insertRows(at: [index], with: .automatic)
+        }
+        
+        tableView.endUpdates()
+        
+    }
+    
+    func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
+        if let index = controlRowIndexPath, index == indexPath {
+            return tappedIndexPath
+        }
+        return indexPath
     }
 }
 

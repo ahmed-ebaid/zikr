@@ -4,12 +4,13 @@ class AppTabController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        tabBar.backgroundColor = UIColor.white
+        tabBar.backgroundColor = UIColor.white
         setTabBarItems()
     }
     
     private func setTabBarItems() {
-        let azkarController = AzkarViewController()
+        let viewModel = ZikrQuranViewModel()
+        let azkarController = AzkarViewController(viewModel: viewModel)
         azkarController.tabBarItem = UITabBarItem(title: "", image: UIImage(named: "Azkar"), tag: 0)
         
         let doaaController = DoaaTableViewController()

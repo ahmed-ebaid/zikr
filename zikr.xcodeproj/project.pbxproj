@@ -55,6 +55,8 @@
 		C2E7F28B20CC9A5B0061B73E /* ChangeLocationTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E7F28920CC9A5B0061B73E /* ChangeLocationTableViewController.xib */; };
 		C2E7F28E20CC9B250061B73E /* CalculationMethodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F28C20CC9B250061B73E /* CalculationMethodTableViewController.swift */; };
 		C2E7F28F20CC9B250061B73E /* CalculationMethodTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E7F28D20CC9B250061B73E /* CalculationMethodTableViewController.xib */; };
+		C2E7F29220CDB5D60061B73E /* ZikrActionsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E7F29020CDB5D60061B73E /* ZikrActionsTableViewCell.swift */; };
+		C2E7F29320CDB5D60061B73E /* ZikrActionsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C2E7F29120CDB5D60061B73E /* ZikrActionsTableViewCell.xib */; };
 		C2F8C93620648F0500630B0A /* zikrTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F8C93520648F0500630B0A /* zikrTests.swift */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +145,8 @@
 		C2E7F28920CC9A5B0061B73E /* ChangeLocationTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChangeLocationTableViewController.xib; sourceTree = "<group>"; };
 		C2E7F28C20CC9B250061B73E /* CalculationMethodTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationMethodTableViewController.swift; sourceTree = "<group>"; };
 		C2E7F28D20CC9B250061B73E /* CalculationMethodTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalculationMethodTableViewController.xib; sourceTree = "<group>"; };
+		C2E7F29020CDB5D60061B73E /* ZikrActionsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrActionsTableViewCell.swift; sourceTree = "<group>"; };
+		C2E7F29120CDB5D60061B73E /* ZikrActionsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ZikrActionsTableViewCell.xib; sourceTree = "<group>"; };
 		C2F8C93320648F0500630B0A /* zikrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zikrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F8C93520648F0500630B0A /* zikrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikrTests.swift; sourceTree = "<group>"; };
 		C2F8C93720648F0500630B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -178,12 +182,12 @@
 			path = Common;
 			sourceTree = "<group>";
 		};
-		C224DDBB208EB27F0089A9F0 /* Tabbar */ = {
+		C224DDBB208EB27F0089A9F0 /* Tab Bar */ = {
 			isa = PBXGroup;
 			children = (
 				C281504D204CD8D000F6117B /* AppTabController.swift */,
 			);
-			path = Tabbar;
+			path = "Tab Bar";
 			sourceTree = "<group>";
 		};
 		C224DDBC208EB2A00089A9F0 /* Core Data */ = {
@@ -279,7 +283,7 @@
 		C263AC8A2057679700F72703 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				C224DDBB208EB27F0089A9F0 /* Tabbar */,
+				C224DDBB208EB27F0089A9F0 /* Tab Bar */,
 				C263AC8D205767AD00F72703 /* Settings */,
 				C263AC8C205767A800F72703 /* Duaa */,
 				C263AC8B205767A200F72703 /* Azkar */,
@@ -294,6 +298,8 @@
 				C2CA97EC207ADA9100D25D4C /* AzkarViewController.swift */,
 				C224DD8F20896F030089A9F0 /* ZikrTableViewCell.xib */,
 				C224DD98208D61290089A9F0 /* ZikrTableViewCell.swift */,
+				C2E7F29120CDB5D60061B73E /* ZikrActionsTableViewCell.xib */,
+				C2E7F29020CDB5D60061B73E /* ZikrActionsTableViewCell.swift */,
 				C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */,
 			);
 			path = Azkar;
@@ -465,6 +471,7 @@
 				C23942B82055A95C00637428 /* Assets.xcassets in Resources */,
 				C2CAAB2220B2399C00EA4148 /* 112.mp3 in Resources */,
 				C224DD9120896F030089A9F0 /* ZikrTableViewCell.xib in Resources */,
+				C2E7F29320CDB5D60061B73E /* ZikrActionsTableViewCell.xib in Resources */,
 				C2E7F28F20CC9B250061B73E /* CalculationMethodTableViewController.xib in Resources */,
 				C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */,
 				C281503D204CBED600F6117B /* LaunchScreen.storyboard in Resources */,
@@ -493,6 +500,7 @@
 				C22607E7205D5486001787CF /* AzkarClient.swift in Sources */,
 				C23942D12055C37600637428 /* ZikrNotificationTime.swift in Sources */,
 				C23942D72055E27100637428 /* Date+Zikr.swift in Sources */,
+				C2E7F29220CDB5D60061B73E /* ZikrActionsTableViewCell.swift in Sources */,
 				C24E77202052376D00C3571D /* AzkarNotificationsModel.swift in Sources */,
 				C2E7F28A20CC9A5B0061B73E /* ChangeLocationTableViewController.swift in Sources */,
 				C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */,
