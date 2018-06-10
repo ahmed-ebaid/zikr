@@ -74,7 +74,7 @@ class SettingsViewModel {
         }
     }
     
-    func restartAzkarNotifications() {
+    func refreshAzkarNotifications() {
         azkarNotificationsModel.removeNotifications()
         azkarNotificationsModel.toggleNotifications(true)
     }

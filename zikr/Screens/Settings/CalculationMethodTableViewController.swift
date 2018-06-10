@@ -31,7 +31,7 @@ class CalculationMethodTableViewController: UITableViewController {
         super.viewWillDisappear(animated)
         if calculationMethod != viewModel.calculationMethod.calculationMethodIndex {
             viewModel.getAzkarTimes {
-                self.viewModel.restartAzkarNotifications()
+                self.viewModel.refreshAzkarNotifications()
             }
         }
     }

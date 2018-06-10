@@ -11,12 +11,9 @@ import MapKit
 import UIKit
 import CoreData
 
-protocol LocationDelegate: class {
-    func locationDidRecieveCurrentLocation(_ location: Location)
-}
-
 class Location: NSObject {
-    weak var delegate: LocationDelegate?
+    static let DidChangeLocationNotification = NSNotification.Name("Location.didChangeLocationNotification")
+    
     let coreDataManager = CoreDataManager.shared
     
     private var locationManager = CLLocationManager()
@@ -107,7 +104,7 @@ extension Location: CLLocationManagerDelegate {
                     newLocation.timestamp = Date()
                     self.coreDataManager.save()
                 }
-                self.delegate?.locationDidRecieveCurrentLocation(self)
+                NotificationCenter.default.post(name: Location.DidChangeLocationNotification, object: nil)
             }
         }
     }

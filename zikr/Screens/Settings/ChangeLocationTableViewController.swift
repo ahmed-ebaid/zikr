@@ -27,7 +27,7 @@ class ChangeLocationTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         title = "Change Location"
-        viewModel.location.delegate = self
+        NotificationCenter.default.addObserver(self, selector: #selector(didChangeLocationNotification), name: Location.DidChangeLocationNotification, object: nil)
         configureDataCells()
     }
     
@@ -84,14 +84,12 @@ class ChangeLocationTableViewController: UITableViewController {
             tableView.cellForRow(at: indexPath)?.accessoryType = .none
         }
     }
-}
-
-extension ChangeLocationTableViewController: LocationDelegate {
-    func locationDidRecieveCurrentLocation(_ location: Location) {
+    
+    @objc private func didChangeLocationNotification() {
         tableView.reloadData()
         stopActivityIndicator()
         viewModel.getAzkarTimes {
-            self.viewModel.restartAzkarNotifications()
+            self.viewModel.refreshAzkarNotifications()
         }
     }
 }

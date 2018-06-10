@@ -7,37 +7,32 @@ import CoreData
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
-    
-    let settingsViewModel = SettingsViewModel(client: AzkarClient())
-    let changeLocationViewModel = ChangeLocationViewModel()
-    let calculationMethodViewModel = CalculationMethodViewModel()
+    let viewModel = SettingsViewModel(client: AzkarClient())
     
     func application(_: UIApplication, didFinishLaunchingWithOptions _: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         window = UIWindow()
         let tabController = AppTabController()
         window?.rootViewController = tabController
         window?.makeKeyAndVisible()
-        changeLocationViewModel.delegate = self
+                NotificationCenter.default.addObserver(self, selector: #selector(didChangeLocationNotification), name: Location.DidChangeLocationNotification, object: nil)
         
         let center = UNUserNotificationCenter.current()
         center.requestAuthorization(options: [.alert, .sound, .badge]) { result, error in
             if error == nil {
                 if result {
                     if UserDefaults.isFirstLaunch() {
-                        self.calculationMethodViewModel.setCalculationMethod()
-                        self.changeLocationViewModel.getCurrentLocation()
+                        self.viewModel.calculationMethod.setCalculationMethod()
+                        self.viewModel.location.getCurrentLocation()
                     }
                 }
             }
         }
         return true
     }
-}
-
-extension AppDelegate: ChangeLocationViewModelDelegate {
-    func changeLocationViewModelDidRecieveLocation() {
-        settingsViewModel.getAzkarTimes {
-            self.settingsViewModel.restartAzkarNotifications()
+    
+    @objc private func didChangeLocationNotification() {
+        viewModel.getAzkarTimes {
+            self.viewModel.refreshAzkarNotifications()
         }
     }
 }
