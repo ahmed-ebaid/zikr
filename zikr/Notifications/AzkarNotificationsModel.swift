@@ -2,6 +2,7 @@
  
  fileprivate let fajrIdentifier = "FajrIdentifier"
  fileprivate let asrIdentifier = "AsrIdentifier"
+ fileprivate let reminderIdentifier = "Reminder"
  
  class AzkarNotificationsModel: NSObject {
     let center: UNUserNotificationCenter!
@@ -15,23 +16,29 @@
     }
     
     private func configureAzkarNotifications() -> [UNNotificationRequest] {
-        
         var notificationRequests = [UNNotificationRequest]()
-        var i = 0
-        for zikrNotificationTime in sharedModel.zikrNotificationTimes {
-            notificationRequests.append(addNotificationRequest(for: zikrNotificationTime, isFajrNotification: true, notificationId: i))
-            notificationRequests.append(addNotificationRequest(for: zikrNotificationTime, isFajrNotification: false, notificationId: i))
-            i += 1
+        for (i, zikrNotificationTime) in sharedModel.zikrNotificationTimes.enumerated() {
+            notificationRequests.append(addNotificationRequest(for: zikrNotificationTime,
+                                                               isFajrNotification: true,
+                                                               notificationId: i))
+            notificationRequests.append(addNotificationRequest(for: zikrNotificationTime,
+                                                               isFajrNotification: false,
+                                                               notificationId: i))
+            if (i + 1) == sharedModel.zikrNotificationTimes.count {
+                notificationRequests.append(addReminderNotificationRequest(for: zikrNotificationTime))
+            }
         }
         return notificationRequests
     }
     
-    private func addNotificationRequest(for zikrNotificationTime: ZikrNotificationTime, isFajrNotification: Bool, notificationId: Int) -> UNNotificationRequest {
+    private func addNotificationRequest(for zikrNotificationTime: ZikrNotificationTime,
+                                        isFajrNotification: Bool,
+                                        notificationId: Int) -> UNNotificationRequest {
         zikrContent.title = isFajrNotification ? "وقت أذكار الصباح" :
         "وقت أذكار المساء"
         zikrContent.body = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ"
         zikrContent.sound = UNNotificationSound.default()
-        var dateComponents = Date.getDateComponentsFrom(date: zikrNotificationTime.date)
+        var dateComponents = Date.getDateComponents(for: zikrNotificationTime.date)
         let zikrTime = isFajrNotification ? getZikrTime(zikrNotificationTime.timings.fajr) : getZikrTime(zikrNotificationTime.timings.asr)
         
         dateComponents.hour = zikrTime.0
@@ -42,6 +49,22 @@
         
         let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
         return UNNotificationRequest(identifier: isFajrNotification ? currentFajrIdentifier : currentAsrIdentifier, content: zikrContent, trigger: trigger)
+    }
+    
+    private func addReminderNotificationRequest(for zikrNotificationTime: ZikrNotificationTime) -> UNNotificationRequest{
+        var dateComponents = Date.getDateComponents(for: zikrNotificationTime.date)
+        let zikrTime = getZikrTime(zikrNotificationTime.timings.asr)
+        
+        zikrContent.title = "Reminder"
+        zikrContent.body = "Please open the app to refresh your daily zikr reminder"
+        zikrContent.sound = UNNotificationSound.default()
+        
+        dateComponents.hour = zikrTime.0
+        dateComponents.minute = zikrTime.1
+        dateComponents.second = 55
+        
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: false)
+        return UNNotificationRequest(identifier: reminderIdentifier, content: zikrContent, trigger: trigger)
     }
     
     func toggleNotifications(_ value: Bool) {

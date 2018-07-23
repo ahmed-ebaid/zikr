@@ -1,6 +1,6 @@
 class AzkarData {
+    static let sharedInstance = AzkarData()
     var zikrNotificationTimes: [ZikrNotificationTime]!
 
-    static let sharedInstance = AzkarData()
     private init() {}
 }

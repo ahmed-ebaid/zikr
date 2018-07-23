@@ -1,10 +1,20 @@
+//
+//  SettingsTableViewController.swift
+//  zikr
+//
+//  Created by Ahmed Ebaid on 6/9/18.
+//  Copyright © 2018 Ahmed Ebaid. All rights reserved.
+//
+
 import Foundation
 
 fileprivate let defaultCalculationMethodIndex = 2
 
-class CalculationMethodViewModel {
+class CalculationMethod {
+    
     let userDefaults = UserDefaults.standard
-    lazy var calculationMethods = [
+    
+    lazy var azkarCalculationMethods = [
         ("Jafari - Ithna Ashari.", 0),
         ("Karachi - University of Islamic Sciences.", 1),
         ("ISNA - Islamic Society of North America.", 2),
@@ -16,10 +26,16 @@ class CalculationMethodViewModel {
         ("Institute of Geophysics.", 9),
         (" Wakfs.", 10),
         ("Geophysics.", 11),
-        (" fs.", 12),
+        (" AB", 12),
+        (" CD.", 13),
+        ("EF.", 14),
+        (" GH.", 15),
+        (" IJ.", 16),
+        ("KL.", 17),
+        (" MN.", 18),
     ]
 
-    var calculationMethod: Int {
+    var calculationMethodIndex: Int {
         return userDefaults.integer(forKey: "CalculationMethod")
     }
 
@@ -28,7 +44,7 @@ class CalculationMethodViewModel {
     }
 
     private func findIndexOfCalculationMethod(_ calculationMethod: String) -> Int {
-        for tuple in calculationMethods {
+        for tuple in azkarCalculationMethods {
             if tuple.0 == calculationMethod {
                 return tuple.1
             }

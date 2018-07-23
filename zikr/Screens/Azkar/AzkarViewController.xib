@@ -15,7 +15,7 @@
                 <outlet property="audioSlider" destination="Ee9-v0-7J6" id="Tp6-7t-lTU"/>
                 <outlet property="pageSelector" destination="i4i-19-4B9" id="OEL-cj-qas"/>
                 <outlet property="playPause" destination="HhU-1F-UEq" id="DdB-su-Mhg"/>
-                <outlet property="tableView" destination="Gel-3s-ow8" id="acv-bk-0DW"/>
+                <outlet property="tableView" destination="Gel-3s-ow8" id="Ymk-nB-xID"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,7 +35,7 @@
                     </connections>
                 </segmentedControl>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Gel-3s-ow8">
-                    <rect key="frame" x="0.0" y="138" width="375" height="640"/>
+                    <rect key="frame" x="0.0" y="80" width="375" height="640"/>
                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <connections>
                         <outlet property="dataSource" destination="-1" id="d95-g8-VQM"/>
@@ -43,32 +43,33 @@
                     </connections>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HhU-1F-UEq">
-                    <rect key="frame" x="16" y="80" width="104" height="50"/>
+                    <rect key="frame" x="16" y="728" width="104" height="50"/>
                     <state key="normal" title="Button" image="play"/>
                     <connections>
                         <action selector="playPauseTapped:" destination="-1" eventType="touchUpInside" id="8IG-kd-QMR"/>
                     </connections>
                 </button>
                 <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ee9-v0-7J6">
-                    <rect key="frame" x="126" y="89.666666666666671" width="235" height="31"/>
+                    <rect key="frame" x="126" y="728" width="235" height="51"/>
                     <connections>
-                        <action selector="audioSliderValueChanged:" destination="-1" eventType="valueChanged" id="msU-wk-3fw"/>
+                        <action selector="sliderDragged:" destination="-1" eventType="valueChanged" id="d9W-Md-BYq"/>
                     </connections>
                 </slider>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="Ee9-v0-7J6" firstAttribute="centerY" secondItem="HhU-1F-UEq" secondAttribute="centerY" id="2S7-Ze-XrY"/>
-                <constraint firstItem="HhU-1F-UEq" firstAttribute="top" secondItem="i4i-19-4B9" secondAttribute="bottom" constant="8" id="4Fn-d4-nf5"/>
                 <constraint firstItem="Ee9-v0-7J6" firstAttribute="leading" secondItem="HhU-1F-UEq" secondAttribute="trailing" constant="8" id="4nh-8e-jD0"/>
+                <constraint firstItem="Gel-3s-ow8" firstAttribute="top" secondItem="i4i-19-4B9" secondAttribute="bottom" constant="8" id="VJ9-ol-gZI"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="i4i-19-4B9" secondAttribute="top" id="Y0J-hv-nMq"/>
-                <constraint firstItem="Gel-3s-ow8" firstAttribute="top" secondItem="HhU-1F-UEq" secondAttribute="bottom" constant="8" id="Yfc-mY-yBV"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Ee9-v0-7J6" secondAttribute="trailing" constant="16" id="Ywo-VZ-JA3"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Gel-3s-ow8" secondAttribute="bottom" id="Zd6-Du-4iG"/>
                 <constraint firstItem="i4i-19-4B9" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="cGK-Ly-mX4"/>
+                <constraint firstItem="HhU-1F-UEq" firstAttribute="bottom" secondItem="fnl-2z-Ty3" secondAttribute="bottom" id="ecT-EW-HOk"/>
+                <constraint firstItem="Gel-3s-ow8" firstAttribute="centerX" secondItem="i4i-19-4B9" secondAttribute="centerX" id="fVU-G2-W2k"/>
+                <constraint firstItem="HhU-1F-UEq" firstAttribute="top" secondItem="Gel-3s-ow8" secondAttribute="bottom" constant="8" id="on4-Al-Kt3"/>
                 <constraint firstItem="HhU-1F-UEq" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="16" id="pcY-ac-JMb"/>
-                <constraint firstItem="Gel-3s-ow8" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="r6Z-q9-2AK"/>
-                <constraint firstItem="Gel-3s-ow8" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="vqd-K5-Mes"/>
+                <constraint firstItem="Gel-3s-ow8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="uRL-8z-jcH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Ee9-v0-7J6" secondAttribute="bottom" id="yk5-Nv-MHb"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="24.5" y="52"/>

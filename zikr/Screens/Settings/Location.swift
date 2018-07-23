@@ -1,14 +1,19 @@
+//
+//  SettingsTableViewController.swift
+//  zikr
+//
+//  Created by Ahmed Ebaid on 6/9/18.
+//  Copyright © 2018 Ahmed Ebaid. All rights reserved.
+//
+
 import CoreLocation
 import MapKit
 import UIKit
 import CoreData
 
-protocol ChangeLocationViewModelDelegate: class {
-    func changeLocationViewModelDidRecieveLocation()
-}
-
-class ChangeLocationViewModel: NSObject {
-    weak var delegate: ChangeLocationViewModelDelegate?
+class Location: NSObject {
+    static let DidChangeLocationNotification = NSNotification.Name("Location.didChangeLocationNotification")
+    
     let coreDataManager = CoreDataManager.shared
     
     private var locationManager = CLLocationManager()
@@ -69,7 +74,7 @@ class ChangeLocationViewModel: NSObject {
     }
 }
 
-extension ChangeLocationViewModel: CLLocationManagerDelegate {
+extension Location: CLLocationManagerDelegate {
     func locationManager(_: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
@@ -99,7 +104,7 @@ extension ChangeLocationViewModel: CLLocationManagerDelegate {
                     newLocation.timestamp = Date()
                     self.coreDataManager.save()
                 }
-                self.delegate?.changeLocationViewModelDidRecieveLocation()
+                NotificationCenter.default.post(name: Location.DidChangeLocationNotification, object: nil)
             }
         }
     }

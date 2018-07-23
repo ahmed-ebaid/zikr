@@ -15,7 +15,6 @@ class ZikrTableViewCell: UITableViewCell {
     @IBOutlet weak var fadlBottom: NSLayoutConstraint!
     @IBOutlet weak var numberOfTimesBottom: NSLayoutConstraint!
     @IBOutlet weak var numberOfTimesTop: NSLayoutConstraint!
-    @IBOutlet weak var stackViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var bismllahTitle: UILabel!
     @IBOutlet weak var zikr: UILabel!
@@ -23,17 +22,8 @@ class ZikrTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfTimes: UILabel!
     
     @IBOutlet weak var separatorView: UIView!
-    @IBOutlet weak var stackView: UIStackView!
     
     weak var delegate: ZikrTableViewCellDelegate?
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        let tap = UITapGestureRecognizer(target: self, action: #selector(handleTap(_:)))
-        tap.delegate = self
-        stackViewHeight.constant = 0
-        containerView.addGestureRecognizer(tap)
-    }
     
     func configureUI(zikrModel: ZikrModel) {
         bismllahTitle.text = zikrModel.title
@@ -67,26 +57,5 @@ class ZikrTableViewCell: UITableViewCell {
     private func numberOfTimesView(hide: Bool) {
         numberOfTimesTop.constant = hide ? 0 : 16
         numberOfTimesBottom.constant = hide ? 0 : 16
-    }
-    
-    @IBAction func share(_ sender: UIButton) {
-        //TODO: delegate action in the controller
-    }
-    
-    @IBAction func favorite(_ sender: UIButton) {
-        //TODO: delegate action in the controller
-    }
-    
-    @objc func handleTap(_ sender: UITapGestureRecognizer) {
-        UIView.animate(withDuration: 0.3) {
-            self.separatorView.alpha = 0
-            self.stackView.alpha = 0
-            
-            self.stackViewHeight.constant = self.stackViewHeight.constant == 0 ? 40 : 0
-            self.delegate?.zikrTableViewRedrawCell(cell: self)
-            
-            self.separatorView.alpha = 1
-            self.stackView.alpha = 1
-        }
     }
 }

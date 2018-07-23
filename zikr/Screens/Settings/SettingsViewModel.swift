@@ -1,25 +1,34 @@
+//
+//  SettingsViewModel.swift
+//  zikr
+//
+//  Created by Ahmed Ebaid on 6/9/18.
+//  Copyright © 2018 Ahmed Ebaid. All rights reserved.
+//
+
 import Foundation
 
 class SettingsViewModel {
     let client: AzkarClientProtocol
-    let changeLocationViewModel: ChangeLocationViewModel
-    let calculationMethodViewModel: CalculationMethodViewModel
+    let location: Location
+    let calculationMethod: CalculationMethod
     let sharedModel: AzkarData
-    let azkarNotificationsModel = AzkarNotificationsModel()
+    let azkarNotificationsModel: AzkarNotificationsModel
     
     init(client: AzkarClientProtocol) {
         self.client = client
-        calculationMethodViewModel = CalculationMethodViewModel()
-        changeLocationViewModel = ChangeLocationViewModel()
+        location = Location()
+        calculationMethod = CalculationMethod()
         sharedModel = AzkarData.sharedInstance
+        azkarNotificationsModel = AzkarNotificationsModel()
     }
     
     func getAzkarTimes(completion: @escaping () -> Void) {
-        let favoritedLocations = changeLocationViewModel.favoritedLocations
+        let favoritedLocations = location.favoritedLocations
         guard let latitude = favoritedLocations[0].latitude, let longitude = favoritedLocations[0].longitude else {
             return
         }
-        let calculationMethod = calculationMethodViewModel.calculationMethod
+        let calculationMethod = self.calculationMethod.calculationMethodIndex
         
         guard let month = Date.month, let year = Date.year else {
             return
@@ -38,11 +47,17 @@ class SettingsViewModel {
     }
     
     private func requestMoreAzkarTimes(completion: @escaping () -> Void) {
-        guard let latitude = changeLocationViewModel.favoritedLocations[0].latitude, let longitude = changeLocationViewModel.favoritedLocations[0].longitude else {
+        guard let latitude = location.favoritedLocations[0].latitude, let longitude = location.favoritedLocations[0].longitude else {
             return
         }
-        let calculationMethod = calculationMethodViewModel.calculationMethod
-        guard let month = Date.nextMonth, let year = Date.nextYear else {
+        let calculationMethod = self.calculationMethod.calculationMethodIndex
+        
+        guard let date = Calendar.current.date(byAdding: .month, value: 1, to: Date()) else {
+            return
+        }
+
+        let dateComponents = Date.getDateComponents(for: date)
+        guard let month = dateComponents.month, let year = dateComponents.year else {
             return
         }
         
@@ -59,7 +74,7 @@ class SettingsViewModel {
         }
     }
     
-    func restartAzkarNotifications() {
+    func refreshAzkarNotifications() {
         azkarNotificationsModel.removeNotifications()
         azkarNotificationsModel.toggleNotifications(true)
     }
