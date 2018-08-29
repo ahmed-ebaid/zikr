@@ -1,3 +1,11 @@
+ //
+ //  AzkarViewController.swift
+ //  zikr
+ //
+ //  Created by Ahmed Ebaid on 6/9/18.
+ //  Copyright © 2018 Ahmed Ebaid. All rights reserved.
+ //
+
 import AVFoundation
 import UIKit
 
@@ -117,10 +125,10 @@ extension AzkarViewController: UITableViewDataSource {
     }
     
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell") as! ZikrTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell", for: indexPath) as! ZikrTableViewCell
         
-        if controlRowIndexPath != nil {
-            let actionCell = tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell") as! ZikrActionsTableViewCell
+        if let index = controlRowIndexPath, index == indexPath {
+            let actionCell = tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell", for: index) as! ZikrActionsTableViewCell
             return actionCell
         }
         
@@ -139,10 +147,9 @@ extension AzkarViewController: UITableViewDelegate {
         
         var indexPathToDelete: IndexPath?
         
-        if let index = controlRowIndexPath{
+        if let index = controlRowIndexPath {
             indexPathToDelete = index
         }
-        
 
         if let index = tappedIndexPath, index == indexPath {
             tappedIndexPath = nil
@@ -163,7 +170,6 @@ extension AzkarViewController: UITableViewDelegate {
         }
         
         tableView.endUpdates()
-        
     }
     
     func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {

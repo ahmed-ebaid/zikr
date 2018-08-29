@@ -1,11 +1,13 @@
+//
+//  GradientView.swift
+//  zikr
+//
+//  Created by Ahmed Ebaid on 6/9/18.
+//  Copyright © 2018 Ahmed Ebaid. All rights reserved.
+//
 import UIKit
 
 class GradientView: UIView {
-    
-    override open class var layerClass: AnyClass {
-        return CAGradientLayer.classForCoder()
-    }
-    
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         configureGradientLayer()
