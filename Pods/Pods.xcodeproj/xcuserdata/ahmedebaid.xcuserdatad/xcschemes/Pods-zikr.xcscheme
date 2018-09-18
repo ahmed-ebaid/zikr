@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C281502E204CBED600F6117B"
-               BuildableName = "zikr.app"
-               BlueprintName = "zikr"
-               ReferencedContainer = "container:zikr.xcodeproj">
+               BlueprintIdentifier = "407DE9145EE8A725642B2F1F1D4F19F4"
+               BuildableName = "Pods_zikr.framework"
+               BlueprintName = "Pods-zikr"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,26 +28,7 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "C2F8C93220648F0500630B0A"
-               BuildableName = "zikrTests.xctest"
-               BlueprintName = "zikrTests"
-               ReferencedContainer = "container:zikr.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C281502E204CBED600F6117B"
-            BuildableName = "zikr.app"
-            BlueprintName = "zikr"
-            ReferencedContainer = "container:zikr.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -61,16 +42,15 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
+      <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C281502E204CBED600F6117B"
-            BuildableName = "zikr.app"
-            BlueprintName = "zikr"
-            ReferencedContainer = "container:zikr.xcodeproj">
+            BlueprintIdentifier = "407DE9145EE8A725642B2F1F1D4F19F4"
+            BuildableName = "Pods_zikr.framework"
+            BlueprintName = "Pods-zikr"
+            ReferencedContainer = "container:Pods.xcodeproj">
          </BuildableReference>
-      </BuildableProductRunnable>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -80,22 +60,12 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
-      <BuildableProductRunnable
-         runnableDebuggingMode = "0">
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "C281502E204CBED600F6117B"
-            BuildableName = "zikr.app"
-            BlueprintName = "zikr"
-            ReferencedContainer = "container:zikr.xcodeproj">
-         </BuildableReference>
-      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
    </AnalyzeAction>
    <ArchiveAction
-      buildConfiguration = "Debug"
+      buildConfiguration = "Release"
       revealArchiveInOrganizer = "YES">
    </ArchiveAction>
 </Scheme>

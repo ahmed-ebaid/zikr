@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		89F00E7BC977E59B5A360AB1 /* Pods_zikr.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 43BDBB92B5083757A1AAEA96 /* Pods_zikr.framework */; };
+		A9B61879439DD9E7DB26478A /* Pods_zikrTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C6D0EB08DF509FED8B0B91B /* Pods_zikrTests.framework */; };
 		C20194022058B198005ED7DC /* LocationMO.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20194012058B198005ED7DC /* LocationMO.swift */; };
 		C21E4E9F20A3D31000D07557 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C21E4E9E20A3D31000D07557 /* GradientView.swift */; };
 		C22055CC2080230C00FCE437 /* ZikrQuranViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */; };
@@ -34,12 +36,8 @@
 		C28794D020682CEC007FEBE4 /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; };
 		C28794D220682D5D007FEBE4 /* Nimble.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25EDB7B2068298A00CF164F /* Nimble.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C28794D320682D5D007FEBE4 /* Quick.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C25EDB7A2068298900CF164F /* Quick.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C28794D520682D74007FEBE4 /* Alamofire.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BD2055B19300637428 /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		C28794D620682D74007FEBE4 /* Result.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BE2055B19300637428 /* Result.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C28794D720682E77007FEBE4 /* Moya.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; };
-		C28794D820682E8C007FEBE4 /* Moya.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942C02055B19300637428 /* Moya.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C28794D920682EBA007FEBE4 /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; };
-		C28794DA20682EC0007FEBE4 /* SwiftyJSON.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = C23942BF2055B19300637428 /* SwiftyJSON.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		C28803142063466800C68F03 /* DoaaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C28803122063466800C68F03 /* DoaaTableViewController.swift */; };
 		C28803152063466800C68F03 /* DoaaTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C28803132063466800C68F03 /* DoaaTableViewController.xib */; };
 		C2CA97EE207ADA9100D25D4C /* AzkarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2CA97EC207ADA9100D25D4C /* AzkarViewController.swift */; };
@@ -82,22 +80,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C28794D420682D66007FEBE4 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				C28794DA20682EC0007FEBE4 /* SwiftyJSON.framework in CopyFiles */,
-				C28794D820682E8C007FEBE4 /* Moya.framework in CopyFiles */,
-				C28794D520682D74007FEBE4 /* Alamofire.framework in CopyFiles */,
-				C28794D620682D74007FEBE4 /* Result.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3C6D0EB08DF509FED8B0B91B /* Pods_zikrTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zikrTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		43BDBB92B5083757A1AAEA96 /* Pods_zikr.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_zikr.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9787C483C8C88B9E5434B806 /* Pods-zikr.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zikr.release.xcconfig"; path = "Pods/Target Support Files/Pods-zikr/Pods-zikr.release.xcconfig"; sourceTree = "<group>"; };
+		AA255C0C96C8E8529E1A5516 /* Pods-zikr.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zikr.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zikr/Pods-zikr.debug.xcconfig"; sourceTree = "<group>"; };
+		C104420CFCB4874475149F88 /* Pods-zikrTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zikrTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-zikrTests/Pods-zikrTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C20194012058B198005ED7DC /* LocationMO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMO.swift; sourceTree = "<group>"; };
 		C21E4E9E20A3D31000D07557 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		C22055CB2080230B00FCE437 /* ZikrQuranViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ZikrQuranViewModel.swift; sourceTree = "<group>"; };
@@ -150,6 +140,7 @@
 		C2F8C93320648F0500630B0A /* zikrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = zikrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2F8C93520648F0500630B0A /* zikrTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = zikrTests.swift; sourceTree = "<group>"; };
 		C2F8C93720648F0500630B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D7B7EFF010C775C8371C476D /* Pods-zikrTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-zikrTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-zikrTests/Pods-zikrTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +152,7 @@
 				C28794D720682E77007FEBE4 /* Moya.framework in Frameworks */,
 				C28794CF20682CEC007FEBE4 /* Alamofire.framework in Frameworks */,
 				C28794D020682CEC007FEBE4 /* Result.framework in Frameworks */,
+				89F00E7BC977E59B5A360AB1 /* Pods_zikr.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +160,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9B61879439DD9E7DB26478A /* Pods_zikrTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +210,8 @@
 				C23942C02055B19300637428 /* Moya.framework */,
 				C23942BE2055B19300637428 /* Result.framework */,
 				C23942BF2055B19300637428 /* SwiftyJSON.framework */,
+				43BDBB92B5083757A1AAEA96 /* Pods_zikr.framework */,
+				3C6D0EB08DF509FED8B0B91B /* Pods_zikrTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -338,6 +333,7 @@
 				C2F8C93420648F0500630B0A /* zikrTests */,
 				C2815030204CBED600F6117B /* Products */,
 				C23942BC2055B19300637428 /* Frameworks */,
+				EFB5D355652C7A094FF57B52 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -376,6 +372,17 @@
 			path = zikrTests;
 			sourceTree = "<group>";
 		};
+		EFB5D355652C7A094FF57B52 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AA255C0C96C8E8529E1A5516 /* Pods-zikr.debug.xcconfig */,
+				9787C483C8C88B9E5434B806 /* Pods-zikr.release.xcconfig */,
+				C104420CFCB4874475149F88 /* Pods-zikrTests.debug.xcconfig */,
+				D7B7EFF010C775C8371C476D /* Pods-zikrTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,10 +390,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2815041204CBED600F6117B /* Build configuration list for PBXNativeTarget "zikr" */;
 			buildPhases = (
+				8DCEF5BECA71189C10F82540 /* [CP] Check Pods Manifest.lock */,
 				C281502B204CBED600F6117B /* Sources */,
 				C281502C204CBED600F6117B /* Frameworks */,
 				C281502D204CBED600F6117B /* Resources */,
-				C28794D420682D66007FEBE4 /* CopyFiles */,
+				934413409285FE095C616543 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -401,6 +409,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2F8C93A20648F0500630B0A /* Build configuration list for PBXNativeTarget "zikrTests" */;
 			buildPhases = (
+				86EA088A1207F48372024A8A /* [CP] Check Pods Manifest.lock */,
 				C2F8C92F20648F0500630B0A /* Sources */,
 				C2F8C93020648F0500630B0A /* Frameworks */,
 				C2F8C93120648F0500630B0A /* Resources */,
@@ -491,6 +500,69 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		86EA088A1207F48372024A8A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zikrTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DCEF5BECA71189C10F82540 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-zikr-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		934413409285FE095C616543 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-zikr/Pods-zikr-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Moya/Moya.framework",
+				"${BUILT_PRODUCTS_DIR}/Result/Result.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Moya.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Result.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-zikr/Pods-zikr-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C281502B204CBED600F6117B /* Sources */ = {
@@ -671,6 +743,7 @@
 		};
 		C2815042204CBED600F6117B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA255C0C96C8E8529E1A5516 /* Pods-zikr.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -693,6 +766,7 @@
 		};
 		C2815043204CBED600F6117B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9787C483C8C88B9E5434B806 /* Pods-zikr.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -714,6 +788,7 @@
 		};
 		C2F8C93B20648F0500630B0A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C104420CFCB4874475149F88 /* Pods-zikrTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
@@ -730,6 +805,7 @@
 		};
 		C2F8C93C20648F0500630B0A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D7B7EFF010C775C8371C476D /* Pods-zikrTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
