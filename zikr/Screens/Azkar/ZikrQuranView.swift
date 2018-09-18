@@ -22,7 +22,7 @@ class ZikrQuranView: UIView {
         super.awakeFromNib()
         configureUI()
     }
-    
+
     func configure(with model: ZikrModel) {
         titleLabel.text = model.title
         descriptionLabel.text = model.zikr
@@ -44,11 +44,9 @@ class ZikrQuranView: UIView {
         }
     }
 
-    @IBAction func shareButtonTapped(_ sender: UIButton) {
-        
+    @IBAction func shareButtonTapped(_: UIButton) {
     }
 
-    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
-        
+    @IBAction func favoriteButtonTapped(_: UIButton) {
     }
 }

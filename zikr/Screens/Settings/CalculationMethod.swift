@@ -1,19 +1,18 @@
 //
-//  SettingsTableViewController.swift
+//  CalculationMethod.swift
 //  zikr
 //
 //  Created by Ahmed Ebaid on 6/9/18.
 //  Copyright © 2018 Ahmed Ebaid. All rights reserved.
 //
-
 import Foundation
 
 fileprivate let defaultCalculationMethodIndex = 2
 
 class CalculationMethod {
-    
+
     let userDefaults = UserDefaults.standard
-    
+
     lazy var azkarCalculationMethods = [
         ("Jafari - Ithna Ashari.", 0),
         ("Karachi - University of Islamic Sciences.", 1),

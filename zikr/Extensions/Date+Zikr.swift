@@ -11,13 +11,13 @@ extension Date {
     static var day: Int? {
         return getDateComponents().day
     }
-    
+
     static var month: Int? {
         return getDateComponents().month
     }
 
     static var year: Int? {
-            return getDateComponents().year
+        return getDateComponents().year
     }
 
     static func getFormattedDate(date: String, dateFormat: String = "dd-MM-yyyy") -> Date {

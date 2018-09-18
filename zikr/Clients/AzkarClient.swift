@@ -20,10 +20,10 @@ class AzkarClient: AzkarClientProtocol {
                        year: Int,
                        completion: @escaping ClientCompletionClosure) {
         MoyaProvider<UnauthenticatedEndpoints>(plugins: [NetworkLoggerPlugin()]).request(.getAzkarTimes(latitude: latitude,
-                                                                        longitude: longitude,
-                                                                        method: method,
-                                                                        month: month,
-                                                                        year: year)) { result in
+                                                                                                        longitude: longitude,
+                                                                                                        method: method,
+                                                                                                        month: month,
+                                                                                                        year: year)) { result in
             switch result {
             case let .success(response):
                 do {

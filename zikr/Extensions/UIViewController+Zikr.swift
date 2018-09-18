@@ -13,15 +13,14 @@ extension UIViewController {
         configureLoadingIndicator(loadingIndicator: loadingIndicator)
         loadingIndicator.startAnimating()
     }
-    
-    
+
     func stopActivityIndicator() {
         if let currentView = view.subviews.last as? UIActivityIndicatorView {
             currentView.stopAnimating()
             currentView.removeFromSuperview()
         }
     }
-    
+
     private func configureLoadingIndicator(loadingIndicator: UIActivityIndicatorView) {
         loadingIndicator.center = view.center
         loadingIndicator.color = UIColor.black.withAlphaComponent(0.3)
