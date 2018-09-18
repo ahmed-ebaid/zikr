@@ -9,7 +9,7 @@ import UIKit
 
 extension UIViewController {
     func startActivtyIndicator() {
-        let loadingIndicator = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        let loadingIndicator = UIActivityIndicatorView(style: .whiteLarge)
         configureLoadingIndicator(loadingIndicator: loadingIndicator)
         loadingIndicator.startAnimating()
     }

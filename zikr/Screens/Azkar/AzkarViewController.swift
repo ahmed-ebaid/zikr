@@ -40,11 +40,11 @@ class AzkarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTableView()
+        registerCells()
         configureAudioPlayer()
     }
     
-    private func configureTableView() {
+    private func registerCells() {
         let zikrCellNib = UINib(nibName: "ZikrTableViewCell", bundle: nil)
         tableView.register(zikrCellNib, forCellReuseIdentifier: "zikrCell")
         
@@ -125,15 +125,15 @@ extension AzkarViewController: UITableViewDataSource {
     }
     
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell", for: indexPath) as! ZikrTableViewCell
-        
+        var row = indexPath.row
         if let index = controlRowIndexPath, index == indexPath {
             let actionCell = tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell", for: index) as! ZikrActionsTableViewCell
+            row = row - 1
             return actionCell
         }
         
-        let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[indexPath.row] : viewModel.eveningZikrModels[indexPath.row]
-        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell", for: indexPath) as! ZikrTableViewCell
+        let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[row] : viewModel.eveningZikrModels[row]
         cell.configureUI(zikrModel: zikrModel)
         return cell
     }
@@ -142,7 +142,7 @@ extension AzkarViewController: UITableViewDataSource {
 extension AzkarViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let index = tappedIndexPath, index == indexPath {
-            tableView.deselectRow(at: index, animated: false)
+            tableView.deselectRow(at: index, animated: true)
         }
         
         var indexPathToDelete: IndexPath?

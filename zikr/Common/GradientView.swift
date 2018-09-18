@@ -19,7 +19,13 @@ class GradientView: UIView {
     }
     
     func configureGradientLayer() {
-        let gradientLayer = layer as! CAGradientLayer
-        gradientLayer.colors = [UIColor.white.cgColor, UIColor(red: 93/255, green: 188/255, blue: 210/255, alpha: 0).cgColor]
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = bounds
+        gradientLayer.colors = [UIColor.white.cgColor,
+                                UIColor(red: 93/255,
+                                        green: 188/255,
+                                        blue: 210/255,
+                                        alpha: 0).cgColor]
+        layer.addSublayer(gradientLayer)
     }
 }

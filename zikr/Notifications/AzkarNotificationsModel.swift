@@ -44,7 +44,7 @@
         zikrContent.title = isFajrNotification ? "وقت أذكار الصباح" :
         "وقت أذكار المساء"
         zikrContent.body = "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ، وَتَحَوُّلِ عَافِيَتِكَ، وَفُجَاءَةِ نِقْمَتِكَ، وَجَمِيعِ سَخَطِكَ"
-        zikrContent.sound = UNNotificationSound.default()
+        zikrContent.sound = UNNotificationSound.default
         var dateComponents = Date.getDateComponents(for: zikrNotificationTime.date)
         let zikrTime = isFajrNotification ? getZikrTime(zikrNotificationTime.timings.fajr) : getZikrTime(zikrNotificationTime.timings.asr)
         
@@ -64,7 +64,7 @@
         
         zikrContent.title = "Reminder"
         zikrContent.body = "Please open the app to refresh your daily zikr reminder"
-        zikrContent.sound = UNNotificationSound.default()
+        zikrContent.sound = UNNotificationSound.default
         
         dateComponents.hour = zikrTime.0
         dateComponents.minute = zikrTime.1
