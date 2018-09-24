@@ -46,6 +46,7 @@ class AzkarViewController: UIViewController {
     }
     
     private func configureTableView() {
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 314
     }
 
@@ -167,10 +168,6 @@ extension AzkarViewController: UITableViewDelegate {
         }
         
         tableView.endUpdates()
-    }
-    
-    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 314
     }
 }
 
