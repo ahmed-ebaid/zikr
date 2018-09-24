@@ -60,11 +60,13 @@ class AzkarViewController: UIViewController {
 
     private func configureAudioPlayer() {
         let sound = Bundle.main.url(forResource: "112", withExtension: "mp3")
+
         guard let player = try? AVAudioPlayer(contentsOf: sound!) else {
             return
         }
         audioPlayer = player
         audioPlayer?.delegate = self
+
         if let duration = audioPlayer?.duration.magnitude {
             audioSlider.maximumValue = Float(duration)
         }
@@ -88,8 +90,8 @@ class AzkarViewController: UIViewController {
             player.currentTime = TimeInterval(sender.value)
         }
     }
-
-    @IBAction func playPauseTapped(_: UIButton) {
+        
+    @IBAction func playPauseTapped(_ sender: UIButton) {
         guard let isPlaying = audioPlayer?.isPlaying else {
             return
         }
@@ -117,6 +119,11 @@ class AzkarViewController: UIViewController {
     @IBAction func pageSelectorTapped(_: UISegmentedControl) {
         tableView.reloadData()
     }
+    
+    @IBAction func audioSliderValueChanged(_ sender: UISlider) {
+        audioPlayer?.currentTime =  Double(sender.value)
+    }
+    
 }
 
 extension AzkarViewController: UITableViewDataSource {
@@ -190,6 +197,7 @@ extension AzkarViewController: AVAudioPlayerDelegate {
             timer?.invalidate()
             audioSlider.value = 0
             playPause.setImage(#imageLiteral(resourceName: "play"), for: .normal)
+            audioSlider.value = 0.0
         }
     }
 }
