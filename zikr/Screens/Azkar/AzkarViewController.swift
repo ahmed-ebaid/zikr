@@ -40,8 +40,13 @@ class AzkarViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureTableView()
         registerCells()
         configureAudioPlayer()
+    }
+    
+    private func configureTableView() {
+        tableView.estimatedRowHeight = 314
     }
 
     private func registerCells() {
@@ -128,7 +133,8 @@ extension AzkarViewController: UITableViewDataSource {
         }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell", for: indexPath) as! ZikrTableViewCell
-        let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[viewModel.getDataCellRow(using: controlRowIndexPath, tappedIndexPath: indexPath)] : viewModel.eveningZikrModels[viewModel.getDataCellRow(using: controlRowIndexPath, tappedIndexPath: indexPath)]
+        let rowOfDataCell = viewModel.getDataCellRow(using: controlRowIndexPath, tappedIndexPath: indexPath)
+        let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[rowOfDataCell] : viewModel.eveningZikrModels[rowOfDataCell]
         cell.configureUI(zikrModel: zikrModel)
         return cell
     }
@@ -151,21 +157,20 @@ extension AzkarViewController: UITableViewDelegate {
         }
         
         tableView.beginUpdates()
+        
         if let deleteIndex = deletedRowIndexPath {
             tableView.deleteRows(at: [deleteIndex], with: .none)
         }
+        
         if let controlIndex = controlRowIndexPath {
             tableView.insertRows(at: [controlIndex], with: .none)
         }
         
         tableView.endUpdates()
     }
-
-    func tableView(_: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
-        if let index = controlRowIndexPath, index == indexPath {
-            return tappedIndexPath
-        }
-        return indexPath
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 314
     }
 }
 
