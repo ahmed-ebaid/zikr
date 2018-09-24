@@ -16,6 +16,7 @@ class AzkarViewController: UIViewController {
 
     var tappedIndexPath: IndexPath?
     var controlRowIndexPath: IndexPath?
+    
     let viewModel: ZikrQuranViewModel
 
     var timer: Timer?
@@ -122,15 +123,12 @@ extension AzkarViewController: UITableViewDataSource {
     }
 
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        var row = indexPath.row
         if let index = controlRowIndexPath, index == indexPath {
-            let actionCell = tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell", for: index) as! ZikrActionsTableViewCell
-            row = row - 1
-            return actionCell
+            return tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell", for: index) as! ZikrActionsTableViewCell
         }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell", for: indexPath) as! ZikrTableViewCell
-        let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[row] : viewModel.eveningZikrModels[row]
+        let zikrModel = pageSelector.selectedSegmentIndex == 0 ? viewModel.morningZikrModels[viewModel.getDataCellRow(using: controlRowIndexPath, tappedIndexPath: indexPath)] : viewModel.eveningZikrModels[viewModel.getDataCellRow(using: controlRowIndexPath, tappedIndexPath: indexPath)]
         cell.configureUI(zikrModel: zikrModel)
         return cell
     }
@@ -138,34 +136,28 @@ extension AzkarViewController: UITableViewDataSource {
 
 extension AzkarViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let index = tappedIndexPath, index == indexPath {
-            tableView.deselectRow(at: index, animated: true)
-        }
-
-        var indexPathToDelete: IndexPath?
-
-        if let index = controlRowIndexPath {
-            indexPathToDelete = index
-        }
-
-        if let index = tappedIndexPath, index == indexPath {
-            tappedIndexPath = nil
-            controlRowIndexPath = nil
+        var deletedRowIndexPath: IndexPath?
+        
+        if let controlIndex = controlRowIndexPath {
+            if controlIndex == IndexPath(row: indexPath.row + 1, section: indexPath.section) {
+                controlRowIndexPath = nil
+            } else {
+                controlRowIndexPath = viewModel.getControlCellIndexPath(using: controlIndex, tappedIndexPath: indexPath)
+            }
+            deletedRowIndexPath = controlIndex
         } else {
             tappedIndexPath = indexPath
             controlRowIndexPath = IndexPath(row: indexPath.row + 1, section: indexPath.section)
         }
-
+        
         tableView.beginUpdates()
-
-        if let index = indexPathToDelete {
-            tableView.deleteRows(at: [index], with: .automatic)
+        if let deleteIndex = deletedRowIndexPath {
+            tableView.deleteRows(at: [deleteIndex], with: .none)
         }
-
-        if let index = controlRowIndexPath {
-            tableView.insertRows(at: [index], with: .automatic)
+        if let controlIndex = controlRowIndexPath {
+            tableView.insertRows(at: [controlIndex], with: .none)
         }
-
+        
         tableView.endUpdates()
     }
 

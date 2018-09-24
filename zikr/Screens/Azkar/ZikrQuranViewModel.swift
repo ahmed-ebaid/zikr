@@ -54,4 +54,20 @@ class ZikrQuranViewModel {
         textToShare.append(numberOfTimes)
         return textToShare
     }
+    
+    func getControlCellIndexPath(using controlIndexPath: IndexPath, tappedIndexPath: IndexPath) -> IndexPath {
+        let tappedRow = tappedIndexPath.row
+        let tappedSection = tappedIndexPath.section
+        
+        return controlIndexPath.row > tappedRow ? IndexPath(row: tappedRow + 1, section: tappedSection) : IndexPath(row: tappedRow, section: tappedSection)
+    }
+    
+    func getDataCellRow(using controlIndexPath: IndexPath?, tappedIndexPath: IndexPath) -> Int {
+        guard let controlRow = controlIndexPath else {
+            return tappedIndexPath.row
+        }
+        
+        let tappedRow = tappedIndexPath.row
+        return tappedRow > controlRow.row ? tappedRow - 1 : tappedRow
+    }
 }
