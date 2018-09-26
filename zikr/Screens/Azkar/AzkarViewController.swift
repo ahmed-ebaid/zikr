@@ -137,7 +137,8 @@ extension AzkarViewController: UITableViewDataSource {
 
     func tableView(_: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let index = controlRowIndexPath, index == indexPath {
-            return tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell", for: index) as! ZikrActionsTableViewCell
+            let controlCell = tableView.dequeueReusableCell(withIdentifier: "zikrActionsCell", for: index) as! ZikrActionsTableViewCell
+            return controlCell
         }
 
         let cell = tableView.dequeueReusableCell(withIdentifier: "zikrCell", for: indexPath) as! ZikrTableViewCell
