@@ -21,10 +21,10 @@ class AzkarViewController: UIViewController {
 
     var timer: Timer?
     var audioPlayer: AVAudioPlayer?
-    var playButtonStatus: PlaybuttonStatus = .play
+    var playButtonStatus: PlayButtonState = .play
     var selectedCell: IndexPath?
 
-    enum PlaybuttonStatus {
+    enum PlayButtonState {
         case play
         case pause
     }
